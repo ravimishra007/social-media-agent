@@ -1,0 +1,27 @@
+{
+  "brand": {
+    "slug": "chloe-thompson",
+    "name": "Chloe Thompson"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/chloe-thompson/images/sfw/chloe-thompson_sfw_20251209_170814_chloe-thompson__sfw__2025-12-09170809-23043456-962387607627915_00001_.png?quality=85&format=webp"
+  },
+  "platform": "reddit",
+  "content": {
+    "title": "Anyone else miss organizing neighborhood events growing up?",
+    "caption": "Used to put together bake sales and stuff with the neighbors back in California, always loved how it brought everyone together. These days I still try to keep that cheerful vibe going in my own way. What kinds of community things do you remember fondly or still do?",
+    "hashtags": [],
+    "cta": ""
+  },
+  "target": {
+    "subreddit": "comfyui",
+    "flair": null
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "approved",
+  "created_at": "2026-07-06T18:02:52.146Z",
+  "approved_at": "2026-07-06T18:02:58.851Z"
+}

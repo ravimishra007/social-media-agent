@@ -1,0 +1,1377 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Social Media Factory</title>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0b0f;
+    --bg-elevated: #12141a;
+    --card: #16181f;
+    --card-hover: #191c24;
+    --border: #262a33;
+    --border-subtle: #1c1f27;
+    --text: #f0f2f6;
+    --text-secondary: #b4bac6;
+    --muted: #6b7280;
+    --accent: #10b981;
+    --accent-hover: #059669;
+    --danger: #ef4444;
+    --warning: #f59e0b;
+    --info: #3b82f6;
+    --shadow: 0 1px 3px rgba(0,0,0,0.4), 0 1px 2px rgba(0,0,0,0.6);
+    --shadow-lg: 0 10px 30px rgba(0,0,0,0.4);
+    --sidebar-w: 240px;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Themed scrollbars */
+  * { scrollbar-width: thin; scrollbar-color: var(--border) transparent; }
+  *::-webkit-scrollbar { width: 10px; height: 10px; }
+  *::-webkit-scrollbar-track { background: transparent; }
+  *::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 999px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+  }
+  *::-webkit-scrollbar-thumb:hover {
+    background: var(--muted);
+    background-clip: content-box;
+    border: 2px solid transparent;
+  }
+  *::-webkit-scrollbar-corner { background: transparent; }
+  .app { display: flex; min-height: 100vh; }
+
+  /* Sidebar */
+  aside.sidebar {
+    width: var(--sidebar-w);
+    flex-shrink: 0;
+    background: var(--bg-elevated);
+    border-right: 1px solid var(--border-subtle);
+    padding: 24px 16px;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .brand-mark {
+    display: flex; align-items: center; gap: 10px;
+    padding: 0 8px 20px;
+    border-bottom: 1px solid var(--border-subtle);
+    margin-bottom: 12px;
+  }
+  .brand-dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 12px var(--accent);
+  }
+  .brand-mark h1 {
+    margin: 0; font-size: 14px; font-weight: 600; letter-spacing: -0.01em;
+  }
+  .tab {
+    display: flex; align-items: center; gap: 10px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    color: var(--text-secondary);
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 13.5px;
+    user-select: none;
+    transition: background .12s, color .12s;
+  }
+  .tab:hover { background: var(--card); color: var(--text); }
+  .tab.active {
+    background: var(--card);
+    color: var(--text);
+    box-shadow: inset 2px 0 0 var(--accent);
+  }
+  .tab svg { width: 16px; height: 16px; flex-shrink: 0; }
+  .tab .tab-count {
+    margin-left: auto;
+    font-size: 11px;
+    background: var(--bg);
+    color: var(--muted);
+    padding: 2px 7px;
+    border-radius: 999px;
+    font-weight: 600;
+  }
+  .tab.active .tab-count { color: var(--text); }
+
+  /* Main */
+  main.main {
+    flex: 1;
+    min-width: 0;
+    padding: 32px 32px 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .page-header {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 24px;
+    gap: 16px;
+  }
+  .page-title {
+    font-size: 20px; font-weight: 600; letter-spacing: -0.02em;
+    margin: 0;
+  }
+  .page-subtitle {
+    font-size: 13px;
+    color: var(--muted);
+    margin-top: 4px;
+  }
+
+  .section-title {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    font-weight: 600;
+    margin: 0 0 16px 4px;
+  }
+  .list { display: grid; gap: 20px; }
+
+  /* Platform colors */
+  .platform-facebook { --plat: #1877f2; --plat-bg: rgba(24,119,242,0.12); }
+  .platform-instagram { --plat: #e1306c; --plat-bg: rgba(225,48,108,0.12); }
+  .platform-x, .platform-twitter { --plat: #ffffff; --plat-bg: rgba(255,255,255,0.08); }
+  .platform-reddit { --plat: #ff4500; --plat-bg: rgba(255,69,0,0.12); }
+  .platform-linkedin { --plat: #0a66c2; --plat-bg: rgba(10,102,194,0.12); }
+  .platform-tiktok { --plat: #ff0050; --plat-bg: rgba(255,0,80,0.12); }
+  .platform-unknown { --plat: #6b7280; --plat-bg: rgba(107,114,128,0.12); }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: border-color .15s, background .15s, transform .15s, box-shadow .2s;
+    box-shadow: var(--shadow);
+  }
+  .card:hover {
+    border-color: var(--border);
+    background: var(--card-hover);
+    box-shadow: var(--shadow-lg);
+  }
+  .platform-strip {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 12px 20px;
+    background: var(--plat-bg);
+    border-bottom: 1px solid var(--border-subtle);
+    border-left: 3px solid var(--plat);
+  }
+  .platform-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 13px; font-weight: 600;
+    color: var(--plat);
+    text-transform: capitalize;
+    letter-spacing: -0.01em;
+  }
+  .platform-badge .icon { display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; }
+  .platform-badge svg { width: 20px; height: 20px; }
+  .strip-meta { display: flex; align-items: center; gap: 12px; }
+  .status-pill {
+    display: inline-flex; align-items: center; gap: 5px;
+    font-size: 11px; font-weight: 600;
+    padding: 3px 9px;
+    border-radius: 999px;
+    background: rgba(245, 158, 11, 0.12);
+    color: var(--warning);
+    border: 1px solid rgba(245, 158, 11, 0.25);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .status-pill .pulse {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--warning);
+    box-shadow: 0 0 8px var(--warning);
+  }
+  .card.is-approved .status-pill {
+    background: rgba(16, 185, 129, 0.12);
+    color: var(--accent);
+    border-color: rgba(16, 185, 129, 0.25);
+  }
+  .card.is-approved .status-pill .pulse {
+    background: var(--accent);
+    box-shadow: 0 0 8px var(--accent);
+  }
+  .card.is-published .status-pill {
+    background: rgba(59, 130, 246, 0.12);
+    color: var(--info);
+    border-color: rgba(59, 130, 246, 0.25);
+  }
+  .card.is-published .status-pill .pulse {
+    background: var(--info);
+    box-shadow: 0 0 8px var(--info);
+  }
+  .timestamp { font-size: 12px; color: var(--muted); font-weight: 500; }
+
+  .card-body {
+    display: grid;
+    grid-template-columns: 200px 1fr auto;
+    gap: 24px;
+    padding: 20px;
+    align-items: start;
+  }
+  .avatar-wrap {
+    position: relative;
+    width: 200px; height: 200px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+  }
+  .avatar { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .avatar-fallback {
+    position: absolute; inset: 0;
+    display: none;
+    align-items: center; justify-content: center;
+    color: var(--muted);
+    font-size: 40px; font-weight: 600;
+  }
+  .body { min-width: 0; }
+  .brand-name {
+    font-weight: 600;
+    font-size: 17px;
+    letter-spacing: -0.015em;
+    color: var(--text);
+    margin: 2px 0 12px;
+  }
+  .post-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text);
+    line-height: 1.4;
+    margin: 0 0 10px;
+    letter-spacing: -0.01em;
+  }
+  .target-row {
+    display: flex; flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+  .target-chip {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 12px; font-weight: 500;
+    padding: 4px 10px;
+    border-radius: 6px;
+    background: rgba(255, 69, 0, 0.08);
+    color: #ff8a5b;
+    border: 1px solid rgba(255, 69, 0, 0.2);
+  }
+  .target-chip .target-key {
+    color: var(--muted);
+    font-size: 10px; font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .target-chip svg { width: 12px; height: 12px; }
+  .caption {
+    color: var(--text);
+    font-size: 14.5px;
+    line-height: 1.65;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    margin: 0 0 14px;
+  }
+  .hashtags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
+  .tag {
+    font-size: 12px; font-weight: 500;
+    padding: 4px 10px;
+    border-radius: 6px;
+    background: rgba(59, 130, 246, 0.08);
+    color: #93c5fd;
+    border: 1px solid rgba(59, 130, 246, 0.15);
+  }
+  .cta {
+    display: flex; align-items: center; gap: 10px;
+    color: var(--text-secondary);
+    font-size: 13px;
+    padding: 10px 14px;
+    background: var(--bg-elevated);
+    border-left: 2px solid var(--info);
+    border-radius: 6px;
+    margin-bottom: 14px;
+  }
+  .cta-label {
+    font-size: 10px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--info);
+    flex-shrink: 0;
+  }
+  .file-meta {
+    display: inline-flex; align-items: center; gap: 6px;
+    color: var(--muted);
+    font-size: 11px;
+    font-family: 'SF Mono', Menlo, Monaco, Consolas, monospace;
+    word-break: break-all;
+    padding: 4px 8px;
+    background: var(--bg-elevated);
+    border-radius: 6px;
+  }
+  .actions { display: flex; flex-direction: column; gap: 8px; min-width: 130px; }
+
+  button {
+    border: 0;
+    border-radius: 8px;
+    padding: 11px 20px;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    font-family: inherit;
+    display: inline-flex;
+    align-items: center; justify-content: center;
+    gap: 6px;
+    transition: background .15s, transform .1s, box-shadow .15s;
+    white-space: nowrap;
+  }
+  button:active { transform: translateY(1px); }
+  button.approve {
+    background: var(--accent);
+    color: #04220f;
+    box-shadow: 0 1px 0 rgba(255,255,255,0.15) inset, 0 4px 14px rgba(16,185,129,0.3);
+  }
+  button.approve:hover { background: var(--accent-hover); }
+  button.revert {
+    background: var(--bg-elevated);
+    color: var(--text);
+    border: 1px solid var(--border);
+  }
+  button.revert:hover { background: var(--card-hover); border-color: var(--warning); color: var(--warning); }
+  button.delete {
+    background: var(--bg-elevated);
+    color: var(--text-secondary);
+    border: 1px solid var(--border);
+  }
+  button.delete:hover { background: rgba(239, 68, 68, 0.12); border-color: var(--danger); color: var(--danger); }
+  button.primary {
+    background: var(--accent);
+    color: #04220f;
+    box-shadow: 0 1px 0 rgba(255,255,255,0.15) inset, 0 4px 14px rgba(16,185,129,0.3);
+  }
+  button.primary:hover { background: var(--accent-hover); }
+  button:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+
+  .spinner {
+    width: 14px; height: 14px;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin .6s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .empty-state {
+    text-align: center;
+    padding: 80px 20px;
+    color: var(--muted);
+  }
+  .empty-icon {
+    width: 48px; height: 48px;
+    margin: 0 auto 16px;
+    color: var(--border);
+  }
+  .empty-title {
+    font-size: 16px; font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: 6px;
+  }
+  .skeleton {
+    background: var(--card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 16px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 24px;
+  }
+  .skel-line {
+    background: linear-gradient(90deg, var(--bg-elevated) 0%, var(--border) 50%, var(--bg-elevated) 100%);
+    background-size: 200% 100%;
+    animation: shimmer 1.4s infinite;
+    border-radius: 6px;
+    height: 12px;
+    margin-bottom: 10px;
+  }
+  .skel-avatar {
+    width: 200px; height: 200px; border-radius: 12px;
+    background: linear-gradient(90deg, var(--bg-elevated) 0%, var(--border) 50%, var(--bg-elevated) 100%);
+    background-size: 200% 100%;
+    animation: shimmer 1.4s infinite;
+  }
+  @keyframes shimmer { to { background-position: -200% 0; } }
+  .toast {
+    position: fixed;
+    bottom: 24px; right: 24px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    padding: 12px 16px 12px 14px;
+    border-radius: 10px;
+    box-shadow: var(--shadow-lg);
+    display: flex; align-items: center; gap: 10px;
+    font-size: 13px; font-weight: 500;
+    opacity: 0; transform: translateY(10px);
+    transition: opacity .2s, transform .2s;
+    pointer-events: none;
+    max-width: 360px;
+    z-index: 100;
+  }
+  .toast.show { opacity: 1; transform: translateY(0); }
+  .toast.error { border-left-color: var(--danger); }
+  .toast-icon { flex-shrink: 0; color: var(--accent); }
+  .toast.error .toast-icon { color: var(--danger); }
+
+  /* Playground */
+  .pg-controls {
+    background: var(--card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 14px;
+    padding: 20px;
+    margin-bottom: 28px;
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    gap: 16px;
+    align-items: end;
+  }
+  .field { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+  .field-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  /* Model dropdown */
+  .combo { position: relative; }
+  .combo-input {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    color: var(--text);
+    border-radius: 8px;
+    padding: 10px 12px;
+    font: inherit;
+    font-size: 13.5px;
+    width: 100%;
+    outline: none;
+    transition: border-color .12s;
+  }
+  .combo-input:focus { border-color: var(--accent); }
+  .combo-input::placeholder { color: var(--muted); }
+  .combo-selected {
+    display: flex; align-items: center; gap: 10px;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 6px 8px 6px 6px;
+    cursor: pointer;
+  }
+  .combo-selected .avatar-sm {
+    width: 34px; height: 34px; border-radius: 6px;
+    object-fit: cover; flex-shrink: 0;
+    background: var(--card);
+  }
+  .combo-selected .selected-name {
+    font-weight: 600; font-size: 13.5px;
+    flex: 1; min-width: 0;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .combo-selected .change-hint { font-size: 11px; color: var(--muted); }
+  .combo-selected:hover { border-color: var(--accent); }
+
+  .combo-popover {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0; right: 0;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    box-shadow: var(--shadow-lg);
+    max-height: 380px;
+    overflow: hidden;
+    display: none;
+    flex-direction: column;
+    z-index: 50;
+  }
+  .combo-popover.open { display: flex; }
+  .combo-search {
+    padding: 10px;
+    border-bottom: 1px solid var(--border-subtle);
+    background: var(--bg-elevated);
+  }
+  .combo-search input {
+    width: 100%;
+    background: var(--card);
+    border: 1px solid var(--border);
+    color: var(--text);
+    border-radius: 6px;
+    padding: 8px 10px;
+    font: inherit; font-size: 13px;
+    outline: none;
+  }
+  .combo-search input:focus { border-color: var(--accent); }
+  .combo-list { overflow-y: auto; padding: 4px; }
+  .combo-item {
+    display: grid;
+    grid-template-columns: 40px 1fr auto;
+    gap: 10px;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    align-items: center;
+    transition: background .1s;
+  }
+  .combo-item:hover, .combo-item.highlight { background: var(--card-hover); }
+  .combo-item .avatar-sm {
+    width: 40px; height: 40px; border-radius: 6px;
+    object-fit: cover;
+    background: var(--bg-elevated);
+  }
+  .combo-item .item-name {
+    font-size: 13.5px; font-weight: 500;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .combo-item .item-slug {
+    font-size: 11px; color: var(--muted);
+    font-family: 'SF Mono', Menlo, Monaco, Consolas, monospace;
+  }
+  .status-icons {
+    display: flex; gap: 14px; align-items: center;
+    padding: 8px 6px;
+  }
+  .status-icon {
+    position: relative;
+    width: 22px; height: 22px;
+    display: inline-flex; align-items: center; justify-content: center;
+    color: var(--muted);
+  }
+  .status-icon svg { width: 18px; height: 18px; }
+  .status-icon.has-any { color: var(--text); }
+  .mini-dot {
+    position: absolute;
+    display: inline-flex;
+    align-items: center; justify-content: center;
+    min-width: 12px; height: 12px;
+    padding: 0 3px;
+    border-radius: 999px;
+    font-size: 8px; font-weight: 700;
+    line-height: 1;
+    border: 1.5px solid var(--card);
+    pointer-events: auto;
+  }
+  .mini-dot.review { background: var(--warning); color: #241704; top: -7px; left: 50%; transform: translateX(-50%); }
+  .mini-dot.approved { background: var(--accent); color: #04220f; top: 50%; left: -7px; transform: translateY(-50%); }
+  .mini-dot.published { background: var(--info); color: #041322; bottom: -7px; left: 50%; transform: translateX(-50%); }
+  .combo-item:hover .mini-dot, .combo-item.highlight .mini-dot { border-color: var(--card-hover); }
+
+  /* Platform multi-select */
+  .pill-group {
+    display: flex; flex-wrap: wrap; align-items: center;
+    gap: 8px;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 8px;
+  }
+  .pill-divider {
+    width: 1px;
+    align-self: stretch;
+    background: var(--border);
+    margin: 2px 2px;
+  }
+  .pill {
+    position: relative;
+    display: inline-flex; align-items: center; gap: 7px;
+    background: var(--card);
+    color: var(--text-secondary);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 7px 12px 7px 10px;
+    font-size: 13px; font-weight: 500;
+    cursor: pointer;
+    user-select: none;
+    text-transform: capitalize;
+    transition: background .12s, border-color .12s, color .12s, transform .05s;
+  }
+  .pill:active { transform: translateY(1px); }
+  .pill svg { width: 15px; height: 15px; flex-shrink: 0; }
+  .pill .pill-check {
+    display: none;
+    width: 14px; height: 14px;
+    color: var(--plat, var(--accent));
+  }
+  .pill.active .pill-check { display: inline-flex; }
+  .pill:hover:not(.active) {
+    border-color: var(--text-secondary);
+    color: var(--text);
+    background: var(--card-hover);
+  }
+  .pill.active {
+    color: var(--plat, var(--accent));
+    background: var(--plat-bg, rgba(16, 185, 129, 0.12));
+    border-color: var(--plat, rgba(16, 185, 129, 0.5));
+    box-shadow: 0 0 0 1px var(--plat, transparent) inset;
+  }
+  .pill.pill-all { padding-right: 12px; }
+  .pill.pill-all.active {
+    color: var(--accent);
+    background: rgba(16, 185, 129, 0.14);
+    border-color: rgba(16, 185, 129, 0.55);
+    box-shadow: 0 0 0 1px rgba(16, 185, 129, 0.4) inset;
+  }
+  .pill.pill-all .pill-check { color: var(--accent); }
+
+  /* Generation output */
+  .gen-summary {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin-bottom: 18px;
+    color: var(--text-secondary);
+    font-size: 13px;
+  }
+  .gen-summary strong { color: var(--text); }
+  .fail-card {
+    background: var(--card);
+    border: 1px solid var(--border-subtle);
+    border-left: 3px solid var(--danger);
+    border-radius: 10px;
+    padding: 14px 18px;
+    color: var(--text-secondary);
+    font-size: 13px;
+  }
+  .fail-card .fail-title {
+    color: var(--danger); font-weight: 600;
+    text-transform: capitalize;
+    margin-bottom: 4px;
+  }
+
+  @media (max-width: 960px) {
+    aside.sidebar { width: 68px; padding: 20px 8px; }
+    aside.sidebar .brand-mark h1 { display: none; }
+    .tab span:not(.tab-count) { display: none; }
+    .tab .tab-count { display: none; }
+    .pg-controls { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 860px) {
+    .card-body { grid-template-columns: 160px 1fr; }
+    .avatar-wrap, .skel-avatar { width: 160px; height: 160px; }
+    .actions { grid-column: 1 / -1; flex-direction: row; min-width: 0; margin-top: 4px; }
+    .actions button { flex: 1; }
+  }
+  @media (max-width: 560px) {
+    .card-body { grid-template-columns: 1fr; }
+    .avatar-wrap, .skel-avatar { width: 100%; height: 220px; }
+  }
+</style>
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand-mark">
+      <span class="brand-dot"></span>
+      <h1>Social Factory</h1>
+    </div>
+    <div class="tab active" data-tab="playground">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+      <span>Playground</span>
+    </div>
+    <div class="tab" data-tab="review">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+      <span>Review</span>
+      <span class="tab-count" id="tab-count-review">–</span>
+    </div>
+    <div class="tab" data-tab="approved">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      <span>Approved</span>
+      <span class="tab-count" id="tab-count-approved">–</span>
+    </div>
+    <div class="tab" data-tab="published">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="m22 2-7 20-4-9-9-4Z"/></svg>
+      <span>Published</span>
+      <span class="tab-count" id="tab-count-published">–</span>
+    </div>
+  </aside>
+
+  <main class="main">
+    <!-- Playground -->
+    <section class="page" data-page="playground">
+      <div class="page-header">
+        <div>
+          <h2 class="page-title">Playground</h2>
+          <div class="page-subtitle">Pick a model and platforms, then generate a fresh batch.</div>
+        </div>
+      </div>
+
+      <div class="pg-controls">
+        <div class="field">
+          <span class="field-label">Model</span>
+          <div class="combo" id="model-combo">
+            <div class="combo-selected" id="model-selected">
+              <div class="avatar-sm" id="selected-avatar" style="display:none;"></div>
+              <div class="selected-name" id="selected-name">Choose a model…</div>
+              <span class="change-hint">▾</span>
+            </div>
+            <div class="combo-popover" id="model-popover">
+              <div class="combo-search">
+                <input type="text" id="model-search" placeholder="Search by name or slug…" autocomplete="off" />
+              </div>
+              <div class="combo-list" id="model-list"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="field">
+          <span class="field-label">Platforms</span>
+          <div class="pill-group" id="platform-group"></div>
+        </div>
+
+        <div class="field">
+          <span class="field-label">&nbsp;</span>
+          <button class="primary" id="generate-btn" disabled>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Start generate
+          </button>
+        </div>
+      </div>
+
+      <div id="playground-output"></div>
+    </section>
+
+    <!-- Review -->
+    <section class="page" data-page="review" style="display:none;">
+      <div class="page-header">
+        <div>
+          <h2 class="page-title">Awaiting review</h2>
+          <div class="page-subtitle">Approve to move to Approved, or delete to discard.</div>
+        </div>
+      </div>
+      <div class="list" id="review-list">
+        <div class="skeleton"><div class="skel-avatar"></div><div>
+          <div class="skel-line" style="width:30%;height:18px"></div>
+          <div class="skel-line" style="width:95%"></div>
+          <div class="skel-line" style="width:88%"></div>
+          <div class="skel-line" style="width:70%"></div>
+        </div></div>
+      </div>
+    </section>
+
+    <!-- Approved -->
+    <section class="page" data-page="approved" style="display:none;">
+      <div class="page-header">
+        <div>
+          <h2 class="page-title">Approved</h2>
+          <div class="page-subtitle">Send an item back to review if it needs edits.</div>
+        </div>
+      </div>
+      <div class="list" id="approved-list">
+        <div class="skeleton"><div class="skel-avatar"></div><div>
+          <div class="skel-line" style="width:30%;height:18px"></div>
+          <div class="skel-line" style="width:95%"></div>
+          <div class="skel-line" style="width:88%"></div>
+          <div class="skel-line" style="width:70%"></div>
+        </div></div>
+      </div>
+    </section>
+
+    <!-- Published -->
+    <section class="page" data-page="published" style="display:none;">
+      <div class="page-header">
+        <div>
+          <h2 class="page-title">Published</h2>
+          <div class="page-subtitle">Read-only history of what went live.</div>
+        </div>
+      </div>
+      <div class="list" id="published-list">
+        <div class="skeleton"><div class="skel-avatar"></div><div>
+          <div class="skel-line" style="width:30%;height:18px"></div>
+          <div class="skel-line" style="width:95%"></div>
+          <div class="skel-line" style="width:88%"></div>
+          <div class="skel-line" style="width:70%"></div>
+        </div></div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<div class="toast" id="toast">
+  <svg class="toast-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="20 6 9 17 4 12"></polyline>
+  </svg>
+  <span id="toast-msg"></span>
+</div>
+
+<script>
+/* --------------- constants + helpers --------------- */
+const PLATFORMS = ['instagram', 'facebook', 'x', 'reddit'];
+
+const PLATFORM_ICONS = {
+  facebook: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.51 1.5-3.9 3.78-3.9 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.77l-.44 2.89h-2.33v6.99A10 10 0 0 0 22 12"/></svg>',
+  instagram: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>',
+  x: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2H21.5l-7.5 8.573L22.5 22h-6.844l-5.36-7.03L4.16 22H.9l8.02-9.166L1.5 2h7.02l4.844 6.402L18.244 2Zm-1.2 18h1.86L7.05 3.9H5.06L17.044 20Z"/></svg>',
+  twitter: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2H21.5l-7.5 8.573L22.5 22h-6.844l-5.36-7.03L4.16 22H.9l8.02-9.166L1.5 2h7.02l4.844 6.402L18.244 2Zm-1.2 18h1.86L7.05 3.9H5.06L17.044 20Z"/></svg>',
+  reddit: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12.14a2.14 2.14 0 0 0-3.63-1.54c-1.42-1-3.36-1.63-5.52-1.71l.94-4.4 3.06.65a1.53 1.53 0 1 0 .15-.87l-3.42-.73a.43.43 0 0 0-.51.33l-1.05 4.93c-2.19.07-4.16.7-5.6 1.71a2.14 2.14 0 1 0-2.36 3.5c-.03.2-.05.4-.05.6 0 3.06 3.56 5.54 7.94 5.54s7.94-2.48 7.94-5.54c0-.2-.02-.4-.05-.6A2.14 2.14 0 0 0 22 12.14M7 13.7a1.43 1.43 0 1 1 2.86 0 1.43 1.43 0 0 1-2.86 0m8.71 3.78c-1.05 1.05-3.05 1.13-3.71 1.13s-2.66-.08-3.71-1.13a.4.4 0 0 1 .57-.57c.66.66 2.09.9 3.14.9s2.47-.24 3.14-.9a.4.4 0 0 1 .57.57m-.13-2.35a1.43 1.43 0 1 1 0-2.86 1.43 1.43 0 0 1 0 2.86"/></svg>',
+};
+const platformIcon = (name) => PLATFORM_ICONS[name?.toLowerCase()] ||
+  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>';
+
+const escapeHtml = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({
+  '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+}[c]));
+
+const timeAgo = (iso) => {
+  if (!iso) return '';
+  const then = new Date(iso).getTime();
+  if (Number.isNaN(then)) return '';
+  const diff = Math.max(0, Date.now() - then);
+  const s = Math.floor(diff / 1000);
+  if (s < 60) return `${s}s ago`;
+  const m = Math.floor(s / 60);
+  if (m < 60) return `${m}m ago`;
+  const h = Math.floor(m / 60);
+  if (h < 24) return `${h}h ago`;
+  const d = Math.floor(h / 24);
+  return `${d}d ago`;
+};
+
+const toastEl = document.getElementById('toast');
+const toastMsg = document.getElementById('toast-msg');
+function toast(msg, isError = false) {
+  toastMsg.textContent = msg;
+  toastEl.classList.toggle('error', isError);
+  toastEl.querySelector('.toast-icon').innerHTML = isError
+    ? '<circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>'
+    : '<polyline points="20 6 9 17 4 12"></polyline>';
+  toastEl.classList.add('show');
+  clearTimeout(toast._t);
+  toast._t = setTimeout(() => toastEl.classList.remove('show'), 2800);
+}
+
+/* --------------- tab switching --------------- */
+const tabs = document.querySelectorAll('.tab');
+const pages = document.querySelectorAll('.page');
+tabs.forEach((t) => t.addEventListener('click', () => switchTab(t.dataset.tab)));
+function switchTab(name) {
+  tabs.forEach((t) => t.classList.toggle('active', t.dataset.tab === name));
+  pages.forEach((p) => (p.style.display = p.dataset.page === name ? '' : 'none'));
+  if (name === 'review') loadReview();
+  if (name === 'approved') loadApproved();
+  if (name === 'published') loadPublished();
+  if (name === 'playground') refreshSummary();
+}
+
+/* --------------- card rendering --------------- */
+function renderCard(item, mode) {
+  const d = item.data || {};
+  const brand = d.brand?.name || d.brand?.slug || 'Unknown';
+  const platform = (d.platform || 'unknown').toLowerCase();
+  const title = d.content?.title || '';
+  const caption = d.content?.caption || '';
+  const hashtags = d.content?.hashtags || [];
+  const cta = d.content?.cta || '';
+  const img = d.assets?.profile_image_url || '';
+  const subreddit = d.target?.subreddit || '';
+  const flair = d.target?.flair || '';
+  const status = d.status || (mode === 'approved' ? 'approved' : mode === 'published' ? 'published' : 'review');
+  const timeSource = mode === 'published' ? (d.published_at || d.approved_at || d.created_at)
+                   : mode === 'approved' ? (d.approved_at || d.created_at)
+                   : d.created_at;
+  const created = timeSource ? timeAgo(timeSource) : '';
+  const initials = brand.split(/\s+/).map(w => w[0]).slice(0, 2).join('').toUpperCase();
+
+  const card = document.createElement('section');
+  card.className = `card platform-${platform} is-${mode}`;
+  card.dataset.file = item.file;
+
+  let actionsHtml = '';
+  if (mode === 'review') {
+    actionsHtml = `
+      <button class="approve" data-action="approve">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        Approve
+      </button>
+      <button class="delete" data-action="delete">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/></svg>
+        Delete
+      </button>`;
+  } else if (mode === 'approved') {
+    actionsHtml = `
+      <button class="revert" data-action="revert">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
+        Send to review
+      </button>`;
+  }
+
+  card.innerHTML = `
+    <div class="platform-strip">
+      <span class="platform-badge">
+        <span class="icon">${platformIcon(platform)}</span>
+        ${escapeHtml(platform)}
+      </span>
+      <div class="strip-meta">
+        ${created ? `<span class="timestamp">${escapeHtml(created)}</span>` : ''}
+        <span class="status-pill"><span class="pulse"></span>${escapeHtml(status)}</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="avatar-wrap">
+        <img class="avatar" src="${escapeHtml(img)}" alt="${escapeHtml(brand)}" />
+        <div class="avatar-fallback">${escapeHtml(initials || '?')}</div>
+      </div>
+      <div class="body">
+        <div class="brand-name">${escapeHtml(brand)}</div>
+        ${subreddit || flair ? `
+          <div class="target-row">
+            ${subreddit ? `<span class="target-chip">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12.14a2.14 2.14 0 0 0-3.63-1.54c-1.42-1-3.36-1.63-5.52-1.71l.94-4.4 3.06.65a1.53 1.53 0 1 0 .15-.87l-3.42-.73a.43.43 0 0 0-.51.33l-1.05 4.93c-2.19.07-4.16.7-5.6 1.71a2.14 2.14 0 1 0-2.36 3.5c-.03.2-.05.4-.05.6 0 3.06 3.56 5.54 7.94 5.54s7.94-2.48 7.94-5.54c0-.2-.02-.4-.05-.6A2.14 2.14 0 0 0 22 12.14"/></svg>
+              <span class="target-key">r/</span>${escapeHtml(subreddit)}
+            </span>` : ''}
+            ${flair ? `<span class="target-chip"><span class="target-key">flair</span>${escapeHtml(flair)}</span>` : ''}
+          </div>` : ''}
+        ${title ? `<div class="post-title">${escapeHtml(title)}</div>` : ''}
+        <div class="caption">${escapeHtml(caption)}</div>
+        ${hashtags.length ? `<div class="hashtags">${hashtags.map((t) => `<span class="tag">${escapeHtml(t)}</span>`).join('')}</div>` : ''}
+        ${cta ? `<div class="cta"><span class="cta-label">CTA</span><span>${escapeHtml(cta)}</span></div>` : ''}
+        <div class="file-meta">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          ${escapeHtml(item.file)}
+        </div>
+      </div>
+      ${actionsHtml ? `<div class="actions">${actionsHtml}</div>` : ''}
+    </div>
+  `;
+
+  const imgEl = card.querySelector('.avatar');
+  const fallback = card.querySelector('.avatar-fallback');
+  imgEl.addEventListener('error', () => { imgEl.style.display = 'none'; fallback.style.display = 'flex'; });
+
+  const approveBtn = card.querySelector('[data-action="approve"]');
+  const deleteBtn = card.querySelector('[data-action="delete"]');
+  const revertBtn = card.querySelector('[data-action="revert"]');
+  if (approveBtn) approveBtn.addEventListener('click', (e) => approve(item.file, e.currentTarget, card));
+  if (deleteBtn) deleteBtn.addEventListener('click', (e) => del(item.file, e.currentTarget, card));
+  if (revertBtn) revertBtn.addEventListener('click', (e) => revert(item.file, e.currentTarget, card));
+  return card;
+}
+
+function renderEmpty(container, title, subtitle) {
+  container.innerHTML = `
+    <div class="empty-state">
+      <svg class="empty-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+        <polyline points="22 4 12 14.01 9 11.01"/>
+      </svg>
+      <div class="empty-title">${escapeHtml(title)}</div>
+      <div>${escapeHtml(subtitle)}</div>
+    </div>`;
+}
+
+function animateOut(card, onDone) {
+  card.style.transition = 'opacity .25s, transform .25s, margin .25s, max-height .3s';
+  card.style.maxHeight = card.offsetHeight + 'px';
+  requestAnimationFrame(() => {
+    card.style.opacity = '0';
+    card.style.transform = 'translateX(30px)';
+    card.style.maxHeight = '0';
+    card.style.marginBottom = '0';
+  });
+  setTimeout(onDone, 300);
+}
+
+/* --------------- section loaders --------------- */
+const reviewListEl = document.getElementById('review-list');
+const approvedListEl = document.getElementById('approved-list');
+const publishedListEl = document.getElementById('published-list');
+const tabCountReview = document.getElementById('tab-count-review');
+const tabCountApproved = document.getElementById('tab-count-approved');
+const tabCountPublished = document.getElementById('tab-count-published');
+
+async function loadSection(endpoint, container, countTarget, mode, empty) {
+  try {
+    const res = await fetch(endpoint);
+    if (!res.ok) throw new Error('Failed to fetch');
+    const { items } = await res.json();
+    container.innerHTML = '';
+    countTarget.textContent = items.length;
+    if (!items.length) { renderEmpty(container, empty.title, empty.subtitle); return; }
+    items.forEach((it) => container.appendChild(renderCard(it, mode)));
+  } catch (err) {
+    countTarget.textContent = '0';
+    container.innerHTML = `<div class="empty-state" style="color: var(--danger)">Error loading: ${escapeHtml(err.message)}</div>`;
+  }
+}
+
+const loadReview = () => loadSection('/api/review', reviewListEl, tabCountReview, 'review',
+  { title: 'All caught up', subtitle: 'No items are waiting for review.' });
+const loadApproved = () => loadSection('/api/approved', approvedListEl, tabCountApproved, 'approved',
+  { title: 'Nothing approved yet', subtitle: 'Approved items will appear here.' });
+const loadPublished = () => loadSection('/api/published', publishedListEl, tabCountPublished, 'published',
+  { title: 'Nothing published yet', subtitle: 'Published items will appear here.' });
+
+/* --------------- actions --------------- */
+async function approve(file, btn, card) {
+  btn.disabled = true;
+  btn.innerHTML = '<span class="spinner"></span> Approving';
+  try {
+    const res = await fetch('/api/approve', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ file }),
+    });
+    const body = await res.json();
+    if (!res.ok || !body.ok) throw new Error(body.error || 'Approve failed');
+    animateOut(card, () => {
+      card.remove();
+      const remaining = reviewListEl.querySelectorAll('.card').length;
+      tabCountReview.textContent = remaining;
+      if (!remaining) renderEmpty(reviewListEl, 'All caught up', 'No items are waiting for review.');
+      refreshSummary();
+    });
+    toast(`Approved · ${file.replace(/\.json$/, '')}`);
+  } catch (err) {
+    btn.disabled = false;
+    btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Approve';
+    toast(err.message, true);
+  }
+}
+
+async function del(file, btn, card) {
+  const sibling = card.querySelector('[data-action="approve"]');
+  if (!confirm(`Delete "${file}"? This cannot be undone.`)) return;
+  btn.disabled = true;
+  if (sibling) sibling.disabled = true;
+  btn.innerHTML = '<span class="spinner"></span> Deleting';
+  try {
+    const res = await fetch('/api/delete', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ file }),
+    });
+    const body = await res.json();
+    if (!res.ok || !body.ok) throw new Error(body.error || 'Delete failed');
+    animateOut(card, () => {
+      card.remove();
+      const remaining = reviewListEl.querySelectorAll('.card').length;
+      tabCountReview.textContent = remaining;
+      if (!remaining) renderEmpty(reviewListEl, 'All caught up', 'No items are waiting for review.');
+      refreshSummary();
+    });
+    toast(`Deleted · ${file.replace(/\.json$/, '')}`);
+  } catch (err) {
+    btn.disabled = false;
+    if (sibling) sibling.disabled = false;
+    btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/></svg> Delete';
+    toast(err.message, true);
+  }
+}
+
+async function revert(file, btn, card) {
+  btn.disabled = true;
+  btn.innerHTML = '<span class="spinner"></span> Moving';
+  try {
+    const res = await fetch('/api/unapprove', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ file }),
+    });
+    const body = await res.json();
+    if (!res.ok || !body.ok) throw new Error(body.error || 'Move failed');
+    animateOut(card, () => {
+      card.remove();
+      const remaining = approvedListEl.querySelectorAll('.card').length;
+      tabCountApproved.textContent = remaining;
+      if (!remaining) renderEmpty(approvedListEl, 'Nothing approved yet', 'Approved items will appear here.');
+      refreshSummary();
+    });
+    toast(`Sent to review · ${file.replace(/\.json$/, '')}`);
+  } catch (err) {
+    btn.disabled = false;
+    btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg> Send to review';
+    toast(err.message, true);
+  }
+}
+
+/* --------------- playground: state --------------- */
+let BRANDS = [];
+let SUMMARY = {};
+let selectedBrand = null;
+let selectedPlatforms = new Set(PLATFORMS); // default all
+let searchQuery = '';
+let highlightedIndex = 0;
+
+const modelCombo = document.getElementById('model-combo');
+const modelSelected = document.getElementById('model-selected');
+const selectedAvatar = document.getElementById('selected-avatar');
+const selectedName = document.getElementById('selected-name');
+const modelPopover = document.getElementById('model-popover');
+const modelSearch = document.getElementById('model-search');
+const modelList = document.getElementById('model-list');
+const platformGroup = document.getElementById('platform-group');
+const generateBtn = document.getElementById('generate-btn');
+const playgroundOutput = document.getElementById('playground-output');
+
+/* --------------- playground: platform pills --------------- */
+const CHECK_SVG = '<svg class="pill-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>';
+
+function renderPlatformPills() {
+  platformGroup.innerHTML = '';
+  const allActive = PLATFORMS.every((p) => selectedPlatforms.has(p));
+  const someActive = !allActive && PLATFORMS.some((p) => selectedPlatforms.has(p));
+  const allPill = document.createElement('div');
+  allPill.className = `pill pill-all${allActive ? ' active' : ''}`;
+  allPill.innerHTML = `
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a15 15 0 0 1 0 20"/><path d="M12 2a15 15 0 0 0 0 20"/><path d="M2 12h20"/></svg>
+    ${allActive ? 'All platforms' : someActive ? `${selectedPlatforms.size} selected` : 'Select all'}
+    ${CHECK_SVG}
+  `;
+  allPill.title = allActive ? 'Clear selection' : 'Select all platforms';
+  allPill.addEventListener('click', () => {
+    if (allActive) { selectedPlatforms.clear(); }
+    else { PLATFORMS.forEach((p) => selectedPlatforms.add(p)); }
+    renderPlatformPills();
+    updateGenerateState();
+  });
+  platformGroup.appendChild(allPill);
+
+  const divider = document.createElement('span');
+  divider.className = 'pill-divider';
+  platformGroup.appendChild(divider);
+
+  PLATFORMS.forEach((p) => {
+    const pill = document.createElement('div');
+    const active = selectedPlatforms.has(p);
+    pill.className = `pill platform-${p}${active ? ' active' : ''}`;
+    pill.innerHTML = `${platformIcon(p)} <span>${p}</span> ${CHECK_SVG}`;
+    pill.title = active ? `Deselect ${p}` : `Select ${p}`;
+    pill.addEventListener('click', () => {
+      if (selectedPlatforms.has(p)) selectedPlatforms.delete(p);
+      else selectedPlatforms.add(p);
+      renderPlatformPills();
+      updateGenerateState();
+    });
+    platformGroup.appendChild(pill);
+  });
+}
+
+/* --------------- playground: model combo --------------- */
+function statusIconsHtml(slug) {
+  const perPlatform = SUMMARY[slug] || {};
+  return PLATFORMS.map((p) => {
+    const c = perPlatform[p] || { review: 0, approved: 0, published: 0 };
+    const has = c.review || c.approved || c.published;
+    const iconTip = has
+      ? `${p} · ${c.review} review / ${c.approved} approved / ${c.published} published`
+      : `${p} · nothing yet`;
+    const dots = [];
+    if (c.review) dots.push(`<span class="mini-dot review" title="${p} · ${c.review} in review">${c.review}</span>`);
+    if (c.approved) dots.push(`<span class="mini-dot approved" title="${p} · ${c.approved} approved">${c.approved}</span>`);
+    if (c.published) dots.push(`<span class="mini-dot published" title="${p} · ${c.published} published">${c.published}</span>`);
+    return `<span class="status-icon${has ? ' has-any' : ''}" title="${iconTip}">
+      ${platformIcon(p)}
+      ${dots.join('')}
+    </span>`;
+  }).join('');
+}
+
+function filteredBrands() {
+  const q = searchQuery.trim().toLowerCase();
+  if (!q) return BRANDS;
+  return BRANDS.filter((b) =>
+    b.name.toLowerCase().includes(q) || b.slug.toLowerCase().includes(q));
+}
+
+function renderModelList() {
+  const items = filteredBrands();
+  if (!items.length) {
+    modelList.innerHTML = '<div style="padding:24px; text-align:center; color: var(--muted); font-size:13px;">No models match.</div>';
+    return;
+  }
+  if (highlightedIndex >= items.length) highlightedIndex = 0;
+  modelList.innerHTML = items.map((b, i) => `
+    <div class="combo-item${i === highlightedIndex ? ' highlight' : ''}" data-slug="${escapeHtml(b.slug)}">
+      <img class="avatar-sm" src="${escapeHtml(b.profile_image_url || '')}" onerror="this.style.visibility='hidden'"/>
+      <div style="min-width:0;">
+        <div class="item-name">${escapeHtml(b.name)}</div>
+        <div class="item-slug">${escapeHtml(b.slug)}</div>
+      </div>
+      <div class="status-icons">${statusIconsHtml(b.slug)}</div>
+    </div>
+  `).join('');
+  modelList.querySelectorAll('.combo-item').forEach((el, i) => {
+    el.addEventListener('click', () => {
+      const slug = el.dataset.slug;
+      const brand = BRANDS.find((b) => b.slug === slug);
+      if (brand) selectBrand(brand);
+    });
+    el.addEventListener('mouseenter', () => { highlightedIndex = i; });
+  });
+}
+
+function selectBrand(brand) {
+  selectedBrand = brand;
+  selectedName.textContent = brand.name;
+  if (brand.profile_image_url) {
+    selectedAvatar.style.display = 'block';
+    selectedAvatar.style.background = `url('${brand.profile_image_url}') center/cover no-repeat`;
+  } else {
+    selectedAvatar.style.display = 'none';
+  }
+  closePopover();
+  updateGenerateState();
+}
+
+function openPopover() {
+  modelPopover.classList.add('open');
+  modelSearch.value = searchQuery;
+  modelSearch.focus();
+  renderModelList();
+}
+function closePopover() { modelPopover.classList.remove('open'); }
+
+modelSelected.addEventListener('click', (e) => {
+  e.stopPropagation();
+  if (modelPopover.classList.contains('open')) closePopover();
+  else openPopover();
+});
+document.addEventListener('click', (e) => {
+  if (!modelCombo.contains(e.target)) closePopover();
+});
+modelSearch.addEventListener('input', (e) => {
+  searchQuery = e.target.value;
+  highlightedIndex = 0;
+  renderModelList();
+});
+modelSearch.addEventListener('keydown', (e) => {
+  const items = filteredBrands();
+  if (e.key === 'ArrowDown') { e.preventDefault(); highlightedIndex = Math.min(items.length - 1, highlightedIndex + 1); renderModelList(); scrollHighlightedIntoView(); }
+  else if (e.key === 'ArrowUp') { e.preventDefault(); highlightedIndex = Math.max(0, highlightedIndex - 1); renderModelList(); scrollHighlightedIntoView(); }
+  else if (e.key === 'Enter') { e.preventDefault(); const b = items[highlightedIndex]; if (b) selectBrand(b); }
+  else if (e.key === 'Escape') { closePopover(); }
+});
+function scrollHighlightedIntoView() {
+  const el = modelList.querySelector('.combo-item.highlight');
+  if (el) el.scrollIntoView({ block: 'nearest' });
+}
+
+function updateGenerateState() {
+  generateBtn.disabled = !selectedBrand || selectedPlatforms.size === 0;
+}
+
+/* --------------- playground: generate --------------- */
+generateBtn.addEventListener('click', runGenerate);
+
+async function runGenerate() {
+  if (!selectedBrand || !selectedPlatforms.size) return;
+  const platforms = Array.from(selectedPlatforms);
+  generateBtn.disabled = true;
+  generateBtn.innerHTML = '<span class="spinner"></span> Generating';
+  playgroundOutput.innerHTML = `
+    <div class="gen-summary">
+      <strong>${escapeHtml(selectedBrand.name)}</strong> · generating for
+      ${platforms.map((p) => `<span style="text-transform:capitalize; margin-left:6px;">${escapeHtml(p)}</span>`).join(', ')} …
+    </div>
+    <div class="list">
+      ${platforms.map(() => `
+        <div class="skeleton"><div class="skel-avatar"></div><div>
+          <div class="skel-line" style="width:30%;height:18px"></div>
+          <div class="skel-line" style="width:95%"></div>
+          <div class="skel-line" style="width:88%"></div>
+          <div class="skel-line" style="width:70%"></div>
+        </div></div>`).join('')}
+    </div>`;
+
+  try {
+    const res = await fetch('/api/generate', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ slug: selectedBrand.slug, platforms }),
+    });
+    const body = await res.json();
+    if (!res.ok || !body.ok) throw new Error(body.error || 'Generation failed');
+    renderGenerateResults(body);
+    toast(`Generated ${body.results.filter(r => r.status === 'success').length}/${body.results.length} posts`);
+    refreshSummary();
+  } catch (err) {
+    playgroundOutput.innerHTML = `<div class="fail-card"><div class="fail-title">Generation failed</div>${escapeHtml(err.message)}</div>`;
+    toast(err.message, true);
+  } finally {
+    generateBtn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg> Start generate';
+    updateGenerateState();
+  }
+}
+
+function renderGenerateResults({ brand, results }) {
+  const ok = results.filter((r) => r.status === 'success');
+  const bad = results.filter((r) => r.status !== 'success');
+  playgroundOutput.innerHTML = '';
+  const summary = document.createElement('div');
+  summary.className = 'gen-summary';
+  summary.innerHTML = `<strong>${escapeHtml(brand.name)}</strong> · ${ok.length} succeeded${bad.length ? `, ${bad.length} failed` : ''}. Successful posts are now in <em>Review</em>.`;
+  playgroundOutput.appendChild(summary);
+
+  const list = document.createElement('div');
+  list.className = 'list';
+  playgroundOutput.appendChild(list);
+
+  results.forEach((r) => {
+    if (r.status === 'success') {
+      list.appendChild(renderCard({ file: r.file, data: r.data }, 'review'));
+    } else {
+      const err = document.createElement('div');
+      err.className = 'fail-card';
+      err.innerHTML = `<div class="fail-title">${escapeHtml(r.platform)} · ${escapeHtml(r.status)}</div>${escapeHtml(r.error || (r.errors && r.errors.join(', ')) || 'Unknown error')}`;
+      list.appendChild(err);
+    }
+  });
+}
+
+/* --------------- init --------------- */
+async function loadBrands() {
+  const res = await fetch('/api/brands');
+  const { brands } = await res.json();
+  BRANDS = brands;
+}
+
+async function refreshSummary() {
+  try {
+    const res = await fetch('/api/summary');
+    const { summary } = await res.json();
+    SUMMARY = summary || {};
+    if (modelPopover.classList.contains('open')) renderModelList();
+    // update tab counts too
+    let review = 0, approved = 0, published = 0;
+    for (const slug of Object.keys(SUMMARY)) {
+      for (const p of PLATFORMS) {
+        const c = SUMMARY[slug][p] || {};
+        review += c.review || 0;
+        approved += c.approved || 0;
+        published += c.published || 0;
+      }
+    }
+    tabCountReview.textContent = review;
+    tabCountApproved.textContent = approved;
+    tabCountPublished.textContent = published;
+  } catch {}
+}
+
+(async function init() {
+  renderPlatformPills();
+  await Promise.all([loadBrands(), refreshSummary()]);
+})();
+</script>
+</body>
+</html>

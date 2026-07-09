@@ -1,0 +1,33 @@
+{
+  "brand": {
+    "slug": "saanvi-rao",
+    "name": "Saanvi Rao"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/saanvi-rao/images/sfw/saanvi-rao_sfw_20251223_134938_saanvi-rao__sfw__2025-12-23174912-23043456-4055275651015871_00001_.png?quality=85&format=webp"
+  },
+  "platform": "instagram",
+  "content": {
+    "caption": "Born in vibrant Mumbai, I turned festival moments at Ganesh Chaturthi into runway dreams. Each step blends tradition with bold glamour, fueling my ambition as a model and content creator. The city’s energy keeps me social and inspired every day!",
+    "hashtags": [
+      "#model",
+      "#bold",
+      "#glamorous",
+      "#ambitious",
+      "#fashionista",
+      "#vibrant",
+      "#contentcreator",
+      "#MumbaiVibes",
+      "#IndianModel",
+      "#SocialSoul"
+    ],
+    "cta": "What festival memory makes you smile? Tell me below!"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "approved",
+  "created_at": "2026-07-09T12:22:43.284Z",
+  "approved_at": "2026-07-09T12:25:36.864Z"
+}
