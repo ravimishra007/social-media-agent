@@ -27,7 +27,12 @@ export function buildPrompt(
   let template = readFileSync(templatePath, "utf8");
 
   const trendText = trend
-    ? `Topic: ${trend.topic}\nSummary: ${trend.summary}`
+    ? [
+        `Topic: ${trend.topic}`,
+        `Summary: ${trend.summary}`,
+        trend.angle ? `Angle: ${trend.angle}` : null,
+        trend.source_url ? `Source: ${trend.source_url}` : null
+      ].filter(Boolean).join("\n")
     : "No current trend available. Create an evergreen post.";
 
   const variables = {

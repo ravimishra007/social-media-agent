@@ -37,7 +37,8 @@
 
   "instagram": {
     "content": {
-      "max_words": 150
+      "min_words": 10,
+      "max_words": 220
     },
     "hashtags": {
       "max": 10
@@ -46,7 +47,8 @@
 
   "facebook": {
     "content": {
-      "max_words": 180
+      "min_words": 8,
+      "max_words": 80
     },
     "hashtags": {
       "max": 5
@@ -55,7 +57,8 @@
 
   "x": {
     "content": {
-      "max_words": 45
+      "min_words": 5,
+      "max_words": 40
     },
     "hashtags": {
       "max": 2
@@ -70,8 +73,8 @@
       "enabled": false
     },
     "content": {
-      "min_words": 80,
-      "max_words": 300
+      "min_words": 40,
+      "max_words": 400
     }
   }
 }

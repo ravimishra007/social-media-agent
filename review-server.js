@@ -9,6 +9,7 @@ import { buildPrompt } from './agent/promptBuilder.js';
 import { generateContent } from './services/grok.js';
 import { validateContent } from './agent/validator.js';
 import { saveReview } from './agent/saveReview.js';
+import { validateBrandSafety } from './agent/brand-safety-validator/brandSafetyValidator.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REVIEW_DIR = path.join(__dirname, 'review');
@@ -118,6 +119,7 @@ const listBrands = async () => {
     slug: b.slug,
     name: b.name,
     profile_image_url: b.profile_image_url ?? null,
+    isSFW: b.isSFW === true,
   }));
 };
 
@@ -243,6 +245,33 @@ const server = http.createServer(async (req, res) => {
       const body = await readBody(req);
       const result = await runGenerate({ slug: body.slug, platforms: body.platforms });
       return sendJson(res, 200, { ok: true, ...result });
+    }
+
+    if (req.method === 'GET' && url.pathname === '/api/validate-safety') {
+      const slug = url.searchParams.get('slug');
+      if (!isSafeSlug(slug)) throw new Error('Invalid brand slug');
+
+      res.writeHead(200, {
+        'Content-Type': 'text/event-stream; charset=utf-8',
+        'Cache-Control': 'no-cache, no-transform',
+        'Connection': 'keep-alive',
+        'X-Accel-Buffering': 'no',
+      });
+
+      const send = (event) => {
+        res.write(`data: ${JSON.stringify(event)}\n\n`);
+      };
+      const heartbeat = setInterval(() => res.write(': ping\n\n'), 15_000);
+
+      try {
+        await validateBrandSafety(slug, send);
+      } catch (err) {
+        send({ step: 'done', ok: false, status: 'error', error: err.message });
+      } finally {
+        clearInterval(heartbeat);
+        res.end();
+      }
+      return;
     }
 
     sendJson(res, 404, { error: 'Not found' });

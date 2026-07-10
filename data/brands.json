@@ -3,7 +3,7 @@
     "slug": "yasmine-khalil",
     "name": "Yasmine Khalil",
     "description": "Aisha Mohammed, a Somali model and content creator, gracefully embodies the warmth and confidence of her heritage.",
-    "profile_image_url": "https://xgen.b-cdn.net/models/aisha-mohammed/images/sfw/aisha-mohammed_sfw_20260406_001649_aisha-mohammed__sfw__2026-04-06001643-18722808-7122339411426454_00001_.png?quality=85&format=webp",
+    "profile_image_url": "https://xgen.b-cdn.net/models/yasmine-khalil/images/sfw/yasmine-khalil_sfw_20260424_035519_yasmine-khalil__sfw__2026-04-24035514-18722808-8862492278568944_00001_.png",
     "secondary_tags": [
       "content-creator",
       "artistic",
@@ -14,13 +14,14 @@
       "model"
     ],
     "country": "Somalia",
-    "ethnicity": "African"
+    "ethnicity": "African",
+    "isSFW": true
   },
   {
     "slug": "vera-popov",
     "name": "Vera Popov",
     "description": "Vera Popov, a Serbian beauty from Belgrade, discovered her passion for modeling after years of dancing the traditional kolo at local festivals, her elegance and warmth captivating all who watched.",
-    "profile_image_url": "https://xgen.b-cdn.net/models/vera-popov/images/sfw/vera-popov_sfw_20260406_055030_vera-popov__sfw__2026-04-06055025-18722808-8280919095407665_00001_.png?quality=85&format=webp",
+    "profile_image_url": "https://xgen.b-cdn.net/models/vera-popov/images/sfw/vera-popov_sfw_20260424_025936_vera-popov__sfw__2026-04-24025930-18722808-407873484305295_00001_.png",
     "secondary_tags": [
       "sophisticated",
       "artistic",
@@ -31,13 +32,14 @@
       "dancer"
     ],
     "country": "Serbia",
-    "ethnicity": "European"
+    "ethnicity": "European",
+    "isSFW": true
   },
   {
     "slug": "tatiana-vinogradova",
     "name": "Tatiana Vinogradova",
     "description": "Born in the vibrant cultural hub of Saint Petersburg, Tatiana Vinogradova was nurtured by her family's warm traditions of heartfelt folk music gatherings around the samovar, fostering her innate...",
-    "profile_image_url": "https://xgen.b-cdn.net/models/tatiana-vinogradova/images/sfw/tatiana-vinogradova_sfw_20260406_054532_tatiana-vinogradova__sfw__2026-04-06054529-18722808-3769211423822063_00001_.png?quality=85&format=webp",
+    "profile_image_url": "https://xgen.b-cdn.net/models/tatiana-vinogradova/images/sfw/tatiana-vinogradova_sfw_20260424_025123_tatiana-vinogradova__sfw__2026-04-24025117-18722808-7894625873579771_00001_.png",
     "secondary_tags": [
       "caring",
       "music-lover",
@@ -51,26 +53,28 @@
       "warm"
     ],
     "country": "Russia",
-    "ethnicity": "European"
+    "ethnicity": "European",
+    "isSFW": true
   },
   {
     "slug": "tara-brennan",
     "name": "Tara Brennan",
     "description": "Tara Brennan, hailing from the vibrant streets of Dublin, Ireland, turned her charm and wit into a flourishing career as a content creator.",
-    "profile_image_url": "https://xgen.b-cdn.net/models/tara-brennan/images/sfw/tara-brennan_sfw_20260406_054311_tara-brennan__sfw__2026-04-06054307-18722808-7089362927409699_00001_.png?quality=85&format=webp",
+    "profile_image_url": "https://xgen.b-cdn.net/models/tara-brennan/images/sfw/tara-brennan_sfw_20260424_022145_tara-brennan__sfw__2026-04-24022139-18722808-2754243679565249_00001_.png",
     "secondary_tags": [
       "content-creator",
       "vibrant",
       "friendly"
     ],
     "country": "Ireland",
-    "ethnicity": "European"
+    "ethnicity": "European",
+    "isSFW": true
   },
   {
     "slug": "su-jin-park",
     "name": "Su-Jin Park",
     "description": "Su-Jin Park, a bubbly and sweet content creator from Seoul, South Korea, always had a passion for K-pop and fashion, which she charmingly shares with her followers.",
-    "profile_image_url": "https://xgen.b-cdn.net/models/su-jin-park/images/sfw/su-jin-park_sfw_20260406_054057_su-jin-park__sfw__2026-04-06054053-18722808-325304072682007_00001_.png?quality=85&format=webp",
+    "profile_image_url": "https://xgen.b-cdn.net/models/su-jin-park/images/sfw/su-jin-park_sfw_20260424_015402_su-jin-park__sfw__2026-04-24015356-18722808-4594802713998604_00001_.png",
     "secondary_tags": [
       "content-creator",
       "genuine",
@@ -80,7 +84,8 @@
       "dancer"
     ],
     "country": "South Korea",
-    "ethnicity": "East Asian"
+    "ethnicity": "East Asian",
+    "isSFW": true
   },
   {
     "slug": "sophia-gagnon",
@@ -368,7 +373,8 @@
       "singer"
     ],
     "country": "Sweden",
-    "ethnicity": "European"
+    "ethnicity": "European",
+    "isSFW": true
   },
   {
     "slug": "kathleen-torres",
@@ -1683,7 +1689,7 @@
     ],
     "country": "Germany",
     "ethnicity": "European",
-     "reddit": {
+    "reddit": {
       "subreddit": "comfyui",
       "flair": null
     }
@@ -1701,7 +1707,7 @@
     ],
     "country": "USA",
     "ethnicity": "American",
-     "reddit": {
+    "reddit": {
       "subreddit": "comfyui",
       "flair": null
     }

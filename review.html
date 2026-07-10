@@ -448,9 +448,11 @@
     display: grid;
     grid-template-columns: 1fr 1fr auto;
     gap: 16px;
-    align-items: end;
+    align-items: start;
   }
   .field { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+  .pg-actions { gap: 8px; min-width: 160px; }
+  .pg-actions button { width: 100%; }
   .field-label {
     font-size: 11px;
     font-weight: 700;
@@ -547,7 +549,15 @@
   .combo-item .item-name {
     font-size: 13.5px; font-weight: 500;
     white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    display: flex; align-items: center; gap: 6px;
   }
+  .sfw-tick {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 14px; height: 14px; border-radius: 999px;
+    background: rgba(16, 185, 129, 0.2); color: var(--accent);
+    flex-shrink: 0;
+  }
+  .sfw-tick svg { width: 10px; height: 10px; }
   .combo-item .item-slug {
     font-size: 11px; color: var(--muted);
     font-family: 'SF Mono', Menlo, Monaco, Consolas, monospace;
@@ -664,6 +674,101 @@
     margin-bottom: 4px;
   }
 
+  /* Safety agent live timeline */
+  .safety-panel {
+    background: var(--card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 14px;
+    padding: 20px;
+  }
+  .safety-head {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 16px;
+  }
+  .safety-title {
+    font-size: 14px; font-weight: 600; letter-spacing: -0.01em;
+  }
+  .safety-status {
+    font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+    padding: 4px 10px; border-radius: 999px;
+    background: rgba(245, 158, 11, 0.12); color: var(--warning);
+    border: 1px solid rgba(245, 158, 11, 0.25);
+  }
+  .safety-status.ok { background: rgba(16, 185, 129, 0.12); color: var(--accent); border-color: rgba(16, 185, 129, 0.25); }
+  .safety-status.fail { background: rgba(239, 68, 68, 0.12); color: var(--danger); border-color: rgba(239, 68, 68, 0.25); }
+
+  .safety-phase-title {
+    font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--muted); margin: 6px 0 8px;
+  }
+  .safety-steps { display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px; }
+  .safety-step {
+    display: grid;
+    grid-template-columns: 22px 1fr auto;
+    align-items: start;
+    gap: 12px;
+    padding: 10px 12px;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: 10px;
+  }
+  .safety-step.running { border-color: var(--warning); }
+  .safety-step.ok { border-color: rgba(16, 185, 129, 0.35); }
+  .safety-step.fail { border-color: rgba(239, 68, 68, 0.35); }
+  .safety-icon {
+    width: 20px; height: 20px; border-radius: 999px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px; font-weight: 700; line-height: 1;
+    margin-top: 1px;
+  }
+  .safety-icon.pending { background: var(--border); color: var(--muted); }
+  .safety-icon.running { background: rgba(245, 158, 11, 0.2); color: var(--warning); }
+  .safety-icon.ok { background: rgba(16, 185, 129, 0.2); color: var(--accent); }
+  .safety-icon.fail { background: rgba(239, 68, 68, 0.2); color: var(--danger); }
+  .safety-icon .spin {
+    width: 12px; height: 12px;
+    border: 2px solid rgba(245, 158, 11, 0.35);
+    border-top-color: var(--warning);
+    border-radius: 50%;
+    animation: spin .6s linear infinite;
+  }
+  .safety-step-body { min-width: 0; }
+  .safety-step-title {
+    font-size: 13.5px; font-weight: 600; color: var(--text);
+  }
+  .safety-step-sub {
+    font-size: 12px; color: var(--muted); margin-top: 2px;
+    word-break: break-word;
+  }
+  .safety-step-thumb {
+    width: 56px; height: 56px; border-radius: 8px;
+    object-fit: cover; background: var(--card);
+    border: 1px solid var(--border-subtle);
+    flex-shrink: 0;
+  }
+  .safety-final {
+    display: grid; grid-template-columns: 180px 1fr; gap: 20px;
+    padding: 16px; border-radius: 12px;
+    background: var(--bg-elevated); border: 1px solid var(--border-subtle);
+  }
+  .safety-final img {
+    width: 100%; height: 180px; object-fit: cover; border-radius: 10px;
+    border: 1px solid var(--border-subtle);
+  }
+  .safety-final .final-label {
+    font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--muted);
+  }
+  .safety-final .final-desc {
+    font-size: 13.5px; color: var(--text); margin-top: 4px; line-height: 1.5;
+  }
+  .safety-final .final-tags { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 6px; }
+  .safety-final .final-tag {
+    font-size: 11px; padding: 3px 8px; border-radius: 6px;
+    background: rgba(59,130,246,0.08); color: #93c5fd;
+    border: 1px solid rgba(59,130,246,0.15);
+  }
+
   @media (max-width: 960px) {
     aside.sidebar { width: 68px; padding: 20px 8px; }
     aside.sidebar .brand-mark h1 { display: none; }
@@ -744,8 +849,11 @@
           <div class="pill-group" id="platform-group"></div>
         </div>
 
-        <div class="field">
-          <span class="field-label">&nbsp;</span>
+        <div class="field pg-actions">
+          <button class="revert" id="sfw-btn" disabled title="Validate this brand's text + image for SFW">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+            Run SFW agent
+          </button>
           <button class="primary" id="generate-btn" disabled>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
             Start generate
@@ -1123,6 +1231,7 @@ const modelSearch = document.getElementById('model-search');
 const modelList = document.getElementById('model-list');
 const platformGroup = document.getElementById('platform-group');
 const generateBtn = document.getElementById('generate-btn');
+const sfwBtn = document.getElementById('sfw-btn');
 const playgroundOutput = document.getElementById('playground-output');
 
 /* --------------- playground: platform pills --------------- */
@@ -1206,7 +1315,10 @@ function renderModelList() {
     <div class="combo-item${i === highlightedIndex ? ' highlight' : ''}" data-slug="${escapeHtml(b.slug)}">
       <img class="avatar-sm" src="${escapeHtml(b.profile_image_url || '')}" onerror="this.style.visibility='hidden'"/>
       <div style="min-width:0;">
-        <div class="item-name">${escapeHtml(b.name)}</div>
+        <div class="item-name">
+          ${escapeHtml(b.name)}
+          ${b.isSFW ? '<span class="sfw-tick" title="Verified SFW"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>' : ''}
+        </div>
         <div class="item-slug">${escapeHtml(b.slug)}</div>
       </div>
       <div class="status-icons">${statusIconsHtml(b.slug)}</div>
@@ -1224,7 +1336,7 @@ function renderModelList() {
 
 function selectBrand(brand) {
   selectedBrand = brand;
-  selectedName.textContent = brand.name;
+  selectedName.innerHTML = `${escapeHtml(brand.name)}${brand.isSFW ? ' <span class="sfw-tick" title="Verified SFW"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>' : ''}`;
   if (brand.profile_image_url) {
     selectedAvatar.style.display = 'block';
     selectedAvatar.style.background = `url('${brand.profile_image_url}') center/cover no-repeat`;
@@ -1270,13 +1382,220 @@ function scrollHighlightedIntoView() {
 
 function updateGenerateState() {
   generateBtn.disabled = !selectedBrand || selectedPlatforms.size === 0;
+  sfwBtn.disabled = !selectedBrand;
 }
 
 /* --------------- playground: generate --------------- */
 generateBtn.addEventListener('click', runGenerate);
+sfwBtn.addEventListener('click', runSafety);
+
+/* --------------- playground: live SFW agent --------------- */
+function safetyPanelSkeleton(name) {
+  return `
+    <div class="safety-panel" id="safety-panel">
+      <div class="safety-head">
+        <div class="safety-title">${escapeHtml(name)} · Safety agent</div>
+        <div style="display:flex; align-items:center; gap:10px;">
+          <div class="safety-status" id="safety-status">Running</div>
+          <button class="delete" id="safety-clear" title="Clear logs">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            Clear
+          </button>
+        </div>
+      </div>
+      <div class="safety-phase-title">Text</div>
+      <div class="safety-steps" id="safety-steps-text"></div>
+      <div class="safety-phase-title" id="safety-image-title" style="display:none;">Image</div>
+      <div class="safety-steps" id="safety-steps-image"></div>
+      <div id="safety-final"></div>
+    </div>`;
+}
+
+function stepIcon(state) {
+  if (state === 'running') return '<span class="safety-icon running"><span class="spin"></span></span>';
+  if (state === 'ok') return '<span class="safety-icon ok">✓</span>';
+  if (state === 'fail') return '<span class="safety-icon fail">✕</span>';
+  return '<span class="safety-icon pending">•</span>';
+}
+
+function upsertStep(container, id, { title, sub = '', state = 'running', thumbUrl = '' }) {
+  let el = container.querySelector(`[data-step-id="${id}"]`);
+  if (!el) {
+    el = document.createElement('div');
+    el.dataset.stepId = id;
+    container.appendChild(el);
+  }
+  el.className = `safety-step ${state}`;
+  el.innerHTML = `
+    ${stepIcon(state)}
+    <div class="safety-step-body">
+      <div class="safety-step-title">${escapeHtml(title)}</div>
+      ${sub ? `<div class="safety-step-sub">${escapeHtml(sub)}</div>` : ''}
+    </div>
+    ${thumbUrl ? `<img class="safety-step-thumb" src="${escapeHtml(thumbUrl)}" alt="" onerror="this.style.display='none'"/>` : ''}
+  `;
+  el.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+}
+
+function renderSafetyFinal(container, name, event) {
+  const result = event.result || {};
+  const ok = !!event.ok;
+  const image = result.image || {};
+  const text = result.text || {};
+  const chosen = (result.updated && result.updated.profile_image_url) || (image.image && image.image.url) || '';
+  const description = (result.updated && result.updated.description) || (text.final && text.final.description) || '';
+  const tags = (result.updated && result.updated.secondary_tags) || (text.final && text.final.secondary_tags) || [];
+
+  if (ok) {
+    container.innerHTML = `
+      <div class="safety-final">
+        ${chosen ? `<img src="${escapeHtml(chosen)}" alt="verified"/>` : '<div></div>'}
+        <div>
+          <div class="final-label">Verified SFW · ${escapeHtml(name)}</div>
+          <div class="final-desc">${escapeHtml(description)}</div>
+          ${tags.length ? `<div class="final-tags">${tags.map(t => `<span class="final-tag">${escapeHtml(t)}</span>`).join('')}</div>` : ''}
+        </div>
+      </div>`;
+  } else {
+    const reason = event.error || (image.error) || 'Text or image could not be verified within the retry budget.';
+    container.innerHTML = `
+      <div class="fail-card" style="margin-top:12px;">
+        <div class="fail-title">Manual review required</div>
+        ${escapeHtml(reason)}
+      </div>`;
+  }
+}
+
+async function runSafety() {
+  if (!selectedBrand) return;
+  const slug = selectedBrand.slug;
+  const name = selectedBrand.name;
+  const originalSfwLabel = sfwBtn.innerHTML;
+  sfwBtn.disabled = true;
+  generateBtn.disabled = true;
+  sfwBtn.innerHTML = '<span class="spinner"></span> Validating';
+
+  playgroundOutput.innerHTML = safetyPanelSkeleton(name);
+  const textSteps = document.getElementById('safety-steps-text');
+  const imageSteps = document.getElementById('safety-steps-image');
+  const imageTitle = document.getElementById('safety-image-title');
+  const statusEl = document.getElementById('safety-status');
+  const finalEl = document.getElementById('safety-final');
+  const clearBtn = document.getElementById('safety-clear');
+  clearBtn.addEventListener('click', () => { playgroundOutput.innerHTML = ''; });
+
+  let currentPhase = 'text';
+  let sourceClosed = false;
+  const es = new EventSource(`/api/validate-safety?slug=${encodeURIComponent(slug)}`);
+
+  const finish = ({ ok, error }) => {
+    if (sourceClosed) return;
+    sourceClosed = true;
+    es.close();
+    sfwBtn.innerHTML = originalSfwLabel;
+    updateGenerateState();
+    if (ok) {
+      toast(`SFW verified · ${name}`);
+      const b = BRANDS.find((x) => x.slug === slug);
+      if (b) {
+        b.isSFW = true;
+        selectBrand(b);
+      }
+    } else if (error) {
+      toast(error, true);
+    } else {
+      toast(`Manual review required · ${name}`, true);
+    }
+  };
+
+  es.onerror = () => {
+    if (!sourceClosed) {
+      finish({ ok: false, error: 'Connection to SFW agent lost' });
+    }
+  };
+
+  es.onmessage = (msg) => {
+    let ev;
+    try { ev = JSON.parse(msg.data); } catch { return; }
+    const container = currentPhase === 'image' ? imageSteps : textSteps;
+
+    switch (ev.step) {
+      case 'phase':
+        currentPhase = ev.name;
+        if (ev.name === 'image') imageTitle.style.display = '';
+        break;
+
+      case 'text_check':
+        upsertStep(textSteps, `text_check_${ev.attempt}`, {
+          title: ev.attempt === 1 ? 'Checking original text' : `Re-checking rewritten text (attempt ${ev.attempt})`,
+          sub: ev.state === 'done'
+            ? (ev.sfw ? 'SFW ✓' : `Flagged: ${(ev.reasons || []).slice(0, 2).join(', ') || 'unsafe content'}`)
+            : 'Grok is classifying the text…',
+          state: ev.state === 'done' ? (ev.sfw ? 'ok' : 'fail') : 'running'
+        });
+        break;
+
+      case 'text_rewrite':
+        upsertStep(textSteps, `text_rewrite_${ev.attempt}`, {
+          title: `Rewriting text (attempt ${ev.attempt})`,
+          sub: ev.state === 'done'
+            ? (ev.description ? `"${ev.description.slice(0, 120)}${ev.description.length > 120 ? '…' : ''}"` : 'Rewritten')
+            : 'Asking Grok for an SFW rewrite…',
+          state: ev.state === 'done' ? 'ok' : 'running'
+        });
+        break;
+
+      case 'text_phase':
+        // no-op — the individual steps already tell the story.
+        break;
+
+      case 'image_pool_fetch':
+        upsertStep(imageSteps, 'image_pool_fetch', {
+          title: 'Fetching replacement image pool',
+          sub: ev.state === 'done' ? `${ev.size} candidate(s) available` :
+               ev.state === 'error' ? `Error: ${ev.error}` :
+               'Calling safe-image API…',
+          state: ev.state === 'done' ? 'ok' :
+                 ev.state === 'error' ? 'fail' : 'running'
+        });
+        break;
+
+      case 'image_check': {
+        const isFirst = ev.attempt === 1 && ev.source === 'current';
+        upsertStep(imageSteps, `image_check_${ev.attempt}`, {
+          title: isFirst ? 'Checking current profile image' : `Checking replacement image (attempt ${ev.attempt})`,
+          sub: ev.state === 'done'
+            ? (ev.sfw ? 'SFW ✓' : `Flagged: ${(ev.reasons || []).slice(0, 2).join(', ') || 'unsafe content'}`)
+            : 'Grok vision is classifying the image…',
+          state: ev.state === 'done' ? (ev.sfw ? 'ok' : 'fail') : 'running',
+          thumbUrl: ev.url || ''
+        });
+        break;
+      }
+
+      case 'image_phase':
+        break;
+
+      case 'done':
+        renderSafetyFinal(finalEl, name, ev);
+        statusEl.textContent = ev.ok ? 'Verified SFW' : (ev.status || 'Failed');
+        statusEl.classList.toggle('ok', !!ev.ok);
+        statusEl.classList.toggle('fail', !ev.ok);
+        finish({ ok: !!ev.ok, error: ev.error });
+        break;
+
+      default:
+        break;
+    }
+  };
+}
 
 async function runGenerate() {
   if (!selectedBrand || !selectedPlatforms.size) return;
+  if (selectedBrand.isSFW !== true) {
+    alert(`"${selectedBrand.name}" hasn't passed SFW validation yet. Click "Run SFW agent" first.`);
+    return;
+  }
   const platforms = Array.from(selectedPlatforms);
   generateBtn.disabled = true;
   generateBtn.innerHTML = '<span class="spinner"></span> Generating';
