@@ -10,6 +10,7 @@ import { generateContent } from './services/grok.js';
 import { validateContent } from './agent/validator.js';
 import { saveReview } from './agent/saveReview.js';
 import { validateBrandSafety } from './agent/brand-safety-validator/brandSafetyValidator.js';
+import { suggestTodayBatch } from './agent/todayReview.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REVIEW_DIR = path.join(__dirname, 'review');
@@ -245,6 +246,28 @@ const server = http.createServer(async (req, res) => {
       const body = await readBody(req);
       const result = await runGenerate({ slug: body.slug, platforms: body.platforms });
       return sendJson(res, 200, { ok: true, ...result });
+    }
+
+    if (req.method === 'GET' && url.pathname === '/api/today-review') {
+      res.writeHead(200, {
+        'Content-Type': 'text/event-stream; charset=utf-8',
+        'Cache-Control': 'no-cache, no-transform',
+        'Connection': 'keep-alive',
+        'X-Accel-Buffering': 'no',
+      });
+
+      const send = (event) => { res.write(`data: ${JSON.stringify(event)}\n\n`); };
+      const heartbeat = setInterval(() => res.write(': ping\n\n'), 15_000);
+
+      try {
+        await suggestTodayBatch(send);
+      } catch (err) {
+        send({ step: 'done', error: err.message });
+      } finally {
+        clearInterval(heartbeat);
+        res.end();
+      }
+      return;
     }
 
     if (req.method === 'GET' && url.pathname === '/api/validate-safety') {

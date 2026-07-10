@@ -769,6 +769,73 @@
     border: 1px solid rgba(59,130,246,0.15);
   }
 
+  /* Today review — daily 4-platform picker */
+  .today-panel {
+    background: var(--card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 14px;
+    padding: 18px;
+    margin-bottom: 20px;
+  }
+  .today-head {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 14px; gap: 12px;
+  }
+  .today-title { font-size: 14px; font-weight: 600; letter-spacing: -0.01em; }
+  .today-date {
+    font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--muted); font-weight: 700;
+  }
+  .today-rows { display: flex; flex-direction: column; gap: 10px; }
+  .today-row {
+    display: grid;
+    grid-template-columns: 130px 1fr auto;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 14px;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: 10px;
+    transition: border-color .15s, background .15s;
+  }
+  .today-row.searching { border-color: var(--warning); }
+  .today-row.picked { border-color: rgba(16,185,129,0.35); }
+  .today-row.empty { border-color: rgba(239,68,68,0.25); opacity: 0.75; }
+
+  .today-plat {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 13px; font-weight: 600;
+    color: var(--plat, var(--text));
+    text-transform: capitalize;
+  }
+  .today-plat svg { width: 18px; height: 18px; }
+
+  .today-brand { min-width: 0; }
+  .today-brand-name { font-size: 13.5px; font-weight: 600; color: var(--text); }
+  .today-brand-sub { font-size: 11.5px; color: var(--muted); margin-top: 2px; }
+
+  .today-status {
+    font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+    padding: 4px 10px; border-radius: 999px;
+    background: var(--card); color: var(--muted);
+    border: 1px solid var(--border-subtle);
+    display: inline-flex; align-items: center; gap: 6px;
+    white-space: nowrap;
+  }
+  .today-status.searching { background: rgba(245,158,11,0.12); color: var(--warning); border-color: rgba(245,158,11,0.25); }
+  .today-status.picked { background: rgba(16,185,129,0.12); color: var(--accent); border-color: rgba(16,185,129,0.25); }
+  .today-status.empty { background: rgba(239,68,68,0.10); color: var(--danger); border-color: rgba(239,68,68,0.20); }
+  .today-status .dot-spin {
+    width: 10px; height: 10px; border-radius: 999px;
+    border: 2px solid rgba(245,158,11,0.35);
+    border-top-color: var(--warning);
+    animation: spin .6s linear infinite;
+  }
+  .today-note {
+    margin-top: 12px; font-size: 12px; color: var(--muted);
+  }
+  .today-note strong { color: var(--text); }
+
   @media (max-width: 960px) {
     aside.sidebar { width: 68px; padding: 20px 8px; }
     aside.sidebar .brand-mark h1 { display: none; }
@@ -871,7 +938,12 @@
           <h2 class="page-title">Awaiting review</h2>
           <div class="page-subtitle">Approve to move to Approved, or delete to discard.</div>
         </div>
+        <button class="primary" id="today-btn" title="Suggest today's 4-platform batch (IST)">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Today review
+        </button>
       </div>
+      <div id="today-panel"></div>
       <div class="list" id="review-list">
         <div class="skeleton"><div class="skel-avatar"></div><div>
           <div class="skel-line" style="width:30%;height:18px"></div>
@@ -1133,6 +1205,149 @@ const loadApproved = () => loadSection('/api/approved', approvedListEl, tabCount
   { title: 'Nothing approved yet', subtitle: 'Approved items will appear here.' });
 const loadPublished = () => loadSection('/api/published', publishedListEl, tabCountPublished, 'published',
   { title: 'Nothing published yet', subtitle: 'Published items will appear here.' });
+
+/* --------------- today review picker --------------- */
+const todayBtn = document.getElementById('today-btn');
+const todayPanelEl = document.getElementById('today-panel');
+const TODAY_PLATFORMS = ['instagram', 'facebook', 'x', 'reddit'];
+
+function todayRowsSkeleton(date) {
+  const rows = TODAY_PLATFORMS.map((p) => `
+    <div class="today-row platform-${p}" data-plat="${p}" id="today-row-${p}">
+      <div class="today-plat">${platformIcon(p)}<span>${p}</span></div>
+      <div class="today-brand">
+        <div class="today-brand-name" style="color: var(--muted);">Waiting…</div>
+      </div>
+      <span class="today-status">Pending</span>
+    </div>`).join('');
+  return `
+    <div class="today-panel" id="today-panel-inner">
+      <div class="today-head">
+        <div class="today-title">Today's suggested batch</div>
+        <div class="today-date">IST · ${escapeHtml(date)}</div>
+      </div>
+      <div class="today-rows">${rows}</div>
+      <div class="today-note" id="today-note"></div>
+    </div>`;
+}
+
+function setTodayRow(platform, { state, brand, sub, statusText }) {
+  const row = document.getElementById(`today-row-${platform}`);
+  if (!row) return;
+  row.className = `today-row platform-${platform} ${state}`;
+  const nameEl = row.querySelector('.today-brand-name');
+  const brandEl = row.querySelector('.today-brand');
+  const statusEl = row.querySelector('.today-status');
+
+  nameEl.textContent = brand || 'Waiting…';
+  nameEl.style.color = brand ? 'var(--text)' : 'var(--muted)';
+
+  // ensure/clear the sub-line
+  let subEl = brandEl.querySelector('.today-brand-sub');
+  if (sub) {
+    if (!subEl) {
+      subEl = document.createElement('div');
+      subEl.className = 'today-brand-sub';
+      brandEl.appendChild(subEl);
+    }
+    subEl.textContent = sub;
+  } else if (subEl) {
+    subEl.remove();
+  }
+
+  statusEl.className = `today-status ${state}`;
+  if (state === 'searching') {
+    statusEl.innerHTML = `<span class="dot-spin"></span> ${escapeHtml(statusText || 'Searching…')}`;
+  } else {
+    statusEl.textContent = statusText || (state === 'picked' ? 'Picked' : state === 'empty' ? 'None' : 'Pending');
+  }
+
+  row.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+}
+
+function runTodayReview() {
+  todayBtn.disabled = true;
+  const originalLabel = todayBtn.innerHTML;
+  todayBtn.innerHTML = '<span class="spinner"></span> Searching';
+
+  // Render an immediate skeleton with today's UTC placeholder — the server
+  // will send the authoritative IST date in the "start" event.
+  todayPanelEl.innerHTML = todayRowsSkeleton('…');
+  const noteEl = () => document.getElementById('today-note');
+
+  const es = new EventSource('/api/today-review');
+  let closed = false;
+  const finish = (msg, isError) => {
+    if (closed) return;
+    closed = true;
+    es.close();
+    todayBtn.innerHTML = originalLabel;
+    todayBtn.disabled = false;
+    if (msg) toast(msg, !!isError);
+  };
+
+  es.onerror = () => finish("Today review connection lost", true);
+
+  es.onmessage = (msg) => {
+    let ev;
+    try { ev = JSON.parse(msg.data); } catch { return; }
+
+    switch (ev.step) {
+      case 'start': {
+        const dateEl = document.querySelector('#today-panel-inner .today-date');
+        if (dateEl) dateEl.textContent = `IST · ${ev.date}`;
+        break;
+      }
+      case 'context': {
+        const el = noteEl();
+        if (el) {
+          const taken = (ev.taken_brands || []);
+          el.innerHTML = `<strong>${ev.sfw_brand_count}</strong> SFW-verified brand(s) · <strong>${taken.length}</strong> already scheduled today${taken.length ? ` (${taken.map(escapeHtml).join(', ')})` : ''}`;
+        }
+        break;
+      }
+      case 'candidates': {
+        // no-op — the individual searches will show details.
+        break;
+      }
+      case 'search_start':
+        setTodayRow(ev.platform, {
+          state: 'searching',
+          brand: null,
+          sub: null,
+          statusText: 'Searching'
+        });
+        break;
+      case 'search_done':
+        if (ev.picked) {
+          setTodayRow(ev.platform, {
+            state: 'picked',
+            brand: ev.picked.name,
+            sub: `${ev.picked.file}${typeof ev.considered === 'number' ? ` · from ${ev.considered} candidate(s)` : ''}`,
+            statusText: 'Picked'
+          });
+        } else {
+          setTodayRow(ev.platform, {
+            state: 'empty',
+            brand: '—',
+            sub: ev.reason || 'no candidate available',
+            statusText: 'None'
+          });
+        }
+        break;
+      case 'done': {
+        if (ev.error) { finish(ev.error, true); break; }
+        const picks = (ev.result && ev.result.picks) || {};
+        const filled = Object.values(picks).filter(Boolean).length;
+        finish(`Today's batch ready · ${filled}/4 slots filled`, filled < 4);
+        break;
+      }
+      default: break;
+    }
+  };
+}
+
+todayBtn.addEventListener('click', runTodayReview);
 
 /* --------------- actions --------------- */
 async function approve(file, btn, card) {
