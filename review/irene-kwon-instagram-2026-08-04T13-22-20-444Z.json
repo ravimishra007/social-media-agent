@@ -1,0 +1,24 @@
+{
+  "brand": {
+    "slug": "irene-kwon",
+    "name": "Irene Kwon"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/irene-kwon/images/sfw/irene-kwon_sfw_20260406_043826_irene-kwon__sfw__2026-04-06043822-18722808-7013543092673148_00001_.png?quality=85&format=webp"
+  },
+  "platform": "instagram",
+  "content": {
+    "caption": "Spent the evening dancing under the city lights 💃 feeling that same rush from my cheerleading days! The beats were pumping and my heart was too ✨ Now relaxing with some art sketches before the next adventure 🎨 Life is so vibrant and full of surprises!",
+    "hashtags": [
+      "#party-girl",
+      "#nightlife"
+    ],
+    "cta": "I'd love to hear about your nights out!"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "review",
+  "created_at": "2026-08-04T13:22:20.444Z"
+}

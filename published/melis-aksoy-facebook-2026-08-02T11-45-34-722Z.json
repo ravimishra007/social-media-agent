@@ -1,0 +1,25 @@
+{
+  "brand": {
+    "slug": "melis-aksoy",
+    "name": "Melis Aksoy"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/melis-aksoy/images/sfw/melis-aksoy_sfw_20260423_222833_melis-aksoy__sfw__2026-04-23222827-18722808-2603440976580028_00001_.png"
+  },
+  "platform": "facebook",
+  "content": {
+    "caption": "Beach days always bring out my playful side. A few spins in the sand and I feel bold and alive under the sun 🌊🏖️ Sharing these simple joys with you all.",
+    "hashtags": [
+      "#BeachLover",
+      "#Playful"
+    ],
+    "cta": "What’s your favorite way to unwind?"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "approved",
+  "created_at": "2026-08-02T11:45:34.722Z",
+  "approved_at": "2026-08-05T06:10:30.940Z"
+}

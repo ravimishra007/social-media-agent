@@ -1,0 +1,23 @@
+{
+  "brand": {
+    "slug": "farah-yusof",
+    "name": "Farah Yusof"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/farah-yusof/images/sfw/farah-yusof_sfw_20260423_132033_farah-yusof__sfw__2026-04-23132029-18722808-1519320059064357_00001_.png"
+  },
+  "platform": "x",
+  "content": {
+    "caption": "Hearing the wild horses call fills my soul with endless wonder and peace",
+    "hashtags": [
+      "#romantic"
+    ],
+    "cta": ""
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "review",
+  "created_at": "2026-08-05T06:10:01.487Z"
+}

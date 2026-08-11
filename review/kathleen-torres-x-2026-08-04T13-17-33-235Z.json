@@ -1,0 +1,23 @@
+{
+  "brand": {
+    "slug": "kathleen-torres",
+    "name": "Kathleen Torres"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/kathleen-torres/images/sfw/kathleen-torres_sfw_20260406_045005_kathleen-torres__sfw__2026-04-06045000-18722808-6824351177480384_00001_.png"
+  },
+  "platform": "x",
+  "content": {
+    "caption": "Feeling the ocean breeze reminds me how beautiful life can be. I love spending evenings dancing near the shore.",
+    "hashtags": [
+      "#beach-lover"
+    ],
+    "cta": "What makes you feel vibrant?"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "review",
+  "created_at": "2026-08-04T13:17:33.235Z"
+}

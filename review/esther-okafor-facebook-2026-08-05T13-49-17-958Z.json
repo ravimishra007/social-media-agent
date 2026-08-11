@@ -1,0 +1,24 @@
+{
+  "brand": {
+    "slug": "esther-okafor",
+    "name": "Esther Okafor"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/esther-okafor/images/sfw/esther-okafor_sfw_20260423_122200_esther-okafor__sfw__2026-04-23122154-18722808-4560682789645667_00001_.png"
+  },
+  "platform": "facebook",
+  "content": {
+    "caption": "Choosing outfits that blend tradition and modern flair always fills me with joy. It’s my way of staying true to the poise I grew up with, feeling vibrant and ready for anything. What’s your go-to style tip? ✨",
+    "hashtags": [
+      "#fashionista",
+      "#vibrant"
+    ],
+    "cta": "I'd love to hear yours!"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "review",
+  "created_at": "2026-08-05T13:49:17.958Z"
+}

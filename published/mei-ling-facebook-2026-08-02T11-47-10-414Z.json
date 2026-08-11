@@ -1,0 +1,25 @@
+{
+  "brand": {
+    "slug": "mei-ling",
+    "name": "Mei Ling"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/mei-ling/images/sfw/mei-ling_sfw_20260423_220843_mei-ling__sfw__2026-04-23220837-18722808-1719291522648215_00001_.png"
+  },
+  "platform": "facebook",
+  "content": {
+    "caption": "The energy from those lively night markets always sparks my playful side. I love to dance and soak in the vibrant atmosphere around me. It feels so freeing! 😊✨🕺",
+    "hashtags": [
+      "#VibrantDance",
+      "#PlayfulMoments"
+    ],
+    "cta": "Tell me about your favorite moments!"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "approved",
+  "created_at": "2026-08-02T11:47:10.414Z",
+  "approved_at": "2026-08-05T13:39:40.585Z"
+}

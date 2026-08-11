@@ -1,0 +1,25 @@
+{
+  "brand": {
+    "slug": "sophia-gagnon",
+    "name": "Sophia Gagnon"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/sophia-gagnon/images/sfw/sophia-gagnon_sfw_20260406_053910_sophia-gagnon__sfw__2026-04-06053906-18722808-6501654117812502_00001_.png?quality=85&format=webp"
+  },
+  "platform": "instagram",
+  "content": {
+    "caption": "Wrapped in the quiet of the evening I let my thoughts wander through old stories and soft fabrics. There's something magical about choosing pieces that feel like a whisper. Today it's all about that cozy yet intriguing vibe. 🌙✨",
+    "hashtags": [
+      "#mysterious",
+      "#fashionista"
+    ],
+    "cta": "Share your favorite mysterious moment with me."
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "approved",
+  "created_at": "2026-08-01T16:31:46.665Z",
+  "approved_at": "2026-08-02T11:49:50.308Z"
+}

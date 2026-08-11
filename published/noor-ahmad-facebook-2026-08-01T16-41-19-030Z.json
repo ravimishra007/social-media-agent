@@ -1,0 +1,25 @@
+{
+  "brand": {
+    "slug": "noor-ahmad",
+    "name": "Noor Ahmad"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/noor-ahmad/images/sfw/noor-ahmad_sfw_20260424_064152_noor-ahmad__sfw__2026-04-24064146-18722808-5662168418684139_00001_.png"
+  },
+  "platform": "facebook",
+  "content": {
+    "caption": "There's a quiet joy in letting dance guide my steps each day. It brings such warmth and helps me see the beauty in simple moments, whether moving freely or pausing to reflect. ✨🌿",
+    "hashtags": [
+      "#DanceInspiration",
+      "#InnerBeauty"
+    ],
+    "cta": "What brings you that same sense of calm?"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "approved",
+  "created_at": "2026-08-01T16:41:19.030Z",
+  "approved_at": "2026-08-03T12:00:35.193Z"
+}

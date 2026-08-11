@@ -1,0 +1,24 @@
+{
+  "brand": {
+    "slug": "zara-malik",
+    "name": "Zara Malik"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/zara-malik/images/sfw/zara-malik_sfw_20260330_113435_zara-malik__sfw__2026-03-30113430-18722808-1086159874560896_00001_.png?quality=85&format=webp"
+  },
+  "platform": "instagram",
+  "content": {
+    "caption": "Walking through the bustling souks today reminded me of how much I love mixing vintage finds with my everyday style. This dress has that perfect vibrant touch that makes me feel alive and glamorous. Beirut never fails to inspire with its energy and charm.",
+    "hashtags": [
+      "#fashionista",
+      "#vintage-lover"
+    ],
+    "cta": "I'd love to hear your thoughts!"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "review",
+  "created_at": "2026-08-06T08:07:24.450Z"
+}

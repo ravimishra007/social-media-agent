@@ -1,0 +1,24 @@
+{
+  "brand": {
+    "slug": "sana-mirza",
+    "name": "Sana Mirza"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/sana-mirza/images/sfw/sana-mirza_sfw_20260307_190020_sana-mirza__sfw__2026-03-07190015-18722808-7586741501619283_00001__crop_1773100519.png"
+  },
+  "platform": "instagram",
+  "content": {
+    "caption": "Twirling in my mother's sarees as a child felt like pure magic, each spin a dance of elegance that sparked my love for modeling. Those moments still fill my days with warmth and joy, reminding me to move with grace every day. ✨🌸",
+    "hashtags": [
+      "#dancer",
+      "#vibrant"
+    ],
+    "cta": "Share a childhood moment that shaped you below!"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "review",
+  "created_at": "2026-08-07T05:40:06.611Z"
+}

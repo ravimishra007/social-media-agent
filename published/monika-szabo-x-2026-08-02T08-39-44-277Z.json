@@ -1,0 +1,24 @@
+{
+  "brand": {
+    "slug": "monika-szabo",
+    "name": "Monika Szabo"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/monika-szabo/images/sfw/monika-szabo_sfw_20260423_234315_monika-szabo__sfw__2026-04-23234311-18722808-2014005534212691_00001_.png"
+  },
+  "platform": "x",
+  "content": {
+    "caption": "The rhythm of folk dance fills my heart with genuine joy every time.",
+    "hashtags": [
+      "#dancer"
+    ],
+    "cta": ""
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "approved",
+  "created_at": "2026-08-02T08:39:44.277Z",
+  "approved_at": "2026-08-05T13:39:47.239Z"
+}

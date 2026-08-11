@@ -1,0 +1,23 @@
+{
+  "brand": {
+    "slug": "sana-mirza",
+    "name": "Sana Mirza"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/sana-mirza/images/sfw/sana-mirza_sfw_20260307_190020_sana-mirza__sfw__2026-03-07190015-18722808-7586741501619283_00001__crop_1773100519.png"
+  },
+  "platform": "x",
+  "content": {
+    "caption": "Spinning in my mom's traditional saree fills my heart with elegance and joy every time.",
+    "hashtags": [
+      "#dancer"
+    ],
+    "cta": ""
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "review",
+  "created_at": "2026-08-07T05:39:46.666Z"
+}

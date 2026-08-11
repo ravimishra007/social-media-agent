@@ -1,0 +1,23 @@
+{
+  "brand": {
+    "slug": "irene-kwon",
+    "name": "Irene Kwon"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/irene-kwon/images/sfw/irene-kwon_sfw_20260406_043826_irene-kwon__sfw__2026-04-06043822-18722808-7013543092673148_00001_.png?quality=85&format=webp"
+  },
+  "platform": "x",
+  "content": {
+    "caption": "Dancing under the lights always sparks my endless energy and joy!",
+    "hashtags": [
+      "#nightlife"
+    ],
+    "cta": "Who's joining the fun?"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "review",
+  "created_at": "2026-08-04T13:22:49.224Z"
+}

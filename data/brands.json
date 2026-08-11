@@ -98,7 +98,8 @@
       "fashionista"
     ],
     "country": "Canada",
-    "ethnicity": "European"
+    "ethnicity": "European",
+    "isSFW": true
   },
   {
     "slug": "ploy-wattana",
@@ -115,13 +116,14 @@
       "dancer"
     ],
     "country": "Thailand",
-    "ethnicity": "Southeast Asian"
+    "ethnicity": "Southeast Asian",
+    "isSFW": true
   },
   {
     "slug": "noor-ahmad",
     "name": "Noor Ahmad",
     "description": "Noor Ahmad, a graceful Jordanian model, grew up in the culturally rich city of Amman, where she was inspired by the elegance of traditional dabke dance.",
-    "profile_image_url": "https://xgen.b-cdn.net/models/noor-ahmad/images/sfw/noor-ahmad_sfw_20260406_053353_noor-ahmad__sfw__2026-04-06053348-18722808-1941740255987014_00001_.png?quality=85&format=webp",
+    "profile_image_url": "https://xgen.b-cdn.net/models/noor-ahmad/images/sfw/noor-ahmad_sfw_20260424_064152_noor-ahmad__sfw__2026-04-24064146-18722808-5662168418684139_00001_.png",
     "secondary_tags": [
       "artistic",
       "beauty-enthusiast",
@@ -132,7 +134,8 @@
       "dancer"
     ],
     "country": "Jordan",
-    "ethnicity": "Middle Eastern"
+    "ethnicity": "Middle Eastern",
+    "isSFW": true
   },
   {
     "slug": "natalia-volkov",
@@ -144,13 +147,14 @@
       "dancer"
     ],
     "country": "Ukraine",
-    "ethnicity": "European"
+    "ethnicity": "European",
+    "isSFW": true
   },
   {
     "slug": "monika-szabo",
     "name": "Monika Szabo",
     "description": "Monika Szabo grew up in the picturesque villages of Hungary, where she learned the art of traditional folk dancing, which she performs with sweet charm at local festivals.",
-    "profile_image_url": "https://xgen.b-cdn.net/models/monika-szabo/images/sfw/monika-szabo_sfw_20260406_052844_monika-szabo__sfw__2026-04-06052839-18722808-6828308707044760_00001_.png?quality=85&format=webp",
+    "profile_image_url": "https://xgen.b-cdn.net/models/monika-szabo/images/sfw/monika-szabo_sfw_20260423_234315_monika-szabo__sfw__2026-04-23234311-18722808-2014005534212691_00001_.png",
     "secondary_tags": [
       "artistic",
       "beauty-enthusiast",
@@ -159,7 +163,8 @@
       "dancer"
     ],
     "country": "Hungary",
-    "ethnicity": "European"
+    "ethnicity": "European",
+    "isSFW": true
   },
   {
     "slug": "melissa-sandringham",
@@ -177,13 +182,14 @@
       "shy"
     ],
     "country": "Nottingham, United Kingdom",
-    "ethnicity": "European"
+    "ethnicity": "European",
+    "isSFW": true
   },
   {
     "slug": "melis-aksoy",
     "name": "Melis Aksoy",
     "description": "Hailing from the sun-kissed shores of Izmir, Melis Aksoy tumbled into gymnastics as a kid during lively Turkish festivals, her confident flips and playful spins quickly earning her national acclaim.",
-    "profile_image_url": "https://xgen.b-cdn.net/models/melis-aksoy/images/sfw/melis-aksoy_sfw_20260406_052307_melis-aksoy__sfw__2026-04-06052302-18722808-7429563285064240_00001_.png?quality=85&format=webp",
+    "profile_image_url": "https://xgen.b-cdn.net/models/melis-aksoy/images/sfw/melis-aksoy_sfw_20260423_222833_melis-aksoy__sfw__2026-04-23222827-18722808-2603440976580028_00001_.png",
     "secondary_tags": [
       "content-creator",
       "bold",
@@ -193,26 +199,28 @@
       "playful"
     ],
     "country": "Turkey",
-    "ethnicity": "Middle Eastern"
+    "ethnicity": "Middle Eastern",
+    "isSFW": true
   },
   {
     "slug": "mei-ling",
     "name": "Mei Ling",
     "description": "Mei Ling, a vibrant soul from Taipei, Taiwan, grew up surrounded by the colorful chaos of night markets, where she developed her playful spirit.",
-    "profile_image_url": "https://xgen.b-cdn.net/models/mei-ling/images/sfw/mei-ling_sfw_20260406_052022_mei-ling__sfw__2026-04-06052017-18722808-3082401294061761_00001_.png?quality=85&format=webp",
+    "profile_image_url": "https://xgen.b-cdn.net/models/mei-ling/images/sfw/mei-ling_sfw_20260423_220843_mei-ling__sfw__2026-04-23220837-18722808-1719291522648215_00001_.png",
     "secondary_tags": [
       "playful",
       "vibrant",
       "dancer"
     ],
     "country": "Taiwan",
-    "ethnicity": "East Asian"
+    "ethnicity": "East Asian",
+    "isSFW": true
   },
   {
     "slug": "margot-girard",
     "name": "Margot Girard",
     "description": "Hailing from the vibrant coastal city of Marseille, Margot Girard channeled her boundless French joie de vivre into CrossFit after dominating beach workouts as a teen, transforming her athletic...",
-    "profile_image_url": "https://xgen.b-cdn.net/models/margot-girard/images/sfw/margot-girard_sfw_20260406_051658_margot-girard__sfw__2026-04-06051653-18722808-8820194148214078_00001_.png?quality=85&format=webp",
+    "profile_image_url": "https://xgen.b-cdn.net/models/margot-girard/images/sfw/margot-girard_sfw_20260406_051841_margot-girard__sfw__2026-04-06051836-18722808-4296697787568128_00001_.png",
     "secondary_tags": [
       "fitness",
       "beach-lover",
@@ -221,25 +229,27 @@
       "warm"
     ],
     "country": "France",
-    "ethnicity": "European"
+    "ethnicity": "European",
+    "isSFW": true
   },
   {
     "slug": "madison-moore",
     "name": "Madison Moore",
     "description": "Madison Moore, a sharp-witted Chicago native raised on a steady diet of public library hauls and indie podcasts, traded the Windy City's hustle for Miami's sun-soaked vibes to pursue her endless...",
-    "profile_image_url": "https://xgen.b-cdn.net/models/madison-moore/images/sfw/madison-moore_sfw_20260406_051356_madison-moore__sfw__2026-04-06051352-18722808-1146572928771206_00001_.png?quality=85&format=webp",
+    "profile_image_url": "https://xgen.b-cdn.net/models/madison-moore/images/sfw/madison-moore_sfw_20260423_210807_madison-moore__sfw__2026-04-23210803-18722808-4796307209880024_00001_.png",
     "secondary_tags": [
       "bold",
       "intelligent"
     ],
     "country": "USA",
-    "ethnicity": "American"
+    "ethnicity": "American",
+    "isSFW": true
   },
   {
     "slug": "luna-martinez",
     "name": "Luna Martinez",
     "description": "Luna Martinez, a vibrant soul from the colorful streets of Cusco, Peru, discovered her passion for modeling while playfully dancing in traditional Peruvian festivals.",
-    "profile_image_url": "https://xgen.b-cdn.net/models/luna-martinez/images/sfw/luna-martinez_sfw_20260406_051135_luna-martinez__sfw__2026-04-06051130-18722808-5473289239477100_00001_.png?quality=85&format=webp",
+    "profile_image_url": "https://xgen.b-cdn.net/models/luna-martinez/images/sfw/luna-martinez_sfw_20260423_203724_luna-martinez__sfw__2026-04-23203718-18722808-3913749795279327_00001_.png",
     "secondary_tags": [
       "beauty-enthusiast",
       "vibrant",
@@ -250,7 +260,8 @@
       "dancer"
     ],
     "country": "Peru",
-    "ethnicity": "Hispanic"
+    "ethnicity": "Hispanic",
+    "isSFW": true
   },
   {
     "slug": "lucia-vargas",
@@ -268,13 +279,14 @@
       "friendly"
     ],
     "country": "Chile",
-    "ethnicity": "Hispanic"
+    "ethnicity": "Hispanic",
+    "isSFW": true
   },
   {
     "slug": "lotte-van-den-berg",
     "name": "Lotte van den Berg",
     "description": "Lotte van den Berg grew up cycling along Amsterdam's leafy canals, her cheerful laugh echoing amid stroopwafel picnics and tulip festivals that shaped her warm, unshakeable confidence.",
-    "profile_image_url": "https://xgen.b-cdn.net/models/lotte-van-den-berg/images/sfw/lotte-van-den-berg_sfw_20260406_050602_lotte-van-den-berg__sfw__2026-04-06050557-18722808-1912485075986539_00001_.png?quality=85&format=webp",
+    "profile_image_url": "https://xgen.b-cdn.net/models/lotte-van-den-berg/images/sfw/lotte-van-den-berg_sfw_20260423_195657_lotte-van-den-berg__sfw__2026-04-23195651-18722808-1590135245654787_00001_.png",
     "secondary_tags": [
       "student",
       "educator",
@@ -282,13 +294,14 @@
       "confident"
     ],
     "country": "Netherlands",
-    "ethnicity": "European"
+    "ethnicity": "European",
+    "isSFW": true
   },
   {
     "slug": "lorena-lima",
     "name": "Lorena Lima",
     "description": "Lorena Lima grew up on the vibrant beaches of Rio de Janeiro, Brazil, where her fierce competitive spirit fueled dominance in beach volleyball tournaments and capoeira challenges, honing her athletic...",
-    "profile_image_url": "https://xgen.b-cdn.net/models/lorena-lima/images/sfw/lorena-lima_sfw_20260406_050546_lorena-lima__sfw__2026-04-06050541-18722808-5439699245861079_00001_.png?quality=85&format=webp",
+    "profile_image_url": "https://xgen.b-cdn.net/models/lorena-lima/images/sfw/lorena-lima_sfw_20260423_194759_lorena-lima__sfw__2026-04-23194752-18722808-549531048977692_00001_.png",
     "secondary_tags": [
       "fitness",
       "intense",
@@ -300,26 +313,28 @@
       "model"
     ],
     "country": "Brazil",
-    "ethnicity": "Hispanic"
+    "ethnicity": "Hispanic",
+    "isSFW": true
   },
   {
     "slug": "lily-chen",
     "name": "Lily Chen",
     "description": "Lily Chen, born and raised in the bustling city of Shanghai, found her passion for content creation through her love for traditional Chinese festivals, where she would playfully reenact stories from...",
-    "profile_image_url": "https://xgen.b-cdn.net/models/lily-chen/images/sfw/lily-chen_sfw_20260406_050123_lily-chen__sfw__2026-04-06050119-18722808-3318757377685057_00001_.png?quality=85&format=webp",
+    "profile_image_url": "https://xgen.b-cdn.net/models/lily-chen/images/sfw/lily-chen_sfw_20260423_192233_lily-chen__sfw__2026-04-23192227-18722808-5222273761042329_00001_.png",
     "secondary_tags": [
       "sweet",
       "genuine",
       "nature-lover"
     ],
     "country": "China",
-    "ethnicity": "East Asian"
+    "ethnicity": "East Asian",
+    "isSFW": true
   },
   {
     "slug": "leila-omar",
     "name": "Leila Omar",
     "description": "Born in the sun-kissed hills of Amman, Jordan, Leila Omar discovered her love for architecture amid the majestic Roman ruins of Jerash and the timeless beauty of Petra, fueling her cheerful dream of...",
-    "profile_image_url": "https://xgen.b-cdn.net/models/leila-omar/images/sfw/leila-omar_sfw_20260406_045810_leila-omar__sfw__2026-04-06045806-18722808-8306471400192185_00001_.png?quality=85&format=webp",
+    "profile_image_url": "https://xgen.b-cdn.net/models/leila-omar/images/sfw/leila-omar_sfw_20260423_184509_leila-omar__sfw__2026-04-23184503-18722808-8499872190581193_00001_.png",
     "secondary_tags": [
       "content-creator",
       "optimistic",
@@ -329,13 +344,14 @@
       "flirty"
     ],
     "country": "Jordan",
-    "ethnicity": "Middle Eastern"
+    "ethnicity": "Middle Eastern",
+    "isSFW": true
   },
   {
     "slug": "layla-abboud",
     "name": "Layla Abboud",
     "description": "Layla Abboud, born and raised in the historic city of Aleppo, Syria, grew up surrounded by the warmth of her close-knit family and the elegance of traditional Syrian architecture.",
-    "profile_image_url": "https://xgen.b-cdn.net/models/layla-abboud/images/sfw/layla-abboud_sfw_20260406_045541_layla-abboud__sfw__2026-04-06045536-18722808-4825961984320317_00001_.png?quality=85&format=webp",
+    "profile_image_url": "https://xgen.b-cdn.net/models/layla-abboud/images/sfw/layla-abboud_sfw_20260423_182858_layla-abboud__sfw__2026-04-23182852-18722808-708355427480803_00001_.png",
     "secondary_tags": [
       "content-creator",
       "artistic",
@@ -345,13 +361,14 @@
       "dancer"
     ],
     "country": "Syria",
-    "ethnicity": "Middle Eastern"
+    "ethnicity": "Middle Eastern",
+    "isSFW": true
   },
   {
     "slug": "lara-okonkwo",
     "name": "Lara Okonkwo",
     "description": "Lara Okonkwo, born and raised in Addis Ababa, Ethiopia, discovered her passion for modeling while gracefully dancing the traditional Eskista at local cultural festivals.",
-    "profile_image_url": "https://xgen.b-cdn.net/models/lara-okonkwo/images/sfw/lara-okonkwo_sfw_20260406_045356_lara-okonkwo__sfw__2026-04-06045351-18722808-4993511502156107_00001_.png?quality=85&format=webp",
+    "profile_image_url": "https://xgen.b-cdn.net/models/lara-okonkwo/images/sfw/lara-okonkwo_sfw_20260423_180325_lara-okonkwo__sfw__2026-04-23180319-18722808-6283274973164768_00001_.png",
     "secondary_tags": [
       "beauty-enthusiast",
       "fashionista",
@@ -360,7 +377,8 @@
       "dancer"
     ],
     "country": "Ethiopia",
-    "ethnicity": "African"
+    "ethnicity": "African",
+    "isSFW": true
   },
   {
     "slug": "klara-eriksson",
@@ -380,7 +398,7 @@
     "slug": "kathleen-torres",
     "name": "Kathleen Torres",
     "description": "Born in the sun-kissed shores of Cebu, Philippines, Kathleen Torres grew up dancing at vibrant Sinulog festivals and savoring adobo with her tight-knit family, her cheerful laughter echoing through...",
-    "profile_image_url": "https://xgen.b-cdn.net/models/kathleen-torres/images/sfw/kathleen-torres_sfw_20260406_044746_kathleen-torres__sfw__2026-04-06044741-18722808-3728749064694628_00001_.png?quality=85&format=webp",
+    "profile_image_url": "https://xgen.b-cdn.net/models/kathleen-torres/images/sfw/kathleen-torres_sfw_20260406_045005_kathleen-torres__sfw__2026-04-06045000-18722808-6824351177480384_00001_.png",
     "secondary_tags": [
       "content-creator",
       "beauty-enthusiast",
@@ -391,7 +409,8 @@
       "dancer"
     ],
     "country": "Philippines",
-    "ethnicity": "Southeast Asian"
+    "ethnicity": "Southeast Asian",
+    "isSFW": true
   },
   {
     "slug": "katarina-horvat",
@@ -407,18 +426,20 @@
       "friendly"
     ],
     "country": "Croatia",
-    "ethnicity": "European"
+    "ethnicity": "European",
+    "isSFW": true
   },
   {
     "slug": "isla-brown",
     "name": "Isla Brown",
     "description": "Growing up on the sun-soaked beaches of the Gold Coast, Isla Brown spent her days surfing the waves and chilling at barbecues with mates, embracing that quintessential Aussie laid-back vibe.",
-    "profile_image_url": "https://xgen.b-cdn.net/models/isla-brown/images/sfw/isla-brown_sfw_20260406_044241_isla-brown__sfw__2026-04-06044235-18722808-1054742561620773_00001_.png?quality=85&format=webp",
+    "profile_image_url": "https://xgen.b-cdn.net/models/isla-brown/images/sfw/isla-brown_sfw_20260423_161235_isla-brown__sfw__2026-04-23161229-18722808-1013961548416279_00001_.png",
     "secondary_tags": [
       "content-creator"
     ],
     "country": "Australia",
-    "ethnicity": "European"
+    "ethnicity": "European",
+    "isSFW": true
   },
   {
     "slug": "irene-kwon",
@@ -435,13 +456,14 @@
       "artist"
     ],
     "country": "South Korea",
-    "ethnicity": "East Asian"
+    "ethnicity": "East Asian",
+    "isSFW": true
   },
   {
     "slug": "ingrid-svensson",
     "name": "Ingrid Svensson",
     "description": "Ingrid Svensson, a sweet and caring model from Sweden, grew up in the picturesque town of Uppsala, where she developed a deep appreciation for the serene beauty of Swedish nature and the warmth of...",
-    "profile_image_url": "https://xgen.b-cdn.net/models/ingrid-svensson/images/sfw/ingrid-svensson_sfw_20260406_043530_ingrid-svensson__sfw__2026-04-06043525-18722808-6864363667950034_00001_.png?quality=85&format=webp",
+    "profile_image_url": "https://xgen.b-cdn.net/models/ingrid-svensson/images/sfw/ingrid-svensson_sfw_20260423_145458_ingrid-svensson__sfw__2026-04-23145453-18722808-8434821729192061_00001_.png",
     "secondary_tags": [
       "caring",
       "coffee-lover",
@@ -453,13 +475,14 @@
       "model"
     ],
     "country": "Sweden",
-    "ethnicity": "European"
+    "ethnicity": "European",
+    "isSFW": true
   },
   {
     "slug": "giorgia-mancini",
     "name": "Giorgia Mancini",
     "description": "Giorgia Mancini, born in the vibrant fashion hub of Milan, Italy, channeled her fierce ambition into mastering graphic design, creating bold visuals for luxury brands while dreaming of a bigger...",
-    "profile_image_url": "https://xgen.b-cdn.net/models/giorgia-mancini/images/sfw/giorgia-mancini_sfw_20260406_042658_giorgia-mancini__sfw__2026-04-06042653-18722808-5549067604850297_00001_.png?quality=85&format=webp",
+    "profile_image_url": "https://xgen.b-cdn.net/models/giorgia-mancini/images/sfw/giorgia-mancini_sfw_20260423_140939_giorgia-mancini__sfw__2026-04-23140935-18722808-3748764878845290_00001_.png",
     "secondary_tags": [
       "creative",
       "bold",
@@ -470,13 +493,14 @@
       "fashionista"
     ],
     "country": "Italy",
-    "ethnicity": "European"
+    "ethnicity": "European",
+    "isSFW": true
   },
   {
     "slug": "freya-andersen",
     "name": "Freya Andersen",
     "description": "Freya Andersen, a spirited Norwegian, grew up exploring the fjords and mountains of her homeland, her adventurous spirit fueled by the tales of Norse explorers.",
-    "profile_image_url": "https://xgen.b-cdn.net/models/freya-andersen/images/sfw/freya-andersen_sfw_20260406_042359_freya-andersen__sfw__2026-04-06042355-18722808-5879223658889212_00001_.png?quality=85&format=webp",
+    "profile_image_url": "https://xgen.b-cdn.net/models/freya-andersen/images/sfw/freya-andersen_sfw_20260423_134241_freya-andersen__sfw__2026-04-23134235-18722808-4484703697077512_00001_.png",
     "secondary_tags": [
       "outdoor-lover",
       "genuine",
@@ -487,39 +511,42 @@
       "friendly"
     ],
     "country": "Norway",
-    "ethnicity": "European"
+    "ethnicity": "European",
+    "isSFW": true
   },
   {
     "slug": "fitri-gunawan",
     "name": "Fitri Gunawan",
     "description": "Fitri Gunawan, a chill Indonesian librarian from the vibrant island of Bali, spends her days lounging amid stacks of ancient wayang kulit scrolls and steamy romance novels in a quiet Ubud library.",
-    "profile_image_url": "https://xgen.b-cdn.net/models/fitri-gunawan/images/sfw/fitri-gunawan_sfw_20260406_042304_fitri-gunawan__sfw__2026-04-06042259-18722808-3944842569883528_00001_.png?quality=85&format=webp",
+    "profile_image_url": "https://xgen.b-cdn.net/models/fitri-gunawan/images/sfw/fitri-gunawan_sfw_20260423_133443_fitri-gunawan__sfw__2026-04-23133436-18722808-6750774505488876_00001_.png",
     "secondary_tags": [
       "fashionista",
       "genuine",
       "vibrant"
     ],
     "country": "Indonesia",
-    "ethnicity": "Southeast Asian"
+    "ethnicity": "Southeast Asian",
+    "isSFW": true
   },
   {
     "slug": "farah-yusof",
     "name": "Farah Yusof",
     "description": "Nestled in the misty highlands of Malaysian Cameron, Farah Yusof discovered her soul's rhythm galloping barefoot across emerald pastures, where the call of wild horses wove into her dreams of eternal...",
-    "profile_image_url": "https://xgen.b-cdn.net/models/farah-yusof/images/sfw/farah-yusof_sfw_20260406_042107_farah-yusof__sfw__2026-04-06042102-18722808-5371089572333650_00001_.png?quality=85&format=webp",
+    "profile_image_url": "https://xgen.b-cdn.net/models/farah-yusof/images/sfw/farah-yusof_sfw_20260423_132033_farah-yusof__sfw__2026-04-23132029-18722808-1519320059064357_00001_.png",
     "secondary_tags": [
       "content-creator",
       "elegant",
       "romantic"
     ],
     "country": "Malaysia",
-    "ethnicity": "Southeast Asian"
+    "ethnicity": "Southeast Asian",
+    "isSFW": true
   },
   {
     "slug": "esther-okafor",
     "name": "Esther Okafor",
     "description": "Esther Okafor, born and raised in Lagos, Nigeria, exudes confidence and elegance, traits she attributes to her upbringing in a family that values tradition and poise.",
-    "profile_image_url": "https://xgen.b-cdn.net/models/esther-okafor/images/sfw/esther-okafor_sfw_20260406_041834_esther-okafor__sfw__2026-04-06041828-18722808-5548546281985638_00001_.png?quality=85&format=webp",
+    "profile_image_url": "https://xgen.b-cdn.net/models/esther-okafor/images/sfw/esther-okafor_sfw_20260423_122200_esther-okafor__sfw__2026-04-23122154-18722808-4560682789645667_00001_.png",
     "secondary_tags": [
       "warm",
       "fashionista",
@@ -527,13 +554,14 @@
       "vibrant"
     ],
     "country": "Nigeria",
-    "ethnicity": "African"
+    "ethnicity": "African",
+    "isSFW": true
   },
   {
     "slug": "elsa-magnusson",
     "name": "Elsa Magnusson",
     "description": "Elsa Magnusson grew up in the serene landscapes of Sweden, where her genuine and friendly nature blossomed through her love for traditional Swedish fika gatherings, often sharing sweet treats and...",
-    "profile_image_url": "https://xgen.b-cdn.net/models/elsa-magnusson/images/sfw/elsa-magnusson_sfw_20260406_041434_elsa-magnusson__sfw__2026-04-06041431-18722808-5246545335681516_00001_.png?quality=85&format=webp",
+    "profile_image_url": "https://xgen.b-cdn.net/models/elsa-magnusson/images/sfw/elsa-magnusson_sfw_20260406_041351_elsa-magnusson__sfw__2026-04-06041347-18722808-6661836825423146_00001_.png",
     "secondary_tags": [
       "genuine",
       "nature-lover",
@@ -542,13 +570,14 @@
       "friendly"
     ],
     "country": "Sweden",
-    "ethnicity": "European"
+    "ethnicity": "European",
+    "isSFW": true
   },
   {
     "slug": "dewi-anggraini",
     "name": "Dewi Anggraini",
     "description": "Dewi Anggraini, born and raised in the vibrant heart of Indonesia, discovered her passion for content creation while sharing her joyful dance routines inspired by traditional Balinese movements.",
-    "profile_image_url": "https://xgen.b-cdn.net/models/dewi-anggraini/images/sfw/dewi-anggraini_sfw_20260406_040853_dewi-anggraini__sfw__2026-04-06040848-18722808-2135250870120216_00001_.png?quality=85&format=webp",
+    "profile_image_url": "https://xgen.b-cdn.net/models/dewi-anggraini/images/sfw/dewi-anggraini_sfw_20260406_041051_dewi-anggraini__sfw__2026-04-06041046-18722808-8797385409826456_00001_.png",
     "secondary_tags": [
       "vibrant",
       "nature-lover",
@@ -557,13 +586,14 @@
       "dancer"
     ],
     "country": "Indonesia",
-    "ethnicity": "Southeast Asian"
+    "ethnicity": "Southeast Asian",
+    "isSFW": true
   },
   {
     "slug": "daniela-fuentes",
     "name": "Daniela Fuentes",
     "description": "Daniela Fuentes, a playful and passionate soul from the vibrant streets of Medellín, Colombia, discovered her love for modeling while dancing salsa at local festivals, her warm smile captivating...",
-    "profile_image_url": "https://xgen.b-cdn.net/models/daniela-fuentes/images/sfw/daniela-fuentes_sfw_20260406_040718_daniela-fuentes__sfw__2026-04-06040713-18722808-5040720841109426_00001_.png?quality=85&format=webp",
+    "profile_image_url": "https://xgen.b-cdn.net/models/daniela-fuentes/images/sfw/daniela-fuentes_sfw_20260423_112025_daniela-fuentes__sfw__2026-04-23112021-18722808-4675768215908661_00001_.png",
     "secondary_tags": [
       "vibrant",
       "passionate",
@@ -573,7 +603,8 @@
       "dancer"
     ],
     "country": "Colombia",
-    "ethnicity": "Hispanic"
+    "ethnicity": "Hispanic",
+    "isSFW": true
   },
   {
     "slug": "dalia-mansour",
@@ -587,13 +618,14 @@
       "warm"
     ],
     "country": "Egypt",
-    "ethnicity": "Middle Eastern"
+    "ethnicity": "Middle Eastern",
+    "isSFW": true
   },
   {
     "slug": "christine-flores",
     "name": "Christine Flores",
     "description": "Born amid the pearl-diving shores of Palawan, Philippines, Christine Flores discovered her calling as a jewelry designer by transforming heirloom filigree and South Sea pearls into elegant, modern...",
-    "profile_image_url": "https://xgen.b-cdn.net/models/christine-flores/images/sfw/christine-flores_sfw_20260406_040231_christine-flores__sfw__2026-04-06040227-18722808-2767972498701984_00001_.png?quality=85&format=webp",
+    "profile_image_url": "https://xgen.b-cdn.net/models/christine-flores/images/sfw/christine-flores_sfw_20260423_102903_christine-flores__sfw__2026-04-23102857-18722808-6422865384741678_00001_.png",
     "secondary_tags": [
       "content-creator",
       "eco-conscious",
@@ -606,25 +638,27 @@
       "artist"
     ],
     "country": "Philippines",
-    "ethnicity": "Southeast Asian"
+    "ethnicity": "Southeast Asian",
+    "isSFW": true
   },
   {
     "slug": "camille-durand",
     "name": "Camille Durand",
-    "description": "Camille Durand, a fiery Parisian ballet dancer, traded the stuffy halls of the Paris Opéra Ballet for spotlight-stealing solos that blend flawless technique with shameless, her lithe body...",
-    "profile_image_url": "https://xgen.b-cdn.net/models/camille-durand/images/sfw/camille-durand_sfw_20260406_035625_camille-durand__sfw__2026-04-06035621-18722808-3311735501488737_00001_.png?quality=85&format=webp",
+    "description": "Camille Durand, a fiery Parisian ballet dancer, traded the stuffy halls of the Paris Opéra Ballet for spotlight-stealing solos that blend flawless technique with passionate expression.",
+    "profile_image_url": "https://xgen.b-cdn.net/models/camille-durand/images/sfw/camille-durand_sfw_20260423_093730_camille-durand__sfw__2026-04-23093725-18722808-6610299019800810_00001_.png",
     "secondary_tags": [
       "bohemian",
       "dancer"
     ],
     "country": "France",
-    "ethnicity": "European"
+    "ethnicity": "European",
+    "isSFW": true
   },
   {
     "slug": "bunga-utomo",
     "name": "Bunga Utomo",
     "description": "Born in the lush rice terraces of Bali, Indonesia, Bunga Utomo discovered her tender passion for cooking through her mother's heartfelt rendang and nasi goreng recipes, always shared with warm hugs...",
-    "profile_image_url": "https://xgen.b-cdn.net/models/bunga-utomo/images/sfw/bunga-utomo_sfw_20260406_021707_bunga-utomo__sfw__2026-04-06021703-18722808-5791032548968116_00001_.png?quality=85&format=webp",
+    "profile_image_url": "https://xgen.b-cdn.net/models/bunga-utomo/images/sfw/bunga-utomo_sfw_20260423_090401_bunga-utomo__sfw__2026-04-23090351-18722808-5984110076813199_00001_.png",
     "secondary_tags": [
       "content-creator",
       "foodie",
@@ -634,13 +668,14 @@
       "warm"
     ],
     "country": "Indonesia",
-    "ethnicity": "Southeast Asian"
+    "ethnicity": "Southeast Asian",
+    "isSFW": true
   },
   {
     "slug": "amira-mahmoud",
     "name": "Amira Mahmoud",
     "description": "Born in the vibrant souks of Dubai, UAE, Amira Mahmoud shattered traditional expectations with her fierce Arab spirit, trading family silk trade roots for the high-flying world of a private jet...",
-    "profile_image_url": "https://xgen.b-cdn.net/models/amira-mahmoud/images/sfw/amira-mahmoud_sfw_20260406_013344_amira-mahmoud__sfw__2026-04-06013339-18722808-4814371851282615_00001_.png?quality=85&format=webp",
+    "profile_image_url": "https://xgen.b-cdn.net/models/amira-mahmoud/images/sfw/amira-mahmoud_sfw_20260423_083011_amira-mahmoud__sfw__2026-04-23083006-18722808-485274255259215_00001_.png",
     "secondary_tags": [
       "traveler",
       "bold",
@@ -651,13 +686,14 @@
       "elegant"
     ],
     "country": "UAE",
-    "ethnicity": "Middle Eastern"
+    "ethnicity": "Middle Eastern",
+    "isSFW": true
   },
   {
     "slug": "alice-bianchi",
     "name": "Alice Bianchi",
     "description": "Hailing from the vibrant streets of Florence, Italy, Alice Bianchi grew up surrounded by Renaissance masterpieces, channeling their bold into her own clay and marble sculptures that...",
-    "profile_image_url": "https://xgen.b-cdn.net/models/alice-bianchi/images/sfw/alice-bianchi_sfw_20260406_004458_alice-bianchi__sfw__2026-04-06004454-18722808-415121034386638_00001_.png?quality=85&format=webp",
+    "profile_image_url": "https://xgen.b-cdn.net/models/alice-bianchi/images/sfw/alice-bianchi_sfw_20260406_004318_alice-bianchi__sfw__2026-04-06004313-18722808-4868417584652093_00001_.png",
     "secondary_tags": [
       "creative",
       "beauty-enthusiast",
@@ -669,7 +705,8 @@
       "artist"
     ],
     "country": "Italy",
-    "ethnicity": "European"
+    "ethnicity": "European",
+    "isSFW": true
   },
   {
     "slug": "zara-malik",
@@ -684,13 +721,14 @@
       "vibrant"
     ],
     "country": "Lebanon",
-    "ethnicity": "Middle Eastern"
+    "ethnicity": "Middle Eastern",
+    "isSFW": true
   },
   {
     "slug": "zara-lee",
     "name": "Zara Lee",
     "description": "Zara Chen, a 22-year-old from Shanghai, discovered her passion for modeling after participating in a traditional Chinese dance performance during the Mid-Autumn Festival.",
-    "profile_image_url": "https://xgen.b-cdn.net/models/zara-lee/images/sfw/zara-lee_sfw_20260330_110936_zara-lee__sfw__2026-03-30110932-18722808-1322024813741350_00001_.png?quality=85&format=webp",
+    "profile_image_url": "https://xgen.b-cdn.net/models/zara-lee/images/sfw/zara-lee_sfw_20260330_112254_zara-lee__sfw__2026-03-30112249-18722808-5210049468041891_00001_.png",
     "secondary_tags": [
       "dancer",
       "model",
@@ -699,7 +737,8 @@
       "artist"
     ],
     "country": "China",
-    "ethnicity": "East Asian"
+    "ethnicity": "East Asian",
+    "isSFW": true
   },
   {
     "slug": "yuna-kim",
@@ -715,13 +754,14 @@
       "shy"
     ],
     "country": "South Korea",
-    "ethnicity": "East Asian"
+    "ethnicity": "East Asian",
+    "isSFW": true
   },
   {
     "slug": "yumiko-morita",
     "name": "Yumiko Morita",
     "description": "Yumiko Morita, a playful and innocent content creator from Tokyo, Japan, always loved dressing up in traditional kimonos and sharing her cute, playful moments on camera.",
-    "profile_image_url": "https://xgen.b-cdn.net/models/yumiko-morita/images/sfw/yumiko-morita_sfw_20260330_102736_yumiko-morita__sfw__2026-03-30102731-18722808-5640870058826430_00001_.png?quality=85&format=webp",
+    "profile_image_url": "https://xgen.b-cdn.net/models/yumiko-morita/images/sfw/yumiko-morita_sfw_20260330_102658_yumiko-morita__sfw__2026-03-30102653-18722808-1777819137968607_00001_.png",
     "secondary_tags": [
       "photographer",
       "content-creator",
@@ -731,13 +771,14 @@
       "playful"
     ],
     "country": "Japan",
-    "ethnicity": "East Asian"
+    "ethnicity": "East Asian",
+    "isSFW": true
   },
   {
     "slug": "xiao-wei",
     "name": "Xiao Wei",
     "description": "Xiao Wei, born in the historic city of Suzhou, was raised amidst the serene beauty of its classical gardens, which nurtured her refined and elegant demeanor.",
-    "profile_image_url": "https://xgen.b-cdn.net/models/xiao-wei/images/sfw/xiao-wei_sfw_20260307_201228_xiao-wei__sfw__2026-03-07201223-18722808-1320059835579793_00001_.png?quality=85&format=webp",
+    "profile_image_url": "https://xgen.b-cdn.net/models/xiao-wei/images/sfw/xiao-wei_sfw_20260424_031742_xiao-wei__sfw__2026-04-24031736-18722808-802935111966947_00001_.png",
     "secondary_tags": [
       "content-creator",
       "dancer",
@@ -747,13 +788,14 @@
       "serene"
     ],
     "country": "China",
-    "ethnicity": "East Asian"
+    "ethnicity": "East Asian",
+    "isSFW": true
   },
   {
     "slug": "tessa-de-groot",
     "name": "Tessa de Groot",
     "description": "Tessa de Groot, a bubbly Dutch nurse from the vibrant streets of Utrecht, grew up pedaling bikes along canals and dancing at King's Day festivals, her infectious optimism turning every rainy day into...",
-    "profile_image_url": "https://xgen.b-cdn.net/models/tessa-de-groot/images/sfw/tessa-de-groot_sfw_20260330_101308_tessa-de-groot__sfw__2026-03-30101303-18722808-729548489958963_00001_.png?quality=85&format=webp",
+    "profile_image_url": "https://xgen.b-cdn.net/models/tessa-de-groot/images/sfw/tessa-de-groot_sfw_20260330_101649_tessa-de-groot__sfw__2026-03-30101643-18722808-2945401343838172_00001_.png",
     "secondary_tags": [
       "healthcare",
       "dancer",
@@ -762,13 +804,14 @@
       "vibrant"
     ],
     "country": "Netherlands",
-    "ethnicity": "European"
+    "ethnicity": "European",
+    "isSFW": true
   },
   {
     "slug": "sienna-clark",
     "name": "Sienna Clark",
     "description": "Sienna Clark, a vibrant Aussie from the sunny coasts of Queensland, turned her love for adventure into a thriving career as a content creator.",
-    "profile_image_url": "https://xgen.b-cdn.net/models/sienna-clark/images/sfw/sienna-clark_sfw_20260307_192821_sienna-clark__sfw__2026-03-07192816-18722808-1910684927352096_00001_.png?quality=85&format=webp",
+    "profile_image_url": "https://xgen.b-cdn.net/models/sienna-clark/images/sfw/sienna-clark_sfw_20260424_011924_sienna-clark__sfw__2026-04-24011918-18722808-252178207542717_00001_.png",
     "secondary_tags": [
       "photographer",
       "content-creator",
@@ -777,13 +820,14 @@
       "vibrant"
     ],
     "country": "Australia",
-    "ethnicity": "European"
+    "ethnicity": "European",
+    "isSFW": true
   },
   {
     "slug": "sana-mirza",
     "name": "Sana Mirza",
     "description": "Sana Mirza, hailing from the vibrant city of Mumbai, discovered her passion for modeling while gracefully twirling in her mother's traditional sarees, each movement a dance of elegance.",
-    "profile_image_url": "https://xgen.b-cdn.net/models/sana-mirza/images/sfw/sana-mirza_sfw_20260308_070444_sana-mirza__sfw__2026-03-08070438-18722808-3501167545081032_00001_.png?quality=85&format=webp",
+    "profile_image_url": "https://xgen.b-cdn.net/models/sana-mirza/images/sfw/sana-mirza_sfw_20260307_190020_sana-mirza__sfw__2026-03-07190015-18722808-7586741501619283_00001__crop_1773100519.png",
     "secondary_tags": [
       "content-creator",
       "warm",
@@ -792,13 +836,14 @@
       "vibrant"
     ],
     "country": "India",
-    "ethnicity": "South Asian"
+    "ethnicity": "South Asian",
+    "isSFW": true
   },
   {
     "slug": "parisa-ahmadi",
     "name": "Parisa Ahmadi",
-    "description": "Born in the vibrant heart of Tehran, Parisa Ahmadi discovered her love for dance while sneaking peeks at forbidden Persian folk performances, blending rhythmic bandari beats with her own teasing hip...",
-    "profile_image_url": "https://xgen.b-cdn.net/models/parisa-ahmadi/images/sfw/parisa-ahmadi_sfw_20260328_052432_parisa-ahmadi__sfw__2026-03-28052427-18722808-1134989311263479_00001_.png?quality=85&format=webp",
+    "description": "Born in the vibrant heart of Tehran, Parisa Ahmadi discovered her love for dance through Persian folk performances, blending rhythmic bandari beats with her own expressive style.",
+    "profile_image_url": "https://xgen.b-cdn.net/models/parisa-ahmadi/images/sfw/parisa-ahmadi_sfw_20260330_070501_parisa-ahmadi__sfw__2026-03-30070457-18722808-5655317546922813_00001_.png",
     "secondary_tags": [
       "photographer",
       "content-creator",
@@ -807,13 +852,14 @@
       "vibrant"
     ],
     "country": "Iran",
-    "ethnicity": "Middle Eastern"
+    "ethnicity": "Middle Eastern",
+    "isSFW": true
   },
   {
     "slug": "mila-ivanova",
     "name": "Mila Ivanova",
     "description": "Mila Ivanova grew up in the picturesque town of Plovdiv, Bulgaria, where she developed a deep appreciation for the traditional Bulgarian folk dances and music that filled her childhood.",
-    "profile_image_url": "https://xgen.b-cdn.net/models/mila-ivanova/images/sfw/mila-ivanova_sfw_20260307_183739_mila-ivanova__sfw__2026-03-07183734-18722808-7149469055072606_00001_.png?quality=85&format=webp",
+    "profile_image_url": "https://xgen.b-cdn.net/models/mila-ivanova/images/sfw/mila-ivanova_sfw_20260424_062956_mila-ivanova__sfw__2026-04-24062950-18722808-931702977154264_00001_.png",
     "secondary_tags": [
       "genuine",
       "sweet",
@@ -822,13 +868,14 @@
       "nature-lover"
     ],
     "country": "Bulgaria",
-    "ethnicity": "European"
+    "ethnicity": "European",
+    "isSFW": true
   },
   {
     "slug": "karolina-nowak",
     "name": "Karolina Nowak",
     "description": "Karolina Nowak, a genuine and charming Polish model, grew up in the picturesque countryside of Poland, where she developed a deep appreciation for traditional folk dances and music.",
-    "profile_image_url": "https://xgen.b-cdn.net/models/karolina-nowak/images/sfw/karolina-nowak_sfw_20260307_175109_karolina-nowak__sfw__2026-03-07175104-18722808-3974215931707173_00001_.png?quality=85&format=webp",
+    "profile_image_url": "https://xgen.b-cdn.net/models/karolina-nowak/images/sfw/karolina-nowak_sfw_20260423_162956_karolina-nowak__sfw__2026-04-23162950-18722808-5748028626327359_00001_.png",
     "secondary_tags": [
       "genuine",
       "sweet",
@@ -838,7 +885,8 @@
       "charming"
     ],
     "country": "Poland",
-    "ethnicity": "European"
+    "ethnicity": "European",
+    "isSFW": true
   },
   {
     "slug": "julia-santos",

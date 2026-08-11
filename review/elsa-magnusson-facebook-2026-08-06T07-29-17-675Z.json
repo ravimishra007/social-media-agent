@@ -1,0 +1,24 @@
+{
+  "brand": {
+    "slug": "elsa-magnusson",
+    "name": "Elsa Magnusson"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/elsa-magnusson/images/sfw/elsa-magnusson_sfw_20260406_041351_elsa-magnusson__sfw__2026-04-06041347-18722808-6661836825423146_00001_.png"
+  },
+  "platform": "facebook",
+  "content": {
+    "caption": "There's something so peaceful about sitting outside with a warm drink and a sweet pastry. The birds are chirping and the trees sway gently in the breeze. Moments like these fill my heart with joy.",
+    "hashtags": [
+      "#NatureLover",
+      "#SereneMoments"
+    ],
+    "cta": "What simple pleasure makes you smile today?"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "review",
+  "created_at": "2026-08-06T07:29:17.675Z"
+}

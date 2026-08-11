@@ -1,0 +1,24 @@
+{
+  "brand": {
+    "slug": "amira-mahmoud",
+    "name": "Amira Mahmoud"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/amira-mahmoud/images/sfw/amira-mahmoud_sfw_20260423_083011_amira-mahmoud__sfw__2026-04-23083006-18722808-485274255259215_00001_.png"
+  },
+  "platform": "facebook",
+  "content": {
+    "caption": "Flying high over endless horizons today and feeling so alive. The world looks different from up here, full of promise and new stories waiting to unfold. Grateful for these moments that make life so vibrant. 😊✈️🌍",
+    "hashtags": [
+      "#traveler",
+      "#luxury-lifestyle"
+    ],
+    "cta": "What's your favorite view from above?"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "review",
+  "created_at": "2026-08-06T08:02:37.260Z"
+}

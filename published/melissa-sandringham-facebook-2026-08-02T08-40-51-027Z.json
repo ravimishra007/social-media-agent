@@ -1,0 +1,25 @@
+{
+  "brand": {
+    "slug": "melissa-sandringham",
+    "name": "Melissa Sandringham"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/melissa-sandringham/images/sfw/melissa-sandringham_sfw_20260406_052441_melissa-sandringham__sfw__2026-04-06052437-18722808-1065266458516533_00001_.png?quality=85&format=webp"
+  },
+  "platform": "facebook",
+  "content": {
+    "caption": "Found a moment of peace walking along the river today, breathing in the crisp air and feeling inspired by the world around me. These simple adventures always lift my spirits 🌿 As a shy girl at heart, nature helps me connect.",
+    "hashtags": [
+      "#naturelover",
+      "#artist"
+    ],
+    "cta": "I'd love to know what you think."
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "approved",
+  "created_at": "2026-08-02T08:40:51.027Z",
+  "approved_at": "2026-08-04T14:35:06.515Z"
+}

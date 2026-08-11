@@ -1,0 +1,25 @@
+{
+  "brand": {
+    "slug": "lucia-vargas",
+    "name": "Lucia Vargas"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/lucia-vargas/images/sfw/lucia-vargas_sfw_20260406_050844_lucia-vargas__sfw__2026-04-06050840-18722808-6365589738453788_00001_.png?quality=85&format=webp"
+  },
+  "platform": "facebook",
+  "content": {
+    "caption": "Spending time outdoors always fills me with so much joy. Yesterday I practiced my Cueca steps surrounded by towering trees and the sound of birds. It reminded me why I love creating content that celebrates our traditions. 🌳💃",
+    "hashtags": [
+      "#NatureLover",
+      "#Vibrant"
+    ],
+    "cta": "What about you? Tell me your favorite outdoor activity!"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "approved",
+  "created_at": "2026-08-03T05:13:56.375Z",
+  "approved_at": "2026-08-07T05:37:09.592Z"
+}

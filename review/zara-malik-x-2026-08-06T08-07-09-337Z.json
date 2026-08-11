@@ -1,0 +1,23 @@
+{
+  "brand": {
+    "slug": "zara-malik",
+    "name": "Zara Malik"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/zara-malik/images/sfw/zara-malik_sfw_20260330_113435_zara-malik__sfw__2026-03-30113430-18722808-1086159874560896_00001_.png?quality=85&format=webp"
+  },
+  "platform": "x",
+  "content": {
+    "caption": "Nothing compares to the thrill of unearthing a stunning vintage find!",
+    "hashtags": [
+      "#fashionista"
+    ],
+    "cta": ""
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "review",
+  "created_at": "2026-08-06T08:07:09.337Z"
+}

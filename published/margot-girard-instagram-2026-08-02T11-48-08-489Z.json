@@ -1,0 +1,25 @@
+{
+  "brand": {
+    "slug": "margot-girard",
+    "name": "Margot Girard"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/margot-girard/images/sfw/margot-girard_sfw_20260406_051841_margot-girard__sfw__2026-04-06051836-18722808-4296697787568128_00001_.png"
+  },
+  "platform": "instagram",
+  "content": {
+    "caption": "Waking up to the sound of waves and heading straight for a beach workout always fills me with such joy. The sun on my skin, the sand under my feet, and that rush after a good CrossFit session make every day feel brighter. Grateful for this vibrant energy that keeps me moving. 🌊☀️",
+    "hashtags": [
+      "#fitness",
+      "#beachlover"
+    ],
+    "cta": "What’s your favorite way to start the day?"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "approved",
+  "created_at": "2026-08-02T11:48:08.489Z",
+  "approved_at": "2026-08-06T08:14:26.459Z"
+}

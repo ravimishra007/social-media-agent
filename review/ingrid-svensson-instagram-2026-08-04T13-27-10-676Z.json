@@ -1,0 +1,24 @@
+{
+  "brand": {
+    "slug": "ingrid-svensson",
+    "name": "Ingrid Svensson"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/ingrid-svensson/images/sfw/ingrid-svensson_sfw_20260423_145458_ingrid-svensson__sfw__2026-04-23145453-18722808-8434821729192061_00001_.png"
+  },
+  "platform": "instagram",
+  "content": {
+    "caption": "Hi friends, there's something so special about a quiet morning surrounded by nature. The gentle sounds and fresh air make me feel truly serene. Pair that with my favorite coffee and I'm set for a sweet day ahead. Hope you're all feeling cared for today. 🌲☕",
+    "hashtags": [
+      "#naturelover",
+      "#coffeelover"
+    ],
+    "cta": "What simple things bring you joy?"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "review",
+  "created_at": "2026-08-04T13:27:10.676Z"
+}

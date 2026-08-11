@@ -1,0 +1,24 @@
+{
+  "brand": {
+    "slug": "mila-ivanova",
+    "name": "Mila Ivanova"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/mila-ivanova/images/sfw/mila-ivanova_sfw_20260424_062956_mila-ivanova__sfw__2026-04-24062950-18722808-931702977154264_00001_.png"
+  },
+  "platform": "instagram",
+  "content": {
+    "caption": "Wandered along the quiet trails near home this morning, where the breeze seemed to hum old folk tunes from my childhood. The way sunlight danced on the leaves reminded me of those joyful dances and the pure beauty in every little moment. My heart feels so full from these simple connections.",
+    "hashtags": [
+      "#MusicLover",
+      "#NatureLover"
+    ],
+    "cta": "What small thing brought you joy today?"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "review",
+  "created_at": "2026-08-07T05:43:55.519Z"
+}

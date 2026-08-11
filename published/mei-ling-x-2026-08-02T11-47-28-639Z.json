@@ -1,0 +1,24 @@
+{
+  "brand": {
+    "slug": "mei-ling",
+    "name": "Mei Ling"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/mei-ling/images/sfw/mei-ling_sfw_20260423_220843_mei-ling__sfw__2026-04-23220837-18722808-1719291522648215_00001_.png"
+  },
+  "platform": "x",
+  "content": {
+    "caption": "Spinning with joy makes every day feel so vibrant!",
+    "hashtags": [
+      "#vibrant"
+    ],
+    "cta": "What's yours?"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "approved",
+  "created_at": "2026-08-02T11:47:28.639Z",
+  "approved_at": "2026-08-06T08:14:43.606Z"
+}

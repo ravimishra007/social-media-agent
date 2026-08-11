@@ -1,0 +1,24 @@
+{
+  "brand": {
+    "slug": "camille-durand",
+    "name": "Camille Durand"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/camille-durand/images/sfw/camille-durand_sfw_20260423_093730_camille-durand__sfw__2026-04-23093725-18722808-6610299019800810_00001_.png"
+  },
+  "platform": "instagram",
+  "content": {
+    "caption": "Stepping into the studio always feels like coming home. The music wraps around me and I let my body tell its story with every graceful turn and leap. It's that perfect mix of precision and pure emotion that lights me up inside. Feeling so grateful for these moments of flow. 🌸💃✨",
+    "hashtags": [
+      "#bohemian",
+      "#dancer"
+    ],
+    "cta": "What inspires your own creative flow?"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "review",
+  "created_at": "2026-08-06T07:54:17.936Z"
+}

@@ -1,0 +1,25 @@
+{
+  "brand": {
+    "slug": "natalia-volkov",
+    "name": "Natalia Volkov"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/natalia-volkov/images/sfw/natalia-volkov_sfw_20260406_053056_natalia-volkov__sfw__2026-04-06053052-18722808-8949736409069053_00001_.png?quality=85&format=webp"
+  },
+  "platform": "instagram",
+  "content": {
+    "caption": "Lost in the flow of movement this afternoon, feeling every beat echo in my soul. Dancing has this beautiful way of connecting me to something deeper. 🌙",
+    "hashtags": [
+      "#dancer",
+      "#mysterious"
+    ],
+    "cta": "What brings grace into your life?"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "approved",
+  "created_at": "2026-08-02T08:14:23.198Z",
+  "approved_at": "2026-08-04T14:35:00.081Z"
+}

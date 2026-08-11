@@ -1,0 +1,25 @@
+{
+  "brand": {
+    "slug": "christine-flores",
+    "name": "Christine Flores"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/christine-flores/images/sfw/christine-flores_sfw_20260423_102903_christine-flores__sfw__2026-04-23102857-18722808-6422865384741678_00001_.png"
+  },
+  "platform": "facebook",
+  "content": {
+    "caption": "Every morning I walk by the sea and let its quiet beauty guide my hands. Turning simple pearls into elegant minimalist pieces feels like sharing a little piece of nature with the world 🌊✨",
+    "hashtags": [
+      "#EcoConscious",
+      "#Minimalist",
+      "#Designer"
+    ],
+    "cta": "What inspires your everyday style?"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "review",
+  "created_at": "2026-08-06T07:49:51.811Z"
+}

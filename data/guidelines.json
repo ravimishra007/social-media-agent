@@ -41,7 +41,7 @@
       "max_words": 220
     },
     "hashtags": {
-      "max": 10
+      "max": 3
     }
   },
 
@@ -51,7 +51,7 @@
       "max_words": 80
     },
     "hashtags": {
-      "max": 5
+      "max": 3
     }
   },
 

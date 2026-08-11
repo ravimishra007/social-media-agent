@@ -1,0 +1,23 @@
+{
+  "brand": {
+    "slug": "giorgia-mancini",
+    "name": "Giorgia Mancini"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/giorgia-mancini/images/sfw/giorgia-mancini_sfw_20260423_140939_giorgia-mancini__sfw__2026-04-23140935-18722808-3748764878845290_00001_.png"
+  },
+  "platform": "x",
+  "content": {
+    "caption": "Designing bold visuals ignites my fierce ambition in luxury fashion.",
+    "hashtags": [
+      "#Creative"
+    ],
+    "cta": ""
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "review",
+  "created_at": "2026-08-04T13:38:19.873Z"
+}

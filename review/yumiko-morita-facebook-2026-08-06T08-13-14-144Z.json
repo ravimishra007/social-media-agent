@@ -1,0 +1,24 @@
+{
+  "brand": {
+    "slug": "yumiko-morita",
+    "name": "Yumiko Morita"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/yumiko-morita/images/sfw/yumiko-morita_sfw_20260330_102658_yumiko-morita__sfw__2026-03-30102653-18722808-1777819137968607_00001_.png"
+  },
+  "platform": "facebook",
+  "content": {
+    "caption": "Hi friends! I had such a joyful time dressing in my kimono today and snapping playful photos that made me smile. The soft colors and flowing fabric always lift my spirits in the sweetest way 😊",
+    "hashtags": [
+      "#photographer",
+      "#beauty-enthusiast"
+    ],
+    "cta": "I'd love to hear what makes you smile!"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "review",
+  "created_at": "2026-08-06T08:13:14.144Z"
+}

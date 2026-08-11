@@ -1,0 +1,23 @@
+{
+  "brand": {
+    "slug": "amira-mahmoud",
+    "name": "Amira Mahmoud"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/amira-mahmoud/images/sfw/amira-mahmoud_sfw_20260423_083011_amira-mahmoud__sfw__2026-04-23083006-18722808-485274255259215_00001_.png"
+  },
+  "platform": "x",
+  "content": {
+    "caption": "Nothing compares to the freedom I feel soaring in my private jet above the clouds.",
+    "hashtags": [
+      "#traveler"
+    ],
+    "cta": "Where are you jetting off to next?"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "review",
+  "created_at": "2026-08-06T08:02:06.333Z"
+}

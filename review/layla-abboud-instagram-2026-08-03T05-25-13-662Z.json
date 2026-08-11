@@ -1,0 +1,24 @@
+{
+  "brand": {
+    "slug": "layla-abboud",
+    "name": "Layla Abboud"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/layla-abboud/images/sfw/layla-abboud_sfw_20260423_182858_layla-abboud__sfw__2026-04-23182852-18722808-708355427480803_00001_.png"
+  },
+  "platform": "instagram",
+  "content": {
+    "caption": "Walking through the garden this morning the flowers seemed to dance with the wind. It filled my heart with such warmth and elegance in the simplest things. Feeling grateful for these quiet moments that inspire my soul.",
+    "hashtags": [
+      "#naturelover",
+      "#dancer"
+    ],
+    "cta": "What moment made you smile today?"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "review",
+  "created_at": "2026-08-03T05:25:13.662Z"
+}

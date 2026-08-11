@@ -1,0 +1,23 @@
+{
+  "brand": {
+    "slug": "bunga-utomo",
+    "name": "Bunga Utomo"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/bunga-utomo/images/sfw/bunga-utomo_sfw_20260423_090401_bunga-utomo__sfw__2026-04-23090351-18722808-5984110076813199_00001_.png"
+  },
+  "platform": "x",
+  "content": {
+    "caption": "I find nothing beats the joy of cooking simple nourishing meals with fresh herbs.",
+    "hashtags": [
+      "#foodie"
+    ],
+    "cta": "What's your favorite comforting dish?"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "review",
+  "created_at": "2026-08-06T07:59:08.052Z"
+}

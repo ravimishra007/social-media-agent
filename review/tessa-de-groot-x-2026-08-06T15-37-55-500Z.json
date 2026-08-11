@@ -1,0 +1,23 @@
+{
+  "brand": {
+    "slug": "tessa-de-groot",
+    "name": "Tessa de Groot"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/tessa-de-groot/images/sfw/tessa-de-groot_sfw_20260330_101649_tessa-de-groot__sfw__2026-03-30101643-18722808-2945401343838172_00001_.png"
+  },
+  "platform": "x",
+  "content": {
+    "caption": "Dancing my way through every shift with endless energy!",
+    "hashtags": [
+      "#dancer"
+    ],
+    "cta": "What's your post-shift ritual?"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "review",
+  "created_at": "2026-08-06T15:37:55.500Z"
+}

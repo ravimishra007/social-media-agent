@@ -1,0 +1,24 @@
+{
+  "brand": {
+    "slug": "bunga-utomo",
+    "name": "Bunga Utomo"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/bunga-utomo/images/sfw/bunga-utomo_sfw_20260423_090401_bunga-utomo__sfw__2026-04-23090351-18722808-5984110076813199_00001_.png"
+  },
+  "platform": "facebook",
+  "content": {
+    "caption": "Nothing beats the joy of cooking a simple nasi goreng inspired by my mother's recipes. The kitchen fills with warm aromas and I feel connected to the lush gardens around me. Sharing a plate with family makes everything feel nurturing and special. 🌱🍳",
+    "hashtags": [
+      "#foodie",
+      "#nature-lover"
+    ],
+    "cta": "What comfort meal brings back your favorite memories?"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "review",
+  "created_at": "2026-08-06T07:59:39.081Z"
+}

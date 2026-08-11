@@ -1,0 +1,24 @@
+{
+  "brand": {
+    "slug": "freya-andersen",
+    "name": "Freya Andersen"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/freya-andersen/images/sfw/freya-andersen_sfw_20260423_134241_freya-andersen__sfw__2026-04-23134235-18722808-4484703697077512_00001_.png"
+  },
+  "platform": "instagram",
+  "content": {
+    "caption": "There's something magical about exploring the hidden trails near my home. The way the sunlight filters through the trees and the crisp air fills my lungs reminds me why I love being out here so much. It’s pure joy 🌲✨",
+    "hashtags": [
+      "#naturelover",
+      "#outdoorlover"
+    ],
+    "cta": "What’s your go-to outdoor escape?"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "review",
+  "created_at": "2026-08-05T06:04:29.008Z"
+}

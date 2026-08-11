@@ -1,0 +1,23 @@
+{
+  "brand": {
+    "slug": "camille-durand",
+    "name": "Camille Durand"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/camille-durand/images/sfw/camille-durand_sfw_20260423_093730_camille-durand__sfw__2026-04-23093725-18722808-6610299019800810_00001_.png"
+  },
+  "platform": "x",
+  "content": {
+    "caption": "Dancing with flawless technique and fiery passion is my daily joy",
+    "hashtags": [
+      "#dancer"
+    ],
+    "cta": ""
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "review",
+  "created_at": "2026-08-06T07:54:05.269Z"
+}

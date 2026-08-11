@@ -1,0 +1,25 @@
+{
+  "brand": {
+    "slug": "monika-szabo",
+    "name": "Monika Szabo"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/monika-szabo/images/sfw/monika-szabo_sfw_20260423_234315_monika-szabo__sfw__2026-04-23234311-18722808-2014005534212691_00001_.png"
+  },
+  "platform": "facebook",
+  "content": {
+    "caption": "Spent a lovely afternoon lost in the rhythms of traditional folk dancing 🌿 Each step brings such sweet joy and a sense of true beauty in movement 💃 It always leaves me feeling genuinely happy and connected.",
+    "hashtags": [
+      "#FolkDance",
+      "#DanceJoy"
+    ],
+    "cta": "What brings you joy today?"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "approved",
+  "created_at": "2026-08-02T08:40:20.612Z",
+  "approved_at": "2026-08-04T13:14:27.840Z"
+}

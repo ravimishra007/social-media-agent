@@ -1,0 +1,25 @@
+{
+  "brand": {
+    "slug": "tara-brennan",
+    "name": "Tara Brennan"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/tara-brennan/images/sfw/tara-brennan_sfw_20260424_022145_tara-brennan__sfw__2026-04-24022139-18722808-2754243679565249_00001_.png"
+  },
+  "platform": "facebook",
+  "content": {
+    "caption": "Hi friends, spent the afternoon chasing some creative inspiration and it felt so good. Always the little things that make the day special 😊 How's your day going?",
+    "hashtags": [
+      "#vibrant",
+      "#friendly"
+    ],
+    "cta": "Let me know what inspires you!"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "approved",
+  "created_at": "2026-07-10T17:29:00.089Z",
+  "approved_at": "2026-08-02T08:42:16.334Z"
+}

@@ -1,0 +1,24 @@
+{
+  "brand": {
+    "slug": "xiao-wei",
+    "name": "Xiao Wei"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/xiao-wei/images/sfw/xiao-wei_sfw_20260424_031742_xiao-wei__sfw__2026-04-24031736-18722808-802935111966947_00001_.png"
+  },
+  "platform": "instagram",
+  "content": {
+    "caption": "Stepping softly through the garden paths this morning, the quiet bloom of flowers and gentle rustle of leaves filled me with such calm. It inspired a graceful dance, moving in harmony with the serene beauty around me. 🌿✨",
+    "hashtags": [
+      "#dancer",
+      "#serene"
+    ],
+    "cta": "What brings you a sense of peace today?"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "review",
+  "created_at": "2026-08-06T08:14:25.654Z"
+}

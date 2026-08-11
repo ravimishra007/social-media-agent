@@ -1,0 +1,25 @@
+{
+  "brand": {
+    "slug": "lucia-vargas",
+    "name": "Lucia Vargas"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/lucia-vargas/images/sfw/lucia-vargas_sfw_20260406_050844_lucia-vargas__sfw__2026-04-06050840-18722808-6365589738453788_00001_.png?quality=85&format=webp"
+  },
+  "platform": "instagram",
+  "content": {
+    "caption": "There's something so calming about dancing in the middle of nature. Practicing my favorite steps under the open sky fills me with vibrant energy and passion. It connects me deeply to what I love most. 🌳💃",
+    "hashtags": [
+      "#naturelover",
+      "#vibrant"
+    ],
+    "cta": "What activity makes you feel most alive?"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "approved",
+  "created_at": "2026-08-03T05:13:43.577Z",
+  "approved_at": "2026-08-06T15:31:29.912Z"
+}

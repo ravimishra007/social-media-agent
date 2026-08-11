@@ -36,6 +36,10 @@ function stripStatus(brand) {
  * Full SFW pipeline for one brand.
  *
  * @param {string} slug
+ * @param {function} [onEvent]
+ * @param {object} [opts]
+ * @param {string[]} [opts.excludeImageUrls] - images the user already saw and
+ *   skipped; the resolver moves past them so a re-run picks the next candidate.
  * @returns {Promise<{
  *   ok: boolean,
  *   status: 'verified_sfw' | 'manual_review_required' | 'brand_not_found',
@@ -45,7 +49,7 @@ function stripStatus(brand) {
  *   image: object
  * }>}
  */
-export async function validateBrandSafety(slug, onEvent = () => {}) {
+export async function validateBrandSafety(slug, onEvent = () => {}, opts = {}) {
   onEvent({ step: "start", slug });
 
   const { list, isArrayShape, original } = await readBrands();
@@ -75,7 +79,9 @@ export async function validateBrandSafety(slug, onEvent = () => {}) {
   };
 
   onEvent({ step: "phase", name: "image" });
-  const image = await resolveSafeImage(working, onEvent);
+  const image = await resolveSafeImage(working, onEvent, {
+    excludeUrls: opts.excludeImageUrls || []
+  });
   onEvent({
     step: "image_phase",
     state: "done",

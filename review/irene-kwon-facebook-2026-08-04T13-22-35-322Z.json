@@ -1,0 +1,24 @@
+{
+  "brand": {
+    "slug": "irene-kwon",
+    "name": "Irene Kwon"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/irene-kwon/images/sfw/irene-kwon_sfw_20260406_043826_irene-kwon__sfw__2026-04-06043822-18722808-7013543092673148_00001_.png?quality=85&format=webp"
+  },
+  "platform": "facebook",
+  "content": {
+    "caption": "The thrill of a K League game always gets me moving! Reminds me of those high school dances and flips under the lights. Now I'm thinking about hitting the town for some fun vibes. ⚽💃😊",
+    "hashtags": [
+      "#nightlife",
+      "#playful"
+    ],
+    "cta": "What's your favorite way to enjoy the game?"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "review",
+  "created_at": "2026-08-04T13:22:35.322Z"
+}

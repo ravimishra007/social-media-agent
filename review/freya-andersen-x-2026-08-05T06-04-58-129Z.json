@@ -1,0 +1,23 @@
+{
+  "brand": {
+    "slug": "freya-andersen",
+    "name": "Freya Andersen"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/freya-andersen/images/sfw/freya-andersen_sfw_20260423_134241_freya-andersen__sfw__2026-04-23134235-18722808-4484703697077512_00001_.png"
+  },
+  "platform": "x",
+  "content": {
+    "caption": "Chasing hidden trails at dawn fills my soul with pure joy and wonder.",
+    "hashtags": [
+      "#NatureLover"
+    ],
+    "cta": "Share your favorite path"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "review",
+  "created_at": "2026-08-05T06:04:58.129Z"
+}

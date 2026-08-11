@@ -14,6 +14,11 @@ const MAX_IMAGE_RETRIES = 5;
  *  3. Stop after MAX_IMAGE_RETRIES replacement attempts.
  *
  * @param {object} brand - { slug, profile_image_url, ... }
+ * @param {function} [onEvent]
+ * @param {object} [opts]
+ * @param {string[]} [opts.excludeUrls] - urls the user already saw and skipped;
+ *   the current profile image is not re-validated if it is in this list, so a
+ *   re-run advances to the next candidate instead of re-approving the same one.
  * @returns {Promise<{
  *   sfw: boolean,
  *   image: { id: string|null, url: string } | null,
@@ -22,13 +27,14 @@ const MAX_IMAGE_RETRIES = 5;
  *   rejected: Array<{ id: string|null, url: string, reasons: string[] }>
  * }>}
  */
-export async function resolveSafeImage(brand, onEvent = () => {}) {
+export async function resolveSafeImage(brand, onEvent = () => {}, opts = {}) {
   const attempts = [];
   const rejected = [];
   const excludeIds = new Set();
-  const excludeUrls = new Set();
+  const excludeUrls = new Set(opts.excludeUrls || []);
 
   const currentUrl = brand.profile_image_url || null;
+  let attemptNo = 0;
 
   const safeValidate = async (url) => {
     try {
@@ -38,14 +44,15 @@ export async function resolveSafeImage(brand, onEvent = () => {}) {
     }
   };
 
-  if (currentUrl) {
-    onEvent({ step: "image_check", state: "start", attempt: 1, url: currentUrl, source: "current" });
+  if (currentUrl && !excludeUrls.has(currentUrl)) {
+    attemptNo += 1;
+    onEvent({ step: "image_check", state: "start", attempt: attemptNo, url: currentUrl, source: "current" });
     const verdict = await safeValidate(currentUrl);
     attempts.push({ image: { id: null, url: currentUrl }, verdict });
     onEvent({
       step: "image_check",
       state: "done",
-      attempt: 1,
+      attempt: attemptNo,
       url: currentUrl,
       sfw: verdict.sfw,
       reasons: verdict.reasons || [],
@@ -89,7 +96,7 @@ export async function resolveSafeImage(brand, onEvent = () => {}) {
       continue;
     }
 
-    const attemptNo = i + 2;
+    attemptNo += 1;
     onEvent({
       step: "image_check",
       state: "start",

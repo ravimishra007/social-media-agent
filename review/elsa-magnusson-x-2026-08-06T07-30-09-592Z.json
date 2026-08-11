@@ -1,0 +1,23 @@
+{
+  "brand": {
+    "slug": "elsa-magnusson",
+    "name": "Elsa Magnusson"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/elsa-magnusson/images/sfw/elsa-magnusson_sfw_20260406_041351_elsa-magnusson__sfw__2026-04-06041347-18722808-6661836825423146_00001_.png"
+  },
+  "platform": "x",
+  "content": {
+    "caption": "The best way to start the day is with a serene fika in natures embrace",
+    "hashtags": [
+      "#serene"
+    ],
+    "cta": "What is your favorite way to unwind?"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "review",
+  "created_at": "2026-08-06T07:30:09.593Z"
+}

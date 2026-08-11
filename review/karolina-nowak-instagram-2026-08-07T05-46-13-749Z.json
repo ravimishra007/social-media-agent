@@ -1,0 +1,24 @@
+{
+  "brand": {
+    "slug": "karolina-nowak",
+    "name": "Karolina Nowak"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/karolina-nowak/images/sfw/karolina-nowak_sfw_20260423_162956_karolina-nowak__sfw__2026-04-23162950-18722808-5748028626327359_00001_.png"
+  },
+  "platform": "instagram",
+  "content": {
+    "caption": "There's nothing quite like a quiet morning wandering through the fields, with the soft rustle of leaves and a gentle folk melody playing in my mind. It fills me with such calm and happiness, like a warm hug from home 🌿🎶😊",
+    "hashtags": [
+      "#MusicLover",
+      "#NatureLover"
+    ],
+    "cta": "What song brings you peace today?"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "review",
+  "created_at": "2026-08-07T05:46:13.749Z"
+}

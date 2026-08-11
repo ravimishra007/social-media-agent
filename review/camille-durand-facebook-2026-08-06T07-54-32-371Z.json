@@ -1,0 +1,24 @@
+{
+  "brand": {
+    "slug": "camille-durand",
+    "name": "Camille Durand"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/camille-durand/images/sfw/camille-durand_sfw_20260423_093730_camille-durand__sfw__2026-04-23093725-18722808-6610299019800810_00001_.png"
+  },
+  "platform": "facebook",
+  "content": {
+    "caption": "Stepping into my studio today, I let the music guide every precise move with pure passion. These solos feel so freeing after the old halls. Grateful for moments like this. 💃",
+    "hashtags": [
+      "#bohemian",
+      "#dancer"
+    ],
+    "cta": "What's moving you today?"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "review",
+  "created_at": "2026-08-06T07:54:32.371Z"
+}

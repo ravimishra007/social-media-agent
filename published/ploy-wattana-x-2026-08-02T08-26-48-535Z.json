@@ -1,0 +1,24 @@
+{
+  "brand": {
+    "slug": "ploy-wattana",
+    "name": "Ploy Wattana"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/ploy-wattana/images/sfw/ploy-wattana_sfw_20260406_053453_ploy-wattana__sfw__2026-04-06053449-18722808-7281615219643061_00001_.png?quality=85&format=webp"
+  },
+  "platform": "x",
+  "content": {
+    "caption": "Finding joy in every graceful move under the open sky reminds me of my Bangkok roots.",
+    "hashtags": [
+      "#Dancer"
+    ],
+    "cta": ""
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "approved",
+  "created_at": "2026-08-02T08:26:48.536Z",
+  "approved_at": "2026-08-02T16:59:53.113Z"
+}

@@ -1,0 +1,23 @@
+{
+  "brand": {
+    "slug": "alice-bianchi",
+    "name": "Alice Bianchi"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/alice-bianchi/images/sfw/alice-bianchi_sfw_20260406_004318_alice-bianchi__sfw__2026-04-06004313-18722808-4868417584652093_00001_.png"
+  },
+  "platform": "x",
+  "content": {
+    "caption": "Sculpting bold shapes from marble sparks my playful side every time.",
+    "hashtags": [
+      "#artist"
+    ],
+    "cta": "What inspires your creativity?"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "review",
+  "created_at": "2026-08-06T08:05:33.089Z"
+}

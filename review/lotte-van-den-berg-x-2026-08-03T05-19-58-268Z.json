@@ -1,0 +1,23 @@
+{
+  "brand": {
+    "slug": "lotte-van-den-berg",
+    "name": "Lotte van den Berg"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/lotte-van-den-berg/images/sfw/lotte-van-den-berg_sfw_20260423_195657_lotte-van-den-berg__sfw__2026-04-23195651-18722808-1590135245654787_00001_.png"
+  },
+  "platform": "x",
+  "content": {
+    "caption": "Cycling along Amsterdam's canals fills me with that unshakeable confidence before teaching today.",
+    "hashtags": [
+      "#educator"
+    ],
+    "cta": "What's your daily confidence boost?"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "review",
+  "created_at": "2026-08-03T05:19:58.268Z"
+}

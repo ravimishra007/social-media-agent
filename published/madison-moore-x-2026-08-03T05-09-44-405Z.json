@@ -1,0 +1,24 @@
+{
+  "brand": {
+    "slug": "madison-moore",
+    "name": "Madison Moore"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/madison-moore/images/sfw/madison-moore_sfw_20260423_210807_madison-moore__sfw__2026-04-23210803-18722808-4796307209880024_00001_.png"
+  },
+  "platform": "x",
+  "content": {
+    "caption": "Trading windy Chicago days for sunny Miami reads is my new favorite escape.",
+    "hashtags": [
+      "#intelligent"
+    ],
+    "cta": ""
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "approved",
+  "created_at": "2026-08-03T05:09:44.405Z",
+  "approved_at": "2026-08-04T17:18:27.879Z"
+}

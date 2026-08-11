@@ -1,0 +1,24 @@
+{
+  "brand": {
+    "slug": "karolina-nowak",
+    "name": "Karolina Nowak"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/karolina-nowak/images/sfw/karolina-nowak_sfw_20260423_162956_karolina-nowak__sfw__2026-04-23162950-18722808-5748028626327359_00001_.png"
+  },
+  "platform": "facebook",
+  "content": {
+    "caption": "There's nothing quite like wandering through the fields on a sunny day with folk music playing softly in my ears. It always reminds me of simpler times and brings such calm to my heart. 🌳🎵 How do you find your own peace in nature?",
+    "hashtags": [
+      "#NatureLover",
+      "#MusicLover"
+    ],
+    "cta": "Share your thoughts with me!"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "review",
+  "created_at": "2026-08-07T05:46:26.221Z"
+}

@@ -1,0 +1,26 @@
+{
+  "brand": {
+    "slug": "monika-szabo",
+    "name": "Monika Szabo"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/monika-szabo/images/sfw/monika-szabo_sfw_20260423_234315_monika-szabo__sfw__2026-04-23234311-18722808-2014005534212691_00001_.png"
+  },
+  "platform": "instagram",
+  "content": {
+    "caption": "Stepping lightly with every beat, I feel the pure happiness that dancing brings. It's a beautiful way to express what's in my heart and share a bit of that warmth with others. Grateful for these moments of movement and grace. 🌷💃🌟",
+    "hashtags": [
+      "#dancer",
+      "#sweet"
+    ],
+    "cta": "I'd love to hear what moves your heart with joy!"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "approved",
+  "created_at": "2026-08-02T08:39:27.269Z",
+  "approved_at": "2026-08-07T05:45:58.013Z",
+  "returned_to_review_at": "2026-08-07T05:38:22.057Z"
+}

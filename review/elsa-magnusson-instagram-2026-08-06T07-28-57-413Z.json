@@ -1,0 +1,24 @@
+{
+  "brand": {
+    "slug": "elsa-magnusson",
+    "name": "Elsa Magnusson"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/elsa-magnusson/images/sfw/elsa-magnusson_sfw_20260406_041351_elsa-magnusson__sfw__2026-04-06041347-18722808-6661836825423146_00001_.png"
+  },
+  "platform": "instagram",
+  "content": {
+    "caption": "There's something so special about a quiet fika in the forest. The smell of fresh coffee, sweet buns and the soft sounds of nature all around. It makes my heart feel full and calm. 🌲☕🍰",
+    "hashtags": [
+      "#naturelover",
+      "#serene"
+    ],
+    "cta": "What brings you peace today?"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "review",
+  "created_at": "2026-08-06T07:28:57.414Z"
+}

@@ -1,0 +1,24 @@
+{
+  "brand": {
+    "slug": "su-jin-park",
+    "name": "Su-Jin Park"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/su-jin-park/images/sfw/su-jin-park_sfw_20260424_015402_su-jin-park__sfw__2026-04-24015356-18722808-4594802713998604_00001_.png"
+  },
+  "platform": "x",
+  "content": {
+    "caption": "Dancing in style with my favorite K-pop playlist on repeat today feels amazing!",
+    "hashtags": [
+      "#fashionista"
+    ],
+    "cta": "What's yours?"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "approved",
+  "created_at": "2026-08-01T16:30:46.434Z",
+  "approved_at": "2026-08-02T11:50:12.616Z"
+}

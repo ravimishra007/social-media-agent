@@ -1,0 +1,24 @@
+{
+  "brand": {
+    "slug": "vera-popov",
+    "name": "Vera Popov"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/vera-popov/images/sfw/vera-popov_sfw_20260424_025936_vera-popov__sfw__2026-04-24025930-18722808-407873484305295_00001_.png"
+  },
+  "platform": "x",
+  "content": {
+    "caption": "Dancing the traditional kolo brings such warmth and elegance to my modeling sessions.",
+    "hashtags": [
+      "#artistic"
+    ],
+    "cta": "What moves you?"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "approved",
+  "created_at": "2026-07-10T17:44:00.799Z",
+  "approved_at": "2026-08-01T06:46:20.386Z"
+}

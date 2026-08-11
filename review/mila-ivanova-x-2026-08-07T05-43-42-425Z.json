@@ -1,0 +1,23 @@
+{
+  "brand": {
+    "slug": "mila-ivanova",
+    "name": "Mila Ivanova"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/mila-ivanova/images/sfw/mila-ivanova_sfw_20260424_062956_mila-ivanova__sfw__2026-04-24062950-18722808-931702977154264_00001_.png"
+  },
+  "platform": "x",
+  "content": {
+    "caption": "There's nothing sweeter than folk music playing softly on a peaceful walk.",
+    "hashtags": [
+      "#MusicLover"
+    ],
+    "cta": "What song lifts your mood?"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "review",
+  "created_at": "2026-08-07T05:43:42.425Z"
+}

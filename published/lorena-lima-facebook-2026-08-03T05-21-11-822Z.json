@@ -1,0 +1,25 @@
+{
+  "brand": {
+    "slug": "lorena-lima",
+    "name": "Lorena Lima"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/lorena-lima/images/sfw/lorena-lima_sfw_20260423_194759_lorena-lima__sfw__2026-04-23194752-18722808-549531048977692_00001_.png"
+  },
+  "platform": "facebook",
+  "content": {
+    "caption": "Nothing like starting the day with the ocean breeze and a quick beach workout. It leaves me feeling strong and full of energy for whatever comes next 🌊💪",
+    "hashtags": [
+      "#fitness",
+      "#beachlover"
+    ],
+    "cta": "What keeps you moving?"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "approved",
+  "created_at": "2026-08-03T05:21:11.822Z",
+  "approved_at": "2026-08-07T05:46:03.751Z"
+}

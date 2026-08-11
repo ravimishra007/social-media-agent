@@ -1,0 +1,24 @@
+{
+  "brand": {
+    "slug": "isla-brown",
+    "name": "Isla Brown"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/isla-brown/images/sfw/isla-brown_sfw_20260423_161235_isla-brown__sfw__2026-04-23161229-18722808-1013961548416279_00001_.png"
+  },
+  "platform": "facebook",
+  "content": {
+    "caption": "Spent the morning catching some waves and feeling the ocean breeze. There's nothing like that salty air to clear your head. Heading home now for a chill barbecue with the crew. Simple moments like these make life sweet.",
+    "hashtags": [
+      "#SurfVibes",
+      "#ChillDays"
+    ],
+    "cta": "What's one thing that always puts a smile on your face? 😊"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "review",
+  "created_at": "2026-08-04T13:20:14.102Z"
+}

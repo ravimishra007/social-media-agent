@@ -1,0 +1,25 @@
+{
+  "brand": {
+    "slug": "luna-martinez",
+    "name": "Luna Martinez"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/luna-martinez/images/sfw/luna-martinez_sfw_20260423_203724_luna-martinez__sfw__2026-04-23203718-18722808-3913749795279327_00001_.png"
+  },
+  "platform": "facebook",
+  "content": {
+    "caption": "Dancing freely always sparks my creativity and reminds me why I love modeling so much. It's such a playful and adventurous feeling that warms my heart every time. 🌸✨😊",
+    "hashtags": [
+      "#vibrant",
+      "#playful"
+    ],
+    "cta": "What brings you joy today?"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "approved",
+  "created_at": "2026-08-03T05:12:44.749Z",
+  "approved_at": "2026-08-06T08:14:34.744Z"
+}

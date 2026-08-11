@@ -1,0 +1,24 @@
+{
+  "brand": {
+    "slug": "layla-abboud",
+    "name": "Layla Abboud"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/layla-abboud/images/sfw/layla-abboud_sfw_20260423_182858_layla-abboud__sfw__2026-04-23182852-18722808-708355427480803_00001_.png"
+  },
+  "platform": "facebook",
+  "content": {
+    "caption": "Stepping into the garden this morning, the gentle sway of flowers felt like a quiet dance. These simple moments bring such warmth and inspiration, connecting me to the beauty all around. 🌸🌿 What peaceful sight made you smile today?",
+    "hashtags": [
+      "#NatureLover",
+      "#Dancer"
+    ],
+    "cta": "Share your favorite peaceful spot with me."
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "review",
+  "created_at": "2026-08-03T05:25:24.107Z"
+}

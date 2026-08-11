@@ -1,0 +1,25 @@
+{
+  "brand": {
+    "slug": "yuna-kim",
+    "name": "Yuna Kim"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/yuna-kim/images/sfw/yuna-kim_sfw_20260330_104318_yuna-kim__sfw__2026-03-30104311-18722808-3476961345707259_00001_.png?quality=85&format=webp"
+  },
+  "platform": "facebook",
+  "content": {
+    "caption": "Today I took a peaceful walk through the park, feeling the gentle breeze. It reminded me of how vibrant and serene nature can be, inspiring my love for colorful hanbok styles mixed with K-pop vibes. 🌸🍃✨",
+    "hashtags": [
+      "#fashionista",
+      "#naturelover",
+      "#serene"
+    ],
+    "cta": "Share your favorite nature spot with me!"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "review",
+  "created_at": "2026-08-06T08:11:40.700Z"
+}

@@ -1,0 +1,25 @@
+{
+  "brand": {
+    "slug": "madison-moore",
+    "name": "Madison Moore"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/madison-moore/images/sfw/madison-moore_sfw_20260423_210807_madison-moore__sfw__2026-04-23210803-18722808-4796307209880024_00001_.png"
+  },
+  "platform": "instagram",
+  "content": {
+    "caption": "Trading the Chicago wind for Miami's warm breeze has its perks, especially when it comes to sunny library afternoons. Just picked up a bold new read that is challenging my thoughts in the best way. Listening to indie podcasts while soaking it all in feels like the perfect mix. 📚☀️🎧",
+    "hashtags": [
+      "#BoldReads",
+      "#IndieThoughts"
+    ],
+    "cta": "What book has you thinking lately?"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "approved",
+  "created_at": "2026-08-03T05:09:06.386Z",
+  "approved_at": "2026-08-07T05:37:03.592Z"
+}

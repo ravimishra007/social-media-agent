@@ -1,0 +1,26 @@
+{
+  "brand": {
+    "slug": "tara-brennan",
+    "name": "Tara Brennan"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/tara-brennan/images/sfw/tara-brennan_sfw_20260424_022145_tara-brennan__sfw__2026-04-24022139-18722808-2754243679565249_00001_.png"
+  },
+  "platform": "instagram",
+  "content": {
+    "caption": "Popped out for a coffee and got lost in the beautiful streets chatting away with the barista about everything and nothing. These little adventures keep me going! ☕ 😊",
+    "hashtags": [
+      "#vibrant",
+      "#friendly"
+    ],
+    "cta": "What little adventure are you planning today?"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "approved",
+  "created_at": "2026-07-10T17:28:44.009Z",
+  "approved_at": "2026-08-01T16:10:54.268Z",
+  "returned_to_review_at": "2026-08-01T16:10:46.947Z"
+}

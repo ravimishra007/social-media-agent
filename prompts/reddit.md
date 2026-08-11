@@ -44,6 +44,7 @@ Maximum Words:
 - Encourage discussion at the end with a real, open question (not a CTA).
 - Also write a short, natural Reddit post title (max ~100 characters). No clickbait, no hashtags, no emojis in the title.
 - The persona's Description informs perspective and taste; do not restate the bio.
+- Do NOT use the em dash character "—" anywhere in the output.
 
 Return ONLY JSON.
 

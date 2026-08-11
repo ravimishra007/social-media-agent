@@ -1,0 +1,24 @@
+{
+  "brand": {
+    "slug": "alice-bianchi",
+    "name": "Alice Bianchi"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/alice-bianchi/images/sfw/alice-bianchi_sfw_20260406_004318_alice-bianchi__sfw__2026-04-06004313-18722808-4868417584652093_00001_.png"
+  },
+  "platform": "instagram",
+  "content": {
+    "caption": "Morning light dancing on fresh clay as I sculpt new forms. It's all about that bold confidence in every touch, creating vibrant pieces that feel alive and bohemian in spirit. Playful moments in the studio never get old! 🌿✨",
+    "hashtags": [
+      "#creative",
+      "#artist"
+    ],
+    "cta": "What brings you joy in your creative process?"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "review",
+  "created_at": "2026-08-06T08:05:56.751Z"
+}

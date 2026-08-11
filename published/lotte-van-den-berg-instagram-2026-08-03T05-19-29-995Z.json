@@ -1,0 +1,25 @@
+{
+  "brand": {
+    "slug": "lotte-van-den-berg",
+    "name": "Lotte van den Berg"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/lotte-van-den-berg/images/sfw/lotte-van-den-berg_sfw_20260423_195657_lotte-van-den-berg__sfw__2026-04-23195651-18722808-1590135245654787_00001_.png"
+  },
+  "platform": "instagram",
+  "content": {
+    "caption": "Pedaling along the leafy canals this morning brought back all the joy of those stroopwafel picnics and tulip festivals from my childhood. These quiet rides always fill me with warmth and remind me why I love what I do as a student and educator. Nature has such a simple way of keeping us confident and grounded.",
+    "hashtags": [
+      "#student",
+      "#educator"
+    ],
+    "cta": "What moment recharges you most?"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "approved",
+  "created_at": "2026-08-03T05:19:29.995Z",
+  "approved_at": "2026-08-07T11:34:36.509Z"
+}

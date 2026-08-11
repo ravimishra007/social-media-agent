@@ -1,0 +1,23 @@
+{
+  "brand": {
+    "slug": "daniela-fuentes",
+    "name": "Daniela Fuentes"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/daniela-fuentes/images/sfw/daniela-fuentes_sfw_20260423_112025_daniela-fuentes__sfw__2026-04-23112021-18722808-4675768215908661_00001_.png"
+  },
+  "platform": "x",
+  "content": {
+    "caption": "Salsa dancing ignites my passionate soul like nothing else can! It always brings a warm smile to my face.",
+    "hashtags": [
+      "#vibrant"
+    ],
+    "cta": ""
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "review",
+  "created_at": "2026-08-06T07:36:42.093Z"
+}

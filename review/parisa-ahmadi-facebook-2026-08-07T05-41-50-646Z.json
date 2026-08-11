@@ -1,0 +1,24 @@
+{
+  "brand": {
+    "slug": "parisa-ahmadi",
+    "name": "Parisa Ahmadi"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/parisa-ahmadi/images/sfw/parisa-ahmadi_sfw_20260330_070501_parisa-ahmadi__sfw__2026-03-30070457-18722808-5655317546922813_00001_.png"
+  },
+  "platform": "facebook",
+  "content": {
+    "caption": "Every dance session feels like a celebration of life. The beats inspire me to create something new and playful each day. 😊",
+    "hashtags": [
+      "#dancer",
+      "#photographer"
+    ],
+    "cta": "Tell me about your passions!"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "review",
+  "created_at": "2026-08-07T05:41:50.646Z"
+}

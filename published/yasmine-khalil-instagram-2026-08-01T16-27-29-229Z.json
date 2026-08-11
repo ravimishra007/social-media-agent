@@ -1,0 +1,26 @@
+{
+  "brand": {
+    "slug": "yasmine-khalil",
+    "name": "Yasmine Khalil"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/yasmine-khalil/images/sfw/yasmine-khalil_sfw_20260424_035519_yasmine-khalil__sfw__2026-04-24035514-18722808-8862492278568944_00001_.png"
+  },
+  "platform": "instagram",
+  "content": {
+    "caption": "There's nothing quite like the quiet joy of golden hour light dancing on my skin. It makes me feel alive and ready for whatever comes next. Embracing these simple moments keeps me grounded and vibrant. ✨",
+    "hashtags": [
+      "#beautyenthusiast",
+      "#vibrant"
+    ],
+    "cta": "What’s your favorite time of day?"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "approved",
+  "created_at": "2026-08-01T16:27:29.229Z",
+  "returned_to_review_at": "2026-08-01T16:29:16.134Z",
+  "approved_at": "2026-08-03T12:00:28.786Z"
+}

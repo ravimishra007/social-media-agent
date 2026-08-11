@@ -1,0 +1,25 @@
+{
+  "brand": {
+    "slug": "leila-omar",
+    "name": "Leila Omar"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/leila-omar/images/sfw/leila-omar_sfw_20260423_184509_leila-omar__sfw__2026-04-23184503-18722808-8499872190581193_00001_.png"
+  },
+  "platform": "facebook",
+  "content": {
+    "caption": "Exploring the ancient ruins always sparks such joy in my heart, blending history with timeless beauty in the most inspiring way. It leaves me feeling vibrant and ready for whatever comes next 😊✨",
+    "hashtags": [
+      "#beautyenthusiast",
+      "#optimistic"
+    ],
+    "cta": "I'd love to hear what inspires you!"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "approved",
+  "created_at": "2026-08-03T05:24:02.754Z",
+  "approved_at": "2026-08-06T15:38:36.032Z"
+}

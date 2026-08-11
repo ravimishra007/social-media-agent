@@ -1,0 +1,24 @@
+{
+  "brand": {
+    "slug": "klara-eriksson",
+    "name": "Klara Eriksson"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/klara-eriksson/images/sfw/klara-eriksson_sfw_20260406_045011_klara-eriksson__sfw__2026-04-06045006-18722808-1880882432008413_00001_.png?quality=85&format=webp"
+  },
+  "platform": "instagram",
+  "content": {
+    "caption": "Spent the morning picking wild strawberries and now savoring them with my favorite coffee while humming a folk song. Such simple joys make the day feel bright and warm. ☕🍓🌿",
+    "hashtags": [
+      "#coffeelover",
+      "#singer"
+    ],
+    "cta": "What’s your favorite way to start the day?"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "review",
+  "created_at": "2026-08-04T13:15:33.834Z"
+}

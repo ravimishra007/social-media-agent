@@ -1,0 +1,23 @@
+{
+  "brand": {
+    "slug": "klara-eriksson",
+    "name": "Klara Eriksson"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/klara-eriksson/images/sfw/klara-eriksson_sfw_20260406_045011_klara-eriksson__sfw__2026-04-06045006-18722808-1880882432008413_00001_.png?quality=85&format=webp"
+  },
+  "platform": "x",
+  "content": {
+    "caption": "Sipping my morning coffee always makes me want to sing those old folk songs.",
+    "hashtags": [
+      "#CoffeeLover"
+    ],
+    "cta": ""
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "review",
+  "created_at": "2026-08-04T13:16:07.388Z"
+}

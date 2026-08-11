@@ -1,0 +1,24 @@
+{
+  "brand": {
+    "slug": "daniela-fuentes",
+    "name": "Daniela Fuentes"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/daniela-fuentes/images/sfw/daniela-fuentes_sfw_20260423_112025_daniela-fuentes__sfw__2026-04-23112021-18722808-4675768215908661_00001_.png"
+  },
+  "platform": "instagram",
+  "content": {
+    "caption": "Lost in the salsa rhythms again, feeling the vibrant energy pulse through every step. It sparks my playful side and keeps my modeling dreams burning bright with passion. What a beautiful way to connect!",
+    "hashtags": [
+      "#vibrant",
+      "#passionate"
+    ],
+    "cta": "Tell me what makes you feel alive!"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "review",
+  "created_at": "2026-08-06T07:35:05.632Z"
+}

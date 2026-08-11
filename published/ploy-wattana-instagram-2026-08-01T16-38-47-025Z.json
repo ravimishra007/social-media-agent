@@ -1,0 +1,25 @@
+{
+  "brand": {
+    "slug": "ploy-wattana",
+    "name": "Ploy Wattana"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/ploy-wattana/images/sfw/ploy-wattana_sfw_20260406_053453_ploy-wattana__sfw__2026-04-06053449-18722808-7281615219643061_00001_.png?quality=85&format=webp"
+  },
+  "platform": "instagram",
+  "content": {
+    "caption": "Good morning friends! Practicing my dance surrounded by blooming flowers and gentle sunlight feels so vibrant and alive. The movements flow with the wind making me feel connected to everything around. Such a sweet way to start the day. 🌸 🌿 ✨",
+    "hashtags": [
+      "#dancer",
+      "#naturelover"
+    ],
+    "cta": "What do you do to feel connected to nature?"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "approved",
+  "created_at": "2026-08-01T16:38:47.025Z",
+  "approved_at": "2026-08-01T16:41:57.938Z"
+}

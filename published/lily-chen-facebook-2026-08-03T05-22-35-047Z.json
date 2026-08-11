@@ -1,0 +1,24 @@
+{
+  "brand": {
+    "slug": "lily-chen",
+    "name": "Lily Chen"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/lily-chen/images/sfw/lily-chen_sfw_20260423_192233_lily-chen__sfw__2026-04-23192227-18722808-5222273761042329_00001_.png"
+  },
+  "platform": "facebook",
+  "content": {
+    "caption": "Took a lovely stroll today and soaked in the peaceful vibes of nature. It always brings me back to those playful festival stories I cherish. 🌿 Feeling truly at home in the outdoors. 😊",
+    "hashtags": [
+      "#NatureLover"
+    ],
+    "cta": "What’s your favorite way to connect with nature?"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "approved",
+  "created_at": "2026-08-03T05:22:35.047Z",
+  "approved_at": "2026-08-07T11:34:43.174Z"
+}

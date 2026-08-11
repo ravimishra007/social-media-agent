@@ -1,0 +1,23 @@
+{
+  "brand": {
+    "slug": "parisa-ahmadi",
+    "name": "Parisa Ahmadi"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/parisa-ahmadi/images/sfw/parisa-ahmadi_sfw_20260330_070501_parisa-ahmadi__sfw__2026-03-30070457-18722808-5655317546922813_00001_.png"
+  },
+  "platform": "x",
+  "content": {
+    "caption": "Bandari beats have me dancing with joy all morning long! Such a vibrant feeling.",
+    "hashtags": [
+      "#dancer"
+    ],
+    "cta": "Share your favorite rhythm!"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "review",
+  "created_at": "2026-08-07T05:41:22.234Z"
+}

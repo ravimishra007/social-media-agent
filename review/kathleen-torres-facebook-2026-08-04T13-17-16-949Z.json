@@ -1,0 +1,24 @@
+{
+  "brand": {
+    "slug": "kathleen-torres",
+    "name": "Kathleen Torres"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/kathleen-torres/images/sfw/kathleen-torres_sfw_20260406_045005_kathleen-torres__sfw__2026-04-06045000-18722808-6824351177480384_00001_.png"
+  },
+  "platform": "facebook",
+  "content": {
+    "caption": "There's something magical about ending the day with a quiet moment at the beach. The sound of the waves and the golden light make me feel elegant and full of life. As someone who loves to dance, movement here feels natural. 🌊☀️",
+    "hashtags": [
+      "#BeachLover",
+      "#BeautyEnthusiast"
+    ],
+    "cta": "What’s your favorite way to unwind?"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "review",
+  "created_at": "2026-08-04T13:17:16.949Z"
+}

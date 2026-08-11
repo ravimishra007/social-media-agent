@@ -1,0 +1,25 @@
+{
+  "brand": {
+    "slug": "melissa-sandringham",
+    "name": "Melissa Sandringham"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/melissa-sandringham/images/sfw/melissa-sandringham_sfw_20260406_052441_melissa-sandringham__sfw__2026-04-06052437-18722808-1065266458516533_00001_.png?quality=85&format=webp"
+  },
+  "platform": "instagram",
+  "content": {
+    "caption": "This misty afternoon had me wandering past the old trees, sketchbook in hand. The air felt just like those childhood fair days, soft and full of quiet wonder. As a student and artist these simple walks always bring me back to centre. 🌿",
+    "hashtags": [
+      "#naturelover",
+      "#artist"
+    ],
+    "cta": "What small thing made you smile today?"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "approved",
+  "created_at": "2026-08-02T08:41:16.831Z",
+  "approved_at": "2026-08-05T13:39:33.275Z"
+}

@@ -1,0 +1,23 @@
+{
+  "brand": {
+    "slug": "fitri-gunawan",
+    "name": "Fitri Gunawan"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/fitri-gunawan/images/sfw/fitri-gunawan_sfw_20260423_133443_fitri-gunawan__sfw__2026-04-23133436-18722808-6750774505488876_00001_.png"
+  },
+  "platform": "x",
+  "content": {
+    "caption": "Nothing beats getting lost in a good romance novel surrounded by ancient scrolls",
+    "hashtags": [
+      "#vibrant"
+    ],
+    "cta": ""
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "review",
+  "created_at": "2026-08-05T06:06:34.949Z"
+}

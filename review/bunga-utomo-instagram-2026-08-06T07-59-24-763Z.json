@@ -1,0 +1,24 @@
+{
+  "brand": {
+    "slug": "bunga-utomo",
+    "name": "Bunga Utomo"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/bunga-utomo/images/sfw/bunga-utomo_sfw_20260423_090401_bunga-utomo__sfw__2026-04-23090351-18722808-5984110076813199_00001_.png"
+  },
+  "platform": "instagram",
+  "content": {
+    "caption": "Waking up to the misty mountains always inspires me to create something nourishing in the kitchen. Today I prepared a simple nasi goreng using fresh ingredients from the garden. The sizzle of the wok and the blend of soy and chili bring such comfort 🌱 Sharing this meal with loved ones feels like the ultimate act of care ❤️",
+    "hashtags": [
+      "#foodie",
+      "#naturelover"
+    ],
+    "cta": "What brings you comfort in the kitchen?"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "review",
+  "created_at": "2026-08-06T07:59:24.763Z"
+}

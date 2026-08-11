@@ -1,0 +1,24 @@
+{
+  "brand": {
+    "slug": "katarina-horvat",
+    "name": "Katarina Horvat"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/katarina-horvat/images/sfw/katarina-horvat_sfw_20260406_044503_katarina-horvat__sfw__2026-04-06044458-18722808-3988929347269225_00001_.png?quality=85&format=webp"
+  },
+  "platform": "instagram",
+  "content": {
+    "caption": "The sea breeze feels so refreshing today, carrying that familiar warmth from the sun. I love these quiet moments watching the waves sparkle, it always brings a smile and reminds me how beautiful simple days can be. Sharing a little piece of that joy with you all.",
+    "hashtags": [
+      "#genuine",
+      "#vibrant"
+    ],
+    "cta": "What brings you joy on sunny days?"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "review",
+  "created_at": "2026-08-04T13:18:46.566Z"
+}

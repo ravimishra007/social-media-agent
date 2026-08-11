@@ -1,0 +1,23 @@
+{
+  "brand": {
+    "slug": "sienna-clark",
+    "name": "Sienna Clark"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/sienna-clark/images/sfw/sienna-clark_sfw_20260424_011924_sienna-clark__sfw__2026-04-24011918-18722808-252178207542717_00001_.png"
+  },
+  "platform": "x",
+  "content": {
+    "caption": "Chasing golden hour light through the mountains always sparks my adventurous spirit",
+    "hashtags": [
+      "#photographer"
+    ],
+    "cta": "What's your favorite trail?"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "review",
+  "created_at": "2026-08-07T05:38:20.003Z"
+}

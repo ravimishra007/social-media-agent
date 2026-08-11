@@ -1,0 +1,26 @@
+{
+  "brand": {
+    "slug": "vera-popov",
+    "name": "Vera Popov"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/vera-popov/images/sfw/vera-popov_sfw_20260424_025936_vera-popov__sfw__2026-04-24025930-18722808-407873484305295_00001_.png"
+  },
+  "platform": "instagram",
+  "content": {
+    "caption": "Dancing always brings out that special elegance in me and I love carrying it into my modeling. It feels so warm to capture those graceful moments with my camera today. There's real beauty in simple movement that makes everything come alive.",
+    "hashtags": [
+      "#fashionista",
+      "#dancer"
+    ],
+    "cta": "What moves you to feel graceful?"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "approved",
+  "created_at": "2026-07-10T17:43:28.540Z",
+  "approved_at": "2026-08-03T05:14:36.007Z",
+  "returned_to_review_at": "2026-08-01T16:11:03.061Z"
+}

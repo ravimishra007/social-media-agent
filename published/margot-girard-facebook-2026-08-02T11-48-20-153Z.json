@@ -1,0 +1,25 @@
+{
+  "brand": {
+    "slug": "margot-girard",
+    "name": "Margot Girard"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/margot-girard/images/sfw/margot-girard_sfw_20260406_051841_margot-girard__sfw__2026-04-06051836-18722808-4296697787568128_00001_.png"
+  },
+  "platform": "facebook",
+  "content": {
+    "caption": "Every morning, I love starting with a beach run that brings back those teen workout vibes. It fills me with such joy and leads perfectly into my CrossFit sessions. Staying active this way keeps my energy high all day 🌊",
+    "hashtags": [
+      "#Fitness",
+      "#BeachLover"
+    ],
+    "cta": "What gets you moving?"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "approved",
+  "created_at": "2026-08-02T11:48:20.153Z",
+  "approved_at": "2026-08-04T17:18:20.358Z"
+}

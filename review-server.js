@@ -7,15 +7,18 @@ import { getBrand } from './agent/readBrand.js';
 import { getGuidelines } from './agent/readGuidelines.js';
 import { buildPrompt } from './agent/promptBuilder.js';
 import { generateContent } from './services/grok.js';
+import { normalizeContent } from './agent/normalizeContent.js';
 import { validateContent } from './agent/validator.js';
 import { saveReview } from './agent/saveReview.js';
 import { validateBrandSafety } from './agent/brand-safety-validator/brandSafetyValidator.js';
+import { validatePostSafety } from './agent/brand-safety-validator/postSafetyValidator.js';
 import { suggestTodayBatch } from './agent/todayReview.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REVIEW_DIR = path.join(__dirname, 'review');
 const APPROVED_DIR = path.join(__dirname, 'approved');
 const PUBLISHED_DIR = path.join(__dirname, 'published');
+const FAILED_DIR = path.join(__dirname, 'failed');
 const BRANDS_PATH = path.join(__dirname, 'data', 'brands.json');
 const HTML_PATH = path.join(__dirname, 'review.html');
 const PORT = Number(process.env.PORT) || 5174;
@@ -112,6 +115,21 @@ const unapprove = async (file) => {
   return { file, moved_to: path.relative(__dirname, dest) };
 };
 
+const unfail = async (file) => {
+  if (!isSafeName(file)) throw new Error('Invalid file name');
+  const src = path.join(FAILED_DIR, file);
+  const dest = path.join(REVIEW_DIR, file);
+  const raw = await readFile(src, 'utf8');
+  const data = JSON.parse(raw);
+  data.status = 'review';
+  delete data.failed_at;
+  delete data.publish_error;
+  data.returned_to_review_at = new Date().toISOString();
+  await writeFile(dest, JSON.stringify(data, null, 2), 'utf8');
+  await unlink(src);
+  return { file, moved_to: path.relative(__dirname, dest) };
+};
+
 const listBrands = async () => {
   const raw = await readFile(BRANDS_PATH, 'utf8');
   const data = JSON.parse(raw);
@@ -138,13 +156,14 @@ const parseFileName = (name) => {
 };
 
 const buildSummary = async () => {
-  const [review, approved, published] = await Promise.all([
+  const [review, approved, published, failed] = await Promise.all([
     listFileNames(REVIEW_DIR),
     listFileNames(APPROVED_DIR),
     listFileNames(PUBLISHED_DIR),
+    listFileNames(FAILED_DIR),
   ]);
 
-  // shape: { [slug]: { [platform]: { review, approved, published } } }
+  // shape: { [slug]: { [platform]: { review, approved, published, failed } } }
   const summary = {};
   const bump = (files, key) => {
     for (const name of files) {
@@ -152,23 +171,38 @@ const buildSummary = async () => {
       if (!parsed) continue;
       const { slug, platform } = parsed;
       summary[slug] ??= {};
-      summary[slug][platform] ??= { review: 0, approved: 0, published: 0 };
+      summary[slug][platform] ??= { review: 0, approved: 0, published: 0, failed: 0 };
       summary[slug][platform][key] += 1;
     }
   };
   bump(review, 'review');
   bump(approved, 'approved');
   bump(published, 'published');
+  bump(failed, 'failed');
   return summary;
 };
 
 const generateOne = async (brand, platform, trend = null) => {
   const guidelines = getGuidelines(platform);
   const prompt = buildPrompt(brand, guidelines, trend, platform);
-  const content = await generateContent(prompt);
+  const content = normalizeContent(await generateContent(prompt));
   const validation = validateContent(content, guidelines);
   if (!validation.passed) {
     return { platform, status: 'validation_failed', errors: validation.errors };
+  }
+  const safety = await validatePostSafety({
+    content,
+    brand,
+    platform,
+    validationFlags: guidelines.validation || {},
+  });
+  if (!safety.ok) {
+    return {
+      platform,
+      status: 'safety_rejected',
+      reason: safety.status,
+      errors: safety.errors,
+    };
   }
   const filePath = saveReview(brand, platform, content, validation);
   const file = path.basename(filePath);
@@ -194,6 +228,27 @@ const runGenerate = async ({ slug, platforms }) => {
   return { brand: { slug: brand.slug, name: brand.name }, results };
 };
 
+const regenerate = async (file) => {
+  if (!isSafeName(file)) throw new Error('Invalid file name');
+  const parsed = parseFileName(file);
+  if (!parsed) throw new Error(`Cannot parse slug/platform from "${file}"`);
+  const { slug, platform } = parsed;
+  if (!isSafeSlug(slug)) throw new Error('Invalid brand slug');
+
+  const brand = getBrand(slug);
+  const result = await generateOne(brand, platform);
+
+  // Only delete the old file if the new one was written successfully.
+  if (result.status === 'success') {
+    try {
+      await unlink(path.join(REVIEW_DIR, file));
+    } catch {
+      // Old file already gone — non-fatal.
+    }
+  }
+  return { previous: file, ...result };
+};
+
 const server = http.createServer(async (req, res) => {
   try {
     const url = new URL(req.url, `http://${req.headers.host}`);
@@ -216,6 +271,10 @@ const server = http.createServer(async (req, res) => {
       return sendJson(res, 200, { items: await listFolder(PUBLISHED_DIR) });
     }
 
+    if (req.method === 'GET' && url.pathname === '/api/failed') {
+      return sendJson(res, 200, { items: await listFolder(FAILED_DIR) });
+    }
+
     if (req.method === 'GET' && url.pathname === '/api/brands') {
       return sendJson(res, 200, { brands: await listBrands(), platforms: PLATFORMS });
     }
@@ -236,6 +295,12 @@ const server = http.createServer(async (req, res) => {
       return sendJson(res, 200, { ok: true, ...result });
     }
 
+    if (req.method === 'POST' && url.pathname === '/api/unfail') {
+      const body = await readBody(req);
+      const result = await unfail(body.file);
+      return sendJson(res, 200, { ok: true, ...result });
+    }
+
     if (req.method === 'POST' && url.pathname === '/api/delete') {
       const body = await readBody(req);
       const result = await remove(body.file);
@@ -245,6 +310,12 @@ const server = http.createServer(async (req, res) => {
     if (req.method === 'POST' && url.pathname === '/api/generate') {
       const body = await readBody(req);
       const result = await runGenerate({ slug: body.slug, platforms: body.platforms });
+      return sendJson(res, 200, { ok: true, ...result });
+    }
+
+    if (req.method === 'POST' && url.pathname === '/api/regenerate') {
+      const body = await readBody(req);
+      const result = await regenerate(body.file);
       return sendJson(res, 200, { ok: true, ...result });
     }
 
@@ -274,6 +345,12 @@ const server = http.createServer(async (req, res) => {
       const slug = url.searchParams.get('slug');
       if (!isSafeSlug(slug)) throw new Error('Invalid brand slug');
 
+      // Images the user already saw and skipped — a re-run advances past them.
+      const excludeImageUrls = url.searchParams
+        .getAll('exclude')
+        .filter((u) => /^https?:\/\//.test(u))
+        .slice(0, 20);
+
       res.writeHead(200, {
         'Content-Type': 'text/event-stream; charset=utf-8',
         'Cache-Control': 'no-cache, no-transform',
@@ -287,7 +364,7 @@ const server = http.createServer(async (req, res) => {
       const heartbeat = setInterval(() => res.write(': ping\n\n'), 15_000);
 
       try {
-        await validateBrandSafety(slug, send);
+        await validateBrandSafety(slug, send, { excludeImageUrls });
       } catch (err) {
         send({ step: 'done', ok: false, status: 'error', error: err.message });
       } finally {

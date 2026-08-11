@@ -1,0 +1,34 @@
+{
+  "platform": "x",
+  "hashtags": {
+    "max_recommended": 1,
+    "deny_list": [
+      "follow4follow", "followforfollow", "f4f", "followme", "followback",
+      "like4like", "likeforlike", "l4l", "likesforlikes",
+      "model", "contentcreator", "influencer", "ootd",
+      "dm", "dmme", "dmforprice", "linkinbio", "checkbio", "clickthelink",
+      "bikini", "thick", "thirsttrap", "cleavage", "hotgirl", "lingerie",
+      "sexy", "booty", "nude", "nudity", "onlyfans", "milf", "nsfw", "stripper"
+    ],
+    "deny_patterns": [
+      "^(follow|like|comment|sub|share|spam|tag|shout|gain)[a-z]*(4|for|_)+(follow|like|comment|sub|share|spam|tag|shout|gain)[a-z0-9]*$",
+      "^(f|l|c|s)4(f|l|c|s)$",
+      "^(dm|link)(me|inbio|4|for)[a-z]*$"
+    ]
+  },
+  "caption": {
+    "solicitation_signals": ["dm me", "check my bio", "link in bio", "click below", "click the link"],
+    "solicitation_max": 0
+  },
+  "stereotype_patterns": [
+    "\\bspicy\\s+(?:latina|arab|asian)\\b",
+    "\\bsubmissive\\s+(?:asian|latina)\\b",
+    "\\bexotic\\s+(?:beauty|goddess)\\b"
+  ],
+  "new_account": {
+    "days_threshold": 14,
+    "hashtag_max_override": 1,
+    "forbid_cta": true,
+    "forbid_links": true
+  }
+}

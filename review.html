@@ -220,6 +220,34 @@
     background: var(--info);
     box-shadow: 0 0 8px var(--info);
   }
+  .card.is-failed .status-pill {
+    background: rgba(239, 68, 68, 0.12);
+    color: var(--danger);
+    border-color: rgba(239, 68, 68, 0.25);
+  }
+  .card.is-failed .status-pill .pulse {
+    background: var(--danger);
+    box-shadow: 0 0 8px var(--danger);
+  }
+  .fail-reason {
+    display: block;
+    margin-top: 4px;
+    padding: 8px 10px;
+    background: rgba(239, 68, 68, 0.06);
+    border: 1px solid rgba(239, 68, 68, 0.18);
+    border-radius: 6px;
+    color: #fca5a5;
+    font-size: 12px;
+    line-height: 1.4;
+    word-break: break-word;
+  }
+  .fail-reason-label {
+    display: inline-block;
+    font-size: 10px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.06em;
+    color: var(--danger);
+    margin-bottom: 3px;
+  }
   .timestamp { font-size: 12px; color: var(--muted); font-weight: 500; }
 
   .card-body {
@@ -836,6 +864,48 @@
   }
   .today-note strong { color: var(--text); }
 
+  /* Review search bar */
+  .review-search {
+    position: relative;
+    display: flex; align-items: center;
+    background: var(--card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 10px;
+    padding: 0 12px;
+    margin-bottom: 16px;
+    transition: border-color .12s;
+  }
+  .review-search:focus-within { border-color: var(--accent); }
+  .review-search-icon {
+    width: 16px; height: 16px;
+    color: var(--muted);
+    flex-shrink: 0;
+  }
+  .review-search input {
+    flex: 1; min-width: 0;
+    background: transparent; border: 0; outline: 0;
+    color: var(--text);
+    font: inherit; font-size: 13.5px;
+    padding: 10px 10px;
+  }
+  .review-search input::placeholder { color: var(--muted); }
+  .review-search-clear {
+    background: transparent; border: 0;
+    color: var(--muted);
+    cursor: pointer; padding: 4px;
+    border-radius: 6px;
+    display: inline-flex; align-items: center; justify-content: center;
+  }
+  .review-search-clear:hover { color: var(--text); background: var(--bg-elevated); }
+  .review-search-clear svg { width: 14px; height: 14px; }
+  .review-search-count {
+    font-size: 11.5px; color: var(--muted);
+    padding-left: 8px; margin-left: 4px;
+    border-left: 1px solid var(--border-subtle);
+    white-space: nowrap;
+  }
+  .review-search-count:empty { display: none; }
+
   @media (max-width: 960px) {
     aside.sidebar { width: 68px; padding: 20px 8px; }
     aside.sidebar .brand-mark h1 { display: none; }
@@ -880,6 +950,11 @@
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="m22 2-7 20-4-9-9-4Z"/></svg>
       <span>Published</span>
       <span class="tab-count" id="tab-count-published">–</span>
+    </div>
+    <div class="tab" data-tab="failed">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+      <span>Failed</span>
+      <span class="tab-count" id="tab-count-failed">–</span>
     </div>
   </aside>
 
@@ -944,6 +1019,14 @@
         </button>
       </div>
       <div id="today-panel"></div>
+      <div class="review-search">
+        <svg class="review-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" id="review-search" placeholder="Search by brand name or file name…" autocomplete="off" />
+        <button class="review-search-clear" id="review-search-clear" title="Clear" style="display:none;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+        <span class="review-search-count" id="review-search-count"></span>
+      </div>
       <div class="list" id="review-list">
         <div class="skeleton"><div class="skel-avatar"></div><div>
           <div class="skel-line" style="width:30%;height:18px"></div>
@@ -981,6 +1064,24 @@
         </div>
       </div>
       <div class="list" id="published-list">
+        <div class="skeleton"><div class="skel-avatar"></div><div>
+          <div class="skel-line" style="width:30%;height:18px"></div>
+          <div class="skel-line" style="width:95%"></div>
+          <div class="skel-line" style="width:88%"></div>
+          <div class="skel-line" style="width:70%"></div>
+        </div></div>
+      </div>
+    </section>
+
+    <!-- Failed -->
+    <section class="page" data-page="failed" style="display:none;">
+      <div class="page-header">
+        <div>
+          <h2 class="page-title">Failed</h2>
+          <div class="page-subtitle">Publishing failed for these. Send back to review to edit or retry.</div>
+        </div>
+      </div>
+      <div class="list" id="failed-list">
         <div class="skeleton"><div class="skel-avatar"></div><div>
           <div class="skel-line" style="width:30%;height:18px"></div>
           <div class="skel-line" style="width:95%"></div>
@@ -1055,6 +1156,7 @@ function switchTab(name) {
   if (name === 'review') loadReview();
   if (name === 'approved') loadApproved();
   if (name === 'published') loadPublished();
+  if (name === 'failed') loadFailed();
   if (name === 'playground') refreshSummary();
 }
 
@@ -1070,10 +1172,14 @@ function renderCard(item, mode) {
   const img = d.assets?.profile_image_url || '';
   const subreddit = d.target?.subreddit || '';
   const flair = d.target?.flair || '';
-  const status = d.status || (mode === 'approved' ? 'approved' : mode === 'published' ? 'published' : 'review');
+  const status = d.status || (mode === 'approved' ? 'approved' : mode === 'published' ? 'published' : mode === 'failed' ? 'failed' : 'review');
   const timeSource = mode === 'published' ? (d.published_at || d.approved_at || d.created_at)
                    : mode === 'approved' ? (d.approved_at || d.created_at)
+                   : mode === 'failed' ? (d.failed_at || d.approved_at || d.created_at)
                    : d.created_at;
+  const failReason = mode === 'failed'
+    ? (d.publish_error || d.error || d.failure_reason || '')
+    : '';
   const created = timeSource ? timeAgo(timeSource) : '';
   const initials = brand.split(/\s+/).map(w => w[0]).slice(0, 2).join('').toUpperCase();
 
@@ -1088,6 +1194,10 @@ function renderCard(item, mode) {
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
         Approve
       </button>
+      <button class="revert" data-action="regenerate">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M23 4v6h-6"/><path d="M1 20v-6h6"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10"/><path d="M20.49 15a9 9 0 0 1-14.85 3.36L1 14"/></svg>
+        Regenerate
+      </button>
       <button class="delete" data-action="delete">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/></svg>
         Delete
@@ -1095,6 +1205,12 @@ function renderCard(item, mode) {
   } else if (mode === 'approved') {
     actionsHtml = `
       <button class="revert" data-action="revert">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
+        Send to review
+      </button>`;
+  } else if (mode === 'failed') {
+    actionsHtml = `
+      <button class="revert" data-action="unfail">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
         Send to review
       </button>`;
@@ -1127,6 +1243,7 @@ function renderCard(item, mode) {
             ${flair ? `<span class="target-chip"><span class="target-key">flair</span>${escapeHtml(flair)}</span>` : ''}
           </div>` : ''}
         ${title ? `<div class="post-title">${escapeHtml(title)}</div>` : ''}
+        ${failReason ? `<div class="fail-reason"><span class="fail-reason-label">Publish error</span><br/>${escapeHtml(failReason)}</div>` : ''}
         <div class="caption">${escapeHtml(caption)}</div>
         ${hashtags.length ? `<div class="hashtags">${hashtags.map((t) => `<span class="tag">${escapeHtml(t)}</span>`).join('')}</div>` : ''}
         ${cta ? `<div class="cta"><span class="cta-label">CTA</span><span>${escapeHtml(cta)}</span></div>` : ''}
@@ -1146,9 +1263,13 @@ function renderCard(item, mode) {
   const approveBtn = card.querySelector('[data-action="approve"]');
   const deleteBtn = card.querySelector('[data-action="delete"]');
   const revertBtn = card.querySelector('[data-action="revert"]');
+  const unfailBtn = card.querySelector('[data-action="unfail"]');
+  const regenBtn = card.querySelector('[data-action="regenerate"]');
   if (approveBtn) approveBtn.addEventListener('click', (e) => approve(item.file, e.currentTarget, card));
   if (deleteBtn) deleteBtn.addEventListener('click', (e) => del(item.file, e.currentTarget, card));
   if (revertBtn) revertBtn.addEventListener('click', (e) => revert(item.file, e.currentTarget, card));
+  if (unfailBtn) unfailBtn.addEventListener('click', (e) => unfail(item.file, e.currentTarget, card));
+  if (regenBtn) regenBtn.addEventListener('click', (e) => regenerate(item.file, e.currentTarget, card));
   return card;
 }
 
@@ -1180,9 +1301,11 @@ function animateOut(card, onDone) {
 const reviewListEl = document.getElementById('review-list');
 const approvedListEl = document.getElementById('approved-list');
 const publishedListEl = document.getElementById('published-list');
+const failedListEl = document.getElementById('failed-list');
 const tabCountReview = document.getElementById('tab-count-review');
 const tabCountApproved = document.getElementById('tab-count-approved');
 const tabCountPublished = document.getElementById('tab-count-published');
+const tabCountFailed = document.getElementById('tab-count-failed');
 
 async function loadSection(endpoint, container, countTarget, mode, empty) {
   try {
@@ -1200,11 +1323,13 @@ async function loadSection(endpoint, container, countTarget, mode, empty) {
 }
 
 const loadReview = () => loadSection('/api/review', reviewListEl, tabCountReview, 'review',
-  { title: 'All caught up', subtitle: 'No items are waiting for review.' });
+  { title: 'All caught up', subtitle: 'No items are waiting for review.' }).then(() => applyReviewFilter());
 const loadApproved = () => loadSection('/api/approved', approvedListEl, tabCountApproved, 'approved',
   { title: 'Nothing approved yet', subtitle: 'Approved items will appear here.' });
 const loadPublished = () => loadSection('/api/published', publishedListEl, tabCountPublished, 'published',
   { title: 'Nothing published yet', subtitle: 'Published items will appear here.' });
+const loadFailed = () => loadSection('/api/failed', failedListEl, tabCountFailed, 'failed',
+  { title: 'No failures', subtitle: 'Posts that failed to publish will appear here.' });
 
 /* --------------- today review picker --------------- */
 const todayBtn = document.getElementById('today-btn');
@@ -1349,6 +1474,40 @@ function runTodayReview() {
 
 todayBtn.addEventListener('click', runTodayReview);
 
+/* --------------- review search --------------- */
+const reviewSearchInput = document.getElementById('review-search');
+const reviewSearchClear = document.getElementById('review-search-clear');
+const reviewSearchCount = document.getElementById('review-search-count');
+
+function applyReviewFilter() {
+  const q = reviewSearchInput.value.trim().toLowerCase();
+  reviewSearchClear.style.display = q ? '' : 'none';
+
+  const cards = reviewListEl.querySelectorAll('.card');
+  if (!cards.length) {
+    reviewSearchCount.textContent = '';
+    return;
+  }
+
+  let shown = 0;
+  cards.forEach((card) => {
+    const file = (card.dataset.file || '').toLowerCase();
+    const brand = (card.querySelector('.brand-name')?.textContent || '').toLowerCase();
+    const match = !q || file.includes(q) || brand.includes(q);
+    card.style.display = match ? '' : 'none';
+    if (match) shown++;
+  });
+
+  reviewSearchCount.textContent = q ? `${shown} of ${cards.length}` : '';
+}
+
+reviewSearchInput.addEventListener('input', applyReviewFilter);
+reviewSearchClear.addEventListener('click', () => {
+  reviewSearchInput.value = '';
+  applyReviewFilter();
+  reviewSearchInput.focus();
+});
+
 /* --------------- actions --------------- */
 async function approve(file, btn, card) {
   btn.disabled = true;
@@ -1419,6 +1578,58 @@ async function revert(file, btn, card) {
       const remaining = approvedListEl.querySelectorAll('.card').length;
       tabCountApproved.textContent = remaining;
       if (!remaining) renderEmpty(approvedListEl, 'Nothing approved yet', 'Approved items will appear here.');
+      refreshSummary();
+    });
+    toast(`Sent to review · ${file.replace(/\.json$/, '')}`);
+  } catch (err) {
+    btn.disabled = false;
+    btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg> Send to review';
+    toast(err.message, true);
+  }
+}
+
+async function regenerate(file, btn, card) {
+  const siblings = card.querySelectorAll('[data-action]');
+  siblings.forEach((b) => { b.disabled = true; });
+  const original = btn.innerHTML;
+  btn.innerHTML = '<span class="spinner"></span> Regenerating';
+  try {
+    const res = await fetch('/api/regenerate', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ file }),
+    });
+    const body = await res.json();
+    if (!res.ok || !body.ok) throw new Error(body.error || 'Regenerate failed');
+    if (body.status !== 'success') {
+      const errs = Array.isArray(body.errors) && body.errors.length ? body.errors.join(' · ') : (body.error || body.status);
+      throw new Error(`${body.status}: ${errs}`);
+    }
+    const newCard = renderCard({ file: body.file, data: body.data }, 'review');
+    card.replaceWith(newCard);
+    toast(`Regenerated · ${body.file.replace(/\.json$/, '')}`);
+    refreshSummary();
+  } catch (err) {
+    siblings.forEach((b) => { b.disabled = false; });
+    btn.innerHTML = original;
+    toast(err.message, true);
+  }
+}
+
+async function unfail(file, btn, card) {
+  btn.disabled = true;
+  btn.innerHTML = '<span class="spinner"></span> Moving';
+  try {
+    const res = await fetch('/api/unfail', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ file }),
+    });
+    const body = await res.json();
+    if (!res.ok || !body.ok) throw new Error(body.error || 'Move failed');
+    animateOut(card, () => {
+      card.remove();
+      const remaining = failedListEl.querySelectorAll('.card').length;
+      tabCountFailed.textContent = remaining;
+      if (!remaining) renderEmpty(failedListEl, 'No failures', 'Posts that failed to publish will appear here.');
       refreshSummary();
     });
     toast(`Sent to review · ${file.replace(/\.json$/, '')}`);
@@ -1605,6 +1816,11 @@ generateBtn.addEventListener('click', runGenerate);
 sfwBtn.addEventListener('click', runSafety);
 
 /* --------------- playground: live SFW agent --------------- */
+// Images already shown as "verified" for the current brand. While the result
+// panel is on screen, re-running the SFW agent excludes them so the agent
+// picks the next image; Clear (or verifying another brand) resets this.
+let sfwSeen = { slug: null, urls: [] };
+
 function safetyPanelSkeleton(name) {
   return `
     <div class="safety-panel" id="safety-panel">
@@ -1669,6 +1885,7 @@ function renderSafetyFinal(container, name, event) {
           <div class="final-label">Verified SFW · ${escapeHtml(name)}</div>
           <div class="final-desc">${escapeHtml(description)}</div>
           ${tags.length ? `<div class="final-tags">${tags.map(t => `<span class="final-tag">${escapeHtml(t)}</span>`).join('')}</div>` : ''}
+          <div class="final-desc" style="margin-top:8px; opacity:.65;">Wrong image? Run the SFW agent again — it will pick the next one.</div>
         </div>
       </div>`;
   } else {
@@ -1697,11 +1914,18 @@ async function runSafety() {
   const statusEl = document.getElementById('safety-status');
   const finalEl = document.getElementById('safety-final');
   const clearBtn = document.getElementById('safety-clear');
-  clearBtn.addEventListener('click', () => { playgroundOutput.innerHTML = ''; });
+  clearBtn.addEventListener('click', () => {
+    playgroundOutput.innerHTML = '';
+    sfwSeen = { slug: null, urls: [] };
+  });
 
   let currentPhase = 'text';
   let sourceClosed = false;
-  const es = new EventSource(`/api/validate-safety?slug=${encodeURIComponent(slug)}`);
+  const params = new URLSearchParams({ slug });
+  if (sfwSeen.slug === slug) {
+    for (const u of sfwSeen.urls) params.append('exclude', u);
+  }
+  const es = new EventSource(`/api/validate-safety?${params}`);
 
   const finish = ({ ok, error }) => {
     if (sourceClosed) return;
@@ -1791,13 +2015,20 @@ async function runSafety() {
       case 'image_phase':
         break;
 
-      case 'done':
+      case 'done': {
+        const r = ev.result || {};
+        const chosenUrl = (r.updated && r.updated.profile_image_url) || (r.image && r.image.image && r.image.image.url) || '';
+        if (ev.ok && chosenUrl) {
+          if (sfwSeen.slug !== slug) sfwSeen = { slug, urls: [] };
+          if (!sfwSeen.urls.includes(chosenUrl)) sfwSeen.urls.push(chosenUrl);
+        }
         renderSafetyFinal(finalEl, name, ev);
         statusEl.textContent = ev.ok ? 'Verified SFW' : (ev.status || 'Failed');
         statusEl.classList.toggle('ok', !!ev.ok);
         statusEl.classList.toggle('fail', !ev.ok);
         finish({ ok: !!ev.ok, error: ev.error });
         break;
+      }
 
       default:
         break;
@@ -1887,18 +2118,20 @@ async function refreshSummary() {
     SUMMARY = summary || {};
     if (modelPopover.classList.contains('open')) renderModelList();
     // update tab counts too
-    let review = 0, approved = 0, published = 0;
+    let review = 0, approved = 0, published = 0, failed = 0;
     for (const slug of Object.keys(SUMMARY)) {
       for (const p of PLATFORMS) {
         const c = SUMMARY[slug][p] || {};
         review += c.review || 0;
         approved += c.approved || 0;
         published += c.published || 0;
+        failed += c.failed || 0;
       }
     }
     tabCountReview.textContent = review;
     tabCountApproved.textContent = approved;
     tabCountPublished.textContent = published;
+    tabCountFailed.textContent = failed;
   } catch {}
 }
 

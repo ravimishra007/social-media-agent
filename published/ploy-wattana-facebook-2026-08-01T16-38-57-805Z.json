@@ -1,0 +1,25 @@
+{
+  "brand": {
+    "slug": "ploy-wattana",
+    "name": "Ploy Wattana"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/ploy-wattana/images/sfw/ploy-wattana_sfw_20260406_053453_ploy-wattana__sfw__2026-04-06053449-18722808-7281615219643061_00001_.png?quality=85&format=webp"
+  },
+  "platform": "facebook",
+  "content": {
+    "caption": "I spent the morning dancing among the flowers in the garden. The vibrant colors and gentle breeze made every step feel magical. Being close to nature always fills my heart with warmth. 🌺 What’s your favorite way to connect with the outdoors?",
+    "hashtags": [
+      "#naturelover",
+      "#dancer"
+    ],
+    "cta": "I'd love to hear yours!"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "approved",
+  "created_at": "2026-08-01T16:38:57.805Z",
+  "approved_at": "2026-08-03T05:14:44.321Z"
+}

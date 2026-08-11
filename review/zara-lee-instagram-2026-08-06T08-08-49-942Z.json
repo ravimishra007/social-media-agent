@@ -1,0 +1,25 @@
+{
+  "brand": {
+    "slug": "zara-lee",
+    "name": "Zara Lee"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/zara-lee/images/sfw/zara-lee_sfw_20260330_112254_zara-lee__sfw__2026-03-30112249-18722808-5210049468041891_00001_.png"
+  },
+  "platform": "instagram",
+  "content": {
+    "caption": "Loving these quiet moments surrounded by green leaves and gentle winds. It brings back memories of flowing movements from my dance days and helps me find new angles for modeling. Creativity flows best when I'm connected to the outdoors. ✨",
+    "hashtags": [
+      "#dancer",
+      "#naturelover",
+      "#artist"
+    ],
+    "cta": "What’s your favorite way to recharge?"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "review",
+  "created_at": "2026-08-06T08:08:49.943Z"
+}

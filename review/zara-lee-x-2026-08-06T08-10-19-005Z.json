@@ -1,0 +1,23 @@
+{
+  "brand": {
+    "slug": "zara-lee",
+    "name": "Zara Lee"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/zara-lee/images/sfw/zara-lee_sfw_20260330_112254_zara-lee__sfw__2026-03-30112249-18722808-5210049468041891_00001_.png"
+  },
+  "platform": "x",
+  "content": {
+    "caption": "Nothing beats the feeling of moving freely in nature. It sparks my creativity every time!",
+    "hashtags": [
+      "#dancer"
+    ],
+    "cta": ""
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "review",
+  "created_at": "2026-08-06T08:10:19.005Z"
+}

@@ -1,0 +1,26 @@
+{
+  "brand": {
+    "slug": "tatiana-vinogradova",
+    "name": "Tatiana Vinogradova"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/tatiana-vinogradova/images/sfw/tatiana-vinogradova_sfw_20260424_025123_tatiana-vinogradova__sfw__2026-04-24025117-18722808-7894625873579771_00001_.png"
+  },
+  "platform": "instagram",
+  "content": {
+    "caption": "There's a special kind of magic in strumming a melody that echoes through the trees. It nurtures my spirit and connects me to the beauty all around. Feeling so grateful for these simple heartfelt moments. 🌿🎶",
+    "hashtags": [
+      "#MusicLover",
+      "#NatureLover"
+    ],
+    "cta": "What melody warms your soul today?"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "approved",
+  "created_at": "2026-07-10T17:42:51.489Z",
+  "approved_at": "2026-08-02T08:42:05.097Z",
+  "returned_to_review_at": "2026-08-01T16:11:01.670Z"
+}

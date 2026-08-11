@@ -1,0 +1,23 @@
+{
+  "brand": {
+    "slug": "karolina-nowak",
+    "name": "Karolina Nowak"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/karolina-nowak/images/sfw/karolina-nowak_sfw_20260423_162956_karolina-nowak__sfw__2026-04-23162950-18722808-5748028626327359_00001_.png"
+  },
+  "platform": "x",
+  "content": {
+    "caption": "Nothing beats dancing to traditional folk music in the countryside. It fills my heart with joy.",
+    "hashtags": [
+      "#MusicLover"
+    ],
+    "cta": ""
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "review",
+  "created_at": "2026-08-07T05:45:59.510Z"
+}

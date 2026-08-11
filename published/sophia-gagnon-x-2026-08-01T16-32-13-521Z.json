@@ -1,0 +1,24 @@
+{
+  "brand": {
+    "slug": "sophia-gagnon",
+    "name": "Sophia Gagnon"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/sophia-gagnon/images/sfw/sophia-gagnon_sfw_20260406_053910_sophia-gagnon__sfw__2026-04-06053906-18722808-6501654117812502_00001_.png?quality=85&format=webp"
+  },
+  "platform": "x",
+  "content": {
+    "caption": "There's a special kind of magic in the Laurentian winter nights that warms my heart.",
+    "hashtags": [
+      "#mysterious"
+    ],
+    "cta": "What about you?"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "approved",
+  "created_at": "2026-08-01T16:32:13.521Z",
+  "approved_at": "2026-08-04T13:14:35.006Z"
+}

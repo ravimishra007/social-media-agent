@@ -1,0 +1,24 @@
+{
+  "brand": {
+    "slug": "sienna-clark",
+    "name": "Sienna Clark"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/sienna-clark/images/sfw/sienna-clark_sfw_20260424_011924_sienna-clark__sfw__2026-04-24011918-18722808-252178207542717_00001_.png"
+  },
+  "platform": "facebook",
+  "content": {
+    "caption": "There's nothing quite like heading out for a spontaneous adventure and capturing the beauty around me. The sun was shining bright today, making every shot a joy to take. Grateful for these moments that fill me with energy. 🌞📷",
+    "hashtags": [
+      "#photographer",
+      "#adventurous"
+    ],
+    "cta": "Tell me about your latest outdoor escapade!"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "review",
+  "created_at": "2026-08-07T05:38:01.512Z"
+}

@@ -1,0 +1,23 @@
+{
+  "brand": {
+    "slug": "yuna-kim",
+    "name": "Yuna Kim"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/yuna-kim/images/sfw/yuna-kim_sfw_20260330_104318_yuna-kim__sfw__2026-03-30104311-18722808-3476961345707259_00001_.png?quality=85&format=webp"
+  },
+  "platform": "x",
+  "content": {
+    "caption": "The gentle breeze through hanbok fabric brings such peaceful joy to my day.",
+    "hashtags": [
+      "#serene"
+    ],
+    "cta": ""
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "review",
+  "created_at": "2026-08-06T08:11:04.554Z"
+}

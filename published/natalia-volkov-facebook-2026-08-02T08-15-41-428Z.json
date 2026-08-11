@@ -1,0 +1,25 @@
+{
+  "brand": {
+    "slug": "natalia-volkov",
+    "name": "Natalia Volkov"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/natalia-volkov/images/sfw/natalia-volkov_sfw_20260406_053056_natalia-volkov__sfw__2026-04-06053052-18722808-8949736409069053_00001_.png?quality=85&format=webp"
+  },
+  "platform": "facebook",
+  "content": {
+    "caption": "Every dance feels like a secret unfolding, graceful and full of wonder. It connects me to something deeper and always leaves me smiling. ✨",
+    "hashtags": [
+      "#dancer",
+      "#mysterious"
+    ],
+    "cta": "Share your thoughts below if you'd like."
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "approved",
+  "created_at": "2026-08-02T08:15:41.428Z",
+  "approved_at": "2026-08-02T16:59:42.994Z"
+}

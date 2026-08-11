@@ -1,0 +1,23 @@
+{
+  "brand": {
+    "slug": "xiao-wei",
+    "name": "Xiao Wei"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/xiao-wei/images/sfw/xiao-wei_sfw_20260424_031742_xiao-wei__sfw__2026-04-24031736-18722808-802935111966947_00001_.png"
+  },
+  "platform": "x",
+  "content": {
+    "caption": "The gentle sway of branches inspires my dance today, bringing a sense of pure elegance and peace",
+    "hashtags": [
+      "#serene"
+    ],
+    "cta": ""
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "review",
+  "created_at": "2026-08-06T08:15:06.629Z"
+}

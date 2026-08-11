@@ -2,7 +2,9 @@ import { getBrand } from "./agent/readBrand.js";
 import { getGuidelines } from "./agent/readGuidelines.js";
 import { buildPrompt } from "./agent/promptBuilder.js";
 import { generateContent } from "./services/grok.js";
+import { normalizeContent } from "./agent/normalizeContent.js";
 import { validateContent } from "./agent/validator.js";
+import { validatePostSafety } from "./agent/brand-safety-validator/postSafetyValidator.js";
 import { saveReview } from "./agent/saveReview.js";
 
 async function main() {
@@ -45,7 +47,7 @@ async function main() {
         console.log("🧠 Prompt Built");
 
         // Generate content
-        const content = await generateContent(prompt);
+        const content = normalizeContent(await generateContent(prompt));
 
         console.log("🤖 Content Generated");
 
@@ -68,6 +70,29 @@ async function main() {
         }
 
         console.log("✅ Validation Passed");
+
+        // Platform-policy + LLM moderation gate.
+        const safety = await validatePostSafety({
+          content,
+          brand,
+          platform,
+          validationFlags: guidelines.validation || {}
+        });
+
+        if (!safety.ok) {
+          console.log(`❌ Safety Rejected (${safety.status})`);
+
+          results.push({
+            platform,
+            status: "Safety Rejected",
+            reason: safety.status,
+            errors: safety.errors
+          });
+
+          continue;
+        }
+
+        console.log("🛡️  Safety Verified");
 
         // Save JSON
         const file = saveReview(

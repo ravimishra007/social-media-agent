@@ -1,0 +1,25 @@
+{
+  "brand": {
+    "slug": "lotte-van-den-berg",
+    "name": "Lotte van den Berg"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/lotte-van-den-berg/images/sfw/lotte-van-den-berg_sfw_20260423_195657_lotte-van-den-berg__sfw__2026-04-23195651-18722808-1590135245654787_00001_.png"
+  },
+  "platform": "facebook",
+  "content": {
+    "caption": "Cycled along the quiet canals today and felt so grateful for these peaceful moments between classes. They always recharge my energy and remind me why I love sharing knowledge with others. 🌷🚲☕",
+    "hashtags": [
+      "#student",
+      "#educator"
+    ],
+    "cta": "What simple joy made your day brighter?"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "approved",
+  "created_at": "2026-08-03T05:19:43.394Z",
+  "approved_at": "2026-08-06T15:31:37.285Z"
+}

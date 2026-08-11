@@ -1,0 +1,21 @@
+{
+  "brand": {
+    "slug": "isla-brown",
+    "name": "Isla Brown"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/isla-brown/images/sfw/isla-brown_sfw_20260423_161235_isla-brown__sfw__2026-04-23161229-18722808-1013961548416279_00001_.png"
+  },
+  "platform": "x",
+  "content": {
+    "caption": "Sunrise surf sessions on the Gold Coast never get old. Pure bliss catching those waves before a chill day with mates.",
+    "hashtags": [],
+    "cta": ""
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "review",
+  "created_at": "2026-08-04T13:20:29.599Z"
+}

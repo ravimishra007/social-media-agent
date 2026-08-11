@@ -1,0 +1,24 @@
+{
+  "brand": {
+    "slug": "leila-omar",
+    "name": "Leila Omar"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/leila-omar/images/sfw/leila-omar_sfw_20260423_184509_leila-omar__sfw__2026-04-23184503-18722808-8499872190581193_00001_.png"
+  },
+  "platform": "x",
+  "content": {
+    "caption": "Sunrise over ancient ruins always fills me with joy and wonder. What beautiful sight starts your day?",
+    "hashtags": [
+      "#vibrant"
+    ],
+    "cta": "Reply with yours!"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "approved",
+  "created_at": "2026-08-03T05:24:17.806Z",
+  "approved_at": "2026-08-07T11:34:49.606Z"
+}

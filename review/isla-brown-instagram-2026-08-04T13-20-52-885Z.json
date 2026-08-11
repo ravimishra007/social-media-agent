@@ -1,0 +1,24 @@
+{
+  "brand": {
+    "slug": "isla-brown",
+    "name": "Isla Brown"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/isla-brown/images/sfw/isla-brown_sfw_20260423_161235_isla-brown__sfw__2026-04-23161229-18722808-1013961548416279_00001_.png"
+  },
+  "platform": "instagram",
+  "content": {
+    "caption": "Spent the morning out on the waves, feeling the sun on my skin and the ocean spray all around. Nothing beats that feeling, then kicking back with a barbie and good chats. These simple days are the best.",
+    "hashtags": [
+      "#goldcoastlife",
+      "#surftime"
+    ],
+    "cta": "What's your go-to way to relax?"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "review",
+  "created_at": "2026-08-04T13:20:52.885Z"
+}

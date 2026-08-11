@@ -1,0 +1,24 @@
+{
+  "brand": {
+    "slug": "fitri-gunawan",
+    "name": "Fitri Gunawan"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/fitri-gunawan/images/sfw/fitri-gunawan_sfw_20260423_133443_fitri-gunawan__sfw__2026-04-23133436-18722808-6750774505488876_00001_.png"
+  },
+  "platform": "facebook",
+  "content": {
+    "caption": "Chilling in the Ubud library surrounded by wayang kulit scrolls and steamy romance novels. These peaceful moments always inspire my vibrant side and I couldn't resist adding a bit of fashion flair to my outfit for the day. 📖✨",
+    "hashtags": [
+      "#fashionista",
+      "#vibrant"
+    ],
+    "cta": "Tell me about your favorite book!"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "review",
+  "created_at": "2026-08-05T06:06:19.840Z"
+}

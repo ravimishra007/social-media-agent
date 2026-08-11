@@ -1,0 +1,23 @@
+{
+  "brand": {
+    "slug": "dalia-mansour",
+    "name": "Dalia Mansour"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/dalia-mansour/images/sfw/dalia-mansour_sfw_20260406_040350_dalia-mansour__sfw__2026-04-06040345-18722808-6957062738463476_00001_.png?quality=85&format=webp"
+  },
+  "platform": "x",
+  "content": {
+    "caption": "Ancient whispers from Cairo sunrises fill my soul with unexpected beauty.",
+    "hashtags": [
+      "#Mysterious"
+    ],
+    "cta": "What whispers to you?"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "review",
+  "created_at": "2026-08-06T07:39:02.483Z"
+}

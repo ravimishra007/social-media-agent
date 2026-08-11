@@ -1,0 +1,24 @@
+{
+  "brand": {
+    "slug": "yumiko-morita",
+    "name": "Yumiko Morita"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/yumiko-morita/images/sfw/yumiko-morita_sfw_20260330_102658_yumiko-morita__sfw__2026-03-30102653-18722808-1777819137968607_00001_.png"
+  },
+  "platform": "instagram",
+  "content": {
+    "caption": "Stepping into my favorite kimono always makes my heart flutter with excitement. The gentle fabric and beautiful designs make every moment feel special and playful. I just love sharing these cute snapshots with you all! 🌸✨",
+    "hashtags": [
+      "#photographer",
+      "#beautyenthusiast"
+    ],
+    "cta": "What moments make you feel joyful?"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "review",
+  "created_at": "2026-08-06T08:12:57.659Z"
+}

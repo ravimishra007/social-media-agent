@@ -1,0 +1,24 @@
+{
+  "brand": {
+    "slug": "luna-martinez",
+    "name": "Luna Martinez"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/luna-martinez/images/sfw/luna-martinez_sfw_20260423_203724_luna-martinez__sfw__2026-04-23203718-18722808-3913749795279327_00001_.png"
+  },
+  "platform": "x",
+  "content": {
+    "caption": "Dancing through festivals always ignites my playful energy!",
+    "hashtags": [
+      "#vibrant"
+    ],
+    "cta": "What sparks your joy?"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "approved",
+  "created_at": "2026-08-03T05:12:59.135Z",
+  "approved_at": "2026-08-07T05:46:12.222Z"
+}

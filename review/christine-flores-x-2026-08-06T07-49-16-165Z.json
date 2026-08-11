@@ -1,0 +1,23 @@
+{
+  "brand": {
+    "slug": "christine-flores",
+    "name": "Christine Flores"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/christine-flores/images/sfw/christine-flores_sfw_20260423_102903_christine-flores__sfw__2026-04-23102857-18722808-6422865384741678_00001_.png"
+  },
+  "platform": "x",
+  "content": {
+    "caption": "Crafting elegant jewelry from South Sea pearls reminds me of nature's timeless beauty every single day.",
+    "hashtags": [
+      "#minimalist"
+    ],
+    "cta": "What inspires you?"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "review",
+  "created_at": "2026-08-06T07:49:16.165Z"
+}

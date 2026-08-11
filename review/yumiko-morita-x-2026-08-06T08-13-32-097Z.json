@@ -1,0 +1,23 @@
+{
+  "brand": {
+    "slug": "yumiko-morita",
+    "name": "Yumiko Morita"
+  },
+  "assets": {
+    "profile_image_url": "https://xgen.b-cdn.net/models/yumiko-morita/images/sfw/yumiko-morita_sfw_20260330_102658_yumiko-morita__sfw__2026-03-30102653-18722808-1777819137968607_00001_.png"
+  },
+  "platform": "x",
+  "content": {
+    "caption": "Twirling around in my kimono always brings the biggest smile to my face.",
+    "hashtags": [
+      "#photographer"
+    ],
+    "cta": "What makes you smile today?"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "review",
+  "created_at": "2026-08-06T08:13:32.097Z"
+}
