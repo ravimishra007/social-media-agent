@@ -1,0 +1,42 @@
+{
+  "brand": {
+    "id": "fcd31896-11fe-47fc-989c-027e0e33717d",
+    "slug": "freya-andersen",
+    "name": "Freya Andersen"
+  },
+  "assets": {
+    "video_url": "https://xgen.b-cdn.net/models/Freya_Andersen/videos/Freya_Andersen_watermarked_b19498fd.mp4",
+    "video_title": "Freya_Andersen_watermarked_b19498fd"
+  },
+  "isVideo": true,
+  "video_verification": {
+    "sfw": true,
+    "apparent_age_verified": true,
+    "method": "human",
+    "verified_at": "2026-08-17T15:22:35.581Z"
+  },
+  "platform": "x",
+  "content": {
+    "caption": "The crisp mountain air welcomes me every time I step outside. Nothing quite matches this feeling of freedom.",
+    "hashtags": [
+      "#naturelover"
+    ],
+    "cta": "What's your favorite trail?"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "published",
+  "created_at": "2026-08-17T15:23:23.458Z",
+  "approved_at": "2026-08-17T15:23:49.578Z",
+  "published_at": "2026-08-17T17:51:41.925Z",
+  "publication": {
+    "platform": "x",
+    "integrationId": "cmsa135oe0qmdkz0ydapqor9l",
+    "account": "Harper Walker",
+    "postId": "cmsxj64qi05fkt90yqljjttpp",
+    "postUrl": null,
+    "publishedAt": "2026-08-17T17:51:41.925Z"
+  }
+}

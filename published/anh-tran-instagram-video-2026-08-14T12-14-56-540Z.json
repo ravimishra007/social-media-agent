@@ -1,0 +1,42 @@
+{
+  "brand": {
+    "id": "253a8dbe-90f2-4624-89d9-94a6648aec6b",
+    "slug": "anh-tran",
+    "name": "Anh Tran"
+  },
+  "assets": {
+    "video_url": "https://xgen.b-cdn.net/models/Anh_Tran/videos/Anh_Tran_watermarked_49936c7b.mp4",
+    "video_title": "Anh_Tran_watermarked_49936c7b"
+  },
+  "isVideo": true,
+  "video_verification": {
+    "sfw": true,
+    "method": "human",
+    "verified_at": "2026-08-14T12:13:55.457Z"
+  },
+  "platform": "instagram",
+  "content": {
+    "caption": "Hi there, Ive been feeling so grateful lately for this modeling adventure. It all began with sweet encouragement from friends who believed in my innocent side. Now each day feels like a gentle discovery 🌼",
+    "hashtags": [
+      "#sweet",
+      "#shy"
+    ],
+    "cta": "Tell me something that makes you smile today"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "published",
+  "created_at": "2026-08-14T12:14:56.540Z",
+  "approved_at": "2026-08-14T12:18:02.231Z",
+  "published_at": "2026-08-14T17:20:11.568Z",
+  "publication": {
+    "platform": "instagram",
+    "integrationId": "cmsaddcic03leqn0yvgyrs7nt",
+    "account": "Aloe",
+    "postId": "cmst7q28q03xlqb0yackxe0tp",
+    "postUrl": null,
+    "publishedAt": "2026-08-14T17:20:11.568Z"
+  }
+}

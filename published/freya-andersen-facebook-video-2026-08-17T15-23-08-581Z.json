@@ -1,0 +1,43 @@
+{
+  "brand": {
+    "id": "fcd31896-11fe-47fc-989c-027e0e33717d",
+    "slug": "freya-andersen",
+    "name": "Freya Andersen"
+  },
+  "assets": {
+    "video_url": "https://xgen.b-cdn.net/models/Freya_Andersen/videos/Freya_Andersen_watermarked_bd47ec52.mp4",
+    "video_title": "Freya_Andersen_watermarked_bd47ec52"
+  },
+  "isVideo": true,
+  "video_verification": {
+    "sfw": true,
+    "apparent_age_verified": true,
+    "method": "human",
+    "verified_at": "2026-08-17T15:21:39.121Z"
+  },
+  "platform": "facebook",
+  "content": {
+    "caption": "There's something magical about heading out into the wild where every trail leads to new discoveries. The mountains call to my adventurous heart and I feel so alive surrounded by natures beauty 🌲🏔️",
+    "hashtags": [
+      "#NatureLover",
+      "#OutdoorLover"
+    ],
+    "cta": "I'd love to hear about your latest outdoor adventures!"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "published",
+  "created_at": "2026-08-17T15:23:08.581Z",
+  "approved_at": "2026-08-17T15:23:47.975Z",
+  "published_at": "2026-08-17T17:51:07.514Z",
+  "publication": {
+    "platform": "facebook",
+    "integrationId": "cmr8uabh4034vk90y8pxbtzxi",
+    "account": "Xgenai brands",
+    "postId": "cmsxj5dxl05fdt90y00zcob80",
+    "postUrl": null,
+    "publishedAt": "2026-08-17T17:51:07.514Z"
+  }
+}

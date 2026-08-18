@@ -1,0 +1,42 @@
+{
+  "brand": {
+    "id": "253a8dbe-90f2-4624-89d9-94a6648aec6b",
+    "slug": "anh-tran",
+    "name": "Anh Tran"
+  },
+  "assets": {
+    "video_url": "https://xgen.b-cdn.net/models/Anh_Tran/videos/Anh_Tran_watermarked_c18a1e5d.mp4",
+    "video_title": "Anh_Tran_watermarked_c18a1e5d"
+  },
+  "isVideo": true,
+  "video_verification": {
+    "sfw": true,
+    "method": "human",
+    "verified_at": "2026-08-14T12:14:12.542Z"
+  },
+  "platform": "facebook",
+  "content": {
+    "caption": "Feeling a little shy today but wanted to share this moment from my modeling session. My close friends always believed in my charm and helped me discover this passion. It's been a sweet journey so far 😊🌸",
+    "hashtags": [
+      "#SweetVibes",
+      "#ShySmile"
+    ],
+    "cta": "I'd love to hear your thoughts!"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "published",
+  "created_at": "2026-08-14T12:15:16.670Z",
+  "approved_at": "2026-08-14T12:18:03.093Z",
+  "published_at": "2026-08-14T17:19:34.354Z",
+  "publication": {
+    "platform": "facebook",
+    "integrationId": "cmr8uabh4034vk90y8pxbtzxi",
+    "account": "Xgenai brands",
+    "postId": "cmst7p8ip03xgqb0ye36gjtxc",
+    "postUrl": null,
+    "publishedAt": "2026-08-14T17:19:34.354Z"
+  }
+}

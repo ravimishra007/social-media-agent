@@ -1,0 +1,42 @@
+{
+  "brand": {
+    "id": "6e2fe04f-534a-4b03-9dc9-bd2eb7a5821c",
+    "slug": "alexandra-petrov",
+    "name": "Alexandra Petrov"
+  },
+  "assets": {
+    "video_url": "https://xgen.b-cdn.net/models/Alexandra_Petrov/videos/Alexandra_Petrov_watermarked_98f16375.mp4",
+    "video_title": "Alexandra_Petrov_watermarked_98f16375"
+  },
+  "isVideo": true,
+  "video_verification": {
+    "sfw": true,
+    "apparent_age_verified": true,
+    "method": "human",
+    "verified_at": "2026-08-18T05:39:09.895Z"
+  },
+  "platform": "x",
+  "content": {
+    "caption": "Nothing compares to the serene moments that recharge my creative soul.",
+    "hashtags": [
+      "#CreativeRecharge"
+    ],
+    "cta": ""
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "published",
+  "created_at": "2026-08-18T05:44:32.142Z",
+  "approved_at": "2026-08-18T05:44:39.262Z",
+  "published_at": "2026-08-18T05:46:29.869Z",
+  "publication": {
+    "platform": "x",
+    "integrationId": "cmsa135oe0qmdkz0ydapqor9l",
+    "account": "Harper Walker",
+    "postId": "cmsy8pcr501gumt0yzyuu3nx9",
+    "postUrl": null,
+    "publishedAt": "2026-08-18T05:46:29.869Z"
+  }
+}

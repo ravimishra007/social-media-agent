@@ -1,0 +1,41 @@
+{
+  "brand": {
+    "id": "253a8dbe-90f2-4624-89d9-94a6648aec6b",
+    "slug": "anh-tran",
+    "name": "Anh Tran"
+  },
+  "assets": {
+    "video_url": "https://xgen.b-cdn.net/models/Anh_Tran/videos/Anh_Tran_watermarked_afb8e1c3.mp4",
+    "video_title": "Anh_Tran_watermarked_afb8e1c3"
+  },
+  "isVideo": true,
+  "video_verification": {
+    "sfw": true,
+    "method": "human",
+    "verified_at": "2026-08-14T05:40:24.311Z"
+  },
+  "platform": "x",
+  "content": {
+    "caption": "My friends saw my innocent charm and encouraged me to model.",
+    "hashtags": [
+      "#sweet"
+    ],
+    "cta": ""
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "published",
+  "created_at": "2026-08-14T05:41:28.565Z",
+  "approved_at": "2026-08-14T05:44:08.504Z",
+  "published_at": "2026-08-14T05:46:22.285Z",
+  "publication": {
+    "platform": "x",
+    "integrationId": "cmsa135oe0qmdkz0ydapqor9l",
+    "account": "Harper Walker",
+    "postId": "cmssixted07hlqb0ysiyt7mf4",
+    "postUrl": null,
+    "publishedAt": "2026-08-14T05:46:22.285Z"
+  }
+}

@@ -18,6 +18,7 @@
     "passed": true,
     "errors": []
   },
-  "status": "review",
-  "created_at": "2026-08-06T08:05:33.089Z"
+  "status": "approved",
+  "created_at": "2026-08-06T08:05:33.089Z",
+  "approved_at": "2026-08-12T17:21:42.190Z"
 }

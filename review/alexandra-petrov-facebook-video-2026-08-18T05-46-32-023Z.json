@@ -1,0 +1,33 @@
+{
+  "brand": {
+    "id": "6e2fe04f-534a-4b03-9dc9-bd2eb7a5821c",
+    "slug": "alexandra-petrov",
+    "name": "Alexandra Petrov"
+  },
+  "assets": {
+    "video_url": "https://xgen.b-cdn.net/models/Alexandra_Petrov/videos/Alexandra_Petrov_watermarked_65264416.mp4",
+    "video_title": "Alexandra_Petrov_watermarked_65264416"
+  },
+  "isVideo": true,
+  "video_verification": {
+    "sfw": true,
+    "apparent_age_verified": true,
+    "method": "human",
+    "verified_at": "2026-08-18T05:45:29.971Z"
+  },
+  "platform": "facebook",
+  "content": {
+    "caption": "Reflecting on timeless stories from classical books while feeling the graceful flow of ballet in my thoughts. These quiet moments always spark fresh ideas and calm my spirit. What inspires your creativity today?",
+    "hashtags": [
+      "#TimelessElegance",
+      "#ArtfulMoments"
+    ],
+    "cta": "Share your thoughts below."
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "review",
+  "created_at": "2026-08-18T05:46:32.023Z"
+}

@@ -18,6 +18,16 @@
     "passed": true,
     "errors": []
   },
-  "status": "review",
-  "created_at": "2026-08-03T05:14:16.539Z"
+  "status": "published",
+  "created_at": "2026-08-03T05:14:16.539Z",
+  "approved_at": "2026-08-12T18:45:16.171Z",
+  "published_at": "2026-08-12T18:57:55.876Z",
+  "publication": {
+    "platform": "x",
+    "integrationId": "cmsa135oe0qmdkz0ydapqor9l",
+    "account": "Harper Walker",
+    "postId": "cmsqgc0kf0d37oy0yy9iqczol",
+    "postUrl": null,
+    "publishedAt": "2026-08-12T18:57:55.876Z"
+  }
 }

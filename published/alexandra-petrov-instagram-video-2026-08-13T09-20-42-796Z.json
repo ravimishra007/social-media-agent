@@ -1,0 +1,37 @@
+{
+  "brand": {
+    "id": "6e2fe04f-534a-4b03-9dc9-bd2eb7a5821c",
+    "slug": "alexandra-petrov",
+    "name": "Alexandra Petrov"
+  },
+  "assets": {
+    "video_url": "https://xgen.b-cdn.net/models/Alexandra_Petrov/videos/Alexandra_Petrov_watermarked_9d66839c.mp4",
+    "video_title": "Alexandra_Petrov_watermarked_9d66839c"
+  },
+  "isVideo": true,
+  "platform": "instagram",
+  "content": {
+    "caption": "Found a peaceful spot by the water that feels like home. The gentle waves and open sky remind me of the beauty in simplicity and the art that shapes my world. It is truly rejuvenating 🌊✨",
+    "hashtags": [
+      "#russian",
+      "#IceBlueEyes"
+    ],
+    "cta": "I'd love to hear what inspires your quiet moments."
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "published",
+  "created_at": "2026-08-13T09:20:42.797Z",
+  "approved_at": "2026-08-13T09:31:54.785Z",
+  "published_at": "2026-08-13T09:33:22.887Z",
+  "publication": {
+    "platform": "instagram",
+    "integrationId": "cmsaddcic03leqn0yvgyrs7nt",
+    "account": "Aloe",
+    "postId": "cmsrblv1w0195ls0y1scsw1p0",
+    "postUrl": null,
+    "publishedAt": "2026-08-13T09:33:22.887Z"
+  }
+}

@@ -676,6 +676,204 @@
   }
   .pill.pill-all .pill-check { color: var(--accent); }
 
+  /* Video playground */
+  .combo-more {
+    padding: 8px;
+    border-top: 1px solid var(--border-subtle);
+    background: var(--bg-elevated);
+  }
+  .combo-more button { width: 100%; justify-content: center; }
+  .video-section-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 10px;
+  }
+  .video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    gap: 14px;
+  }
+  .video-card {
+    position: relative;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: border-color .12s, box-shadow .12s;
+  }
+  .video-card video {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    display: block;
+    background: #000;
+  }
+  .video-card.selected {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 1px var(--accent) inset;
+  }
+  .video-assign {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    display: none;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 9px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: capitalize;
+    background: rgba(0, 0, 0, 0.65);
+    color: #fff;
+    backdrop-filter: blur(4px);
+    pointer-events: none;
+  }
+  .video-assign svg { width: 12px; height: 12px; }
+  .video-card.selected .video-assign { display: inline-flex; }
+  .video-used {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    padding: 4px 9px;
+    border-radius: 999px;
+    font-size: 10.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    backdrop-filter: blur(4px);
+    pointer-events: none;
+  }
+  .video-used.published { background: rgba(16, 185, 129, 0.88); color: #04220f; }
+  .video-used.approved { background: rgba(96, 165, 250, 0.88); color: #041322; }
+  .video-used.review { background: rgba(245, 158, 11, 0.88); color: #241704; }
+  .video-used.failed { background: rgba(239, 68, 68, 0.88); color: #fff; }
+  .video-foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 9px 10px;
+    cursor: pointer;
+    background: var(--bg-elevated);
+    border-top: 1px solid var(--border-subtle);
+    user-select: none;
+  }
+  .video-foot:hover { background: var(--card-hover); }
+  .video-foot-actions { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+  .sfw-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    border: 1px solid var(--border);
+    background: var(--card);
+    color: var(--muted);
+    font-size: 10.5px;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 999px;
+    cursor: pointer;
+  }
+  .sfw-toggle svg { width: 11px; height: 11px; }
+  .sfw-toggle:hover { border-color: var(--text-secondary); color: var(--text); }
+  .sfw-toggle.on {
+    background: rgba(16, 185, 129, 0.15);
+    border-color: rgba(16, 185, 129, 0.5);
+    color: var(--accent);
+  }
+  .video-title {
+    font-size: 12px;
+    color: var(--text-secondary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .video-pick { font-size: 11px; font-weight: 700; color: var(--muted); flex-shrink: 0; }
+  .video-card.selected .video-pick { color: var(--accent); }
+  .videos-more-wrap { display: flex; justify-content: center; margin: 16px 0 24px; }
+  .card-video {
+    width: 100%;
+    max-width: 300px;
+    max-height: 340px;
+    border-radius: 10px;
+    margin: 10px 0 4px;
+    background: #000;
+    display: block;
+  }
+  .video-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--info);
+    background: rgba(96, 165, 250, 0.12);
+    border: 1px solid rgba(96, 165, 250, 0.35);
+    padding: 3px 8px;
+    border-radius: 999px;
+  }
+  .video-chip svg { width: 11px; height: 11px; }
+
+  /* Images / Videos sub-tabs (Review + Approved) */
+  .seg-tabs {
+    display: inline-flex;
+    gap: 4px;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 4px;
+    margin-bottom: 16px;
+  }
+  .seg {
+    border: 0;
+    background: transparent;
+    color: var(--text-secondary);
+    font: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 7px 14px;
+    border-radius: 7px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+  }
+  .seg svg { width: 14px; height: 14px; }
+  .seg:hover:not(.active) { color: var(--text); background: var(--card-hover); }
+  .seg.active { background: var(--card); color: var(--text); box-shadow: var(--shadow); }
+  .seg-count {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 1px 7px;
+    border-radius: 999px;
+    color: var(--muted);
+    border: 1px solid var(--border-subtle);
+    background: var(--bg-elevated);
+  }
+  .seg.active .seg-count { color: var(--accent); border-color: rgba(16, 185, 129, 0.4); }
+
+  /* Reel-style video cards (Review + Approved) */
+  .reel-wrap {
+    position: relative;
+    width: 200px;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #000;
+    border: 1px solid var(--border-subtle);
+  }
+  .reel-video {
+    width: 100%;
+    aspect-ratio: 9 / 16;
+    object-fit: cover;
+    display: block;
+    background: #000;
+  }
+
   /* Generation output */
   .gen-summary {
     background: var(--bg-elevated);
@@ -916,12 +1114,14 @@
   @media (max-width: 860px) {
     .card-body { grid-template-columns: 160px 1fr; }
     .avatar-wrap, .skel-avatar { width: 160px; height: 160px; }
+    .reel-wrap { width: 160px; }
     .actions { grid-column: 1 / -1; flex-direction: row; min-width: 0; margin-top: 4px; }
     .actions button { flex: 1; }
   }
   @media (max-width: 560px) {
     .card-body { grid-template-columns: 1fr; }
     .avatar-wrap, .skel-avatar { width: 100%; height: 220px; }
+    .reel-wrap { width: 220px; margin: 0 auto; }
   }
 </style>
 </head>
@@ -935,6 +1135,10 @@
     <div class="tab active" data-tab="playground">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
       <span>Playground</span>
+    </div>
+    <div class="tab" data-tab="video-playground">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+      <span>Video Playground</span>
     </div>
     <div class="tab" data-tab="review">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
@@ -1006,6 +1210,60 @@
       <div id="playground-output"></div>
     </section>
 
+    <!-- Video Playground -->
+    <section class="page" data-page="video-playground" style="display:none;">
+      <div class="page-header">
+        <div>
+          <h2 class="page-title">Video Playground</h2>
+          <div class="page-subtitle">Pick a model and platforms, then select one video per platform and generate.</div>
+        </div>
+      </div>
+
+      <div class="pg-controls">
+        <div class="field">
+          <span class="field-label" id="v-model-label">Model</span>
+          <div class="combo" id="v-model-combo">
+            <div class="combo-selected" id="v-model-selected">
+              <div class="avatar-sm" id="v-selected-avatar" style="display:none;"></div>
+              <div class="selected-name" id="v-selected-name">Choose a model…</div>
+              <span class="change-hint">▾</span>
+            </div>
+            <div class="combo-popover" id="v-model-popover">
+              <div class="combo-search">
+                <input type="text" id="v-model-search" placeholder="Search loaded models by name or slug…" autocomplete="off" />
+              </div>
+              <div class="combo-list" id="v-model-list"></div>
+              <div class="combo-more">
+                <button class="revert" id="v-brands-more">Load next 10</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="field">
+          <span class="field-label">Platforms</span>
+          <div class="pill-group" id="v-platform-group"></div>
+        </div>
+
+        <div class="field pg-actions">
+          <button class="primary" id="v-generate-btn" disabled>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Start generate
+          </button>
+        </div>
+      </div>
+
+      <div id="v-videos-wrap" style="display:none;">
+        <div class="video-section-label" id="v-videos-label">Videos</div>
+        <div class="video-grid" id="v-video-grid"></div>
+        <div class="videos-more-wrap">
+          <button class="revert" id="v-videos-more" style="display:none;">Load 10 more</button>
+        </div>
+      </div>
+
+      <div id="v-playground-output"></div>
+    </section>
+
     <!-- Review -->
     <section class="page" data-page="review" style="display:none;">
       <div class="page-header">
@@ -1019,6 +1277,16 @@
         </button>
       </div>
       <div id="today-panel"></div>
+      <div class="seg-tabs" id="review-seg">
+        <button class="seg active" data-seg="image">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          Images <span class="seg-count">0</span>
+        </button>
+        <button class="seg" data-seg="video">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+          Videos <span class="seg-count">0</span>
+        </button>
+      </div>
       <div class="review-search">
         <svg class="review-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
         <input type="text" id="review-search" placeholder="Search by brand name or file name…" autocomplete="off" />
@@ -1045,6 +1313,16 @@
           <div class="page-subtitle">Send an item back to review if it needs edits.</div>
         </div>
       </div>
+      <div class="seg-tabs" id="approved-seg">
+        <button class="seg active" data-seg="image">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          Images <span class="seg-count">0</span>
+        </button>
+        <button class="seg" data-seg="video">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+          Videos <span class="seg-count">0</span>
+        </button>
+      </div>
       <div class="list" id="approved-list">
         <div class="skeleton"><div class="skel-avatar"></div><div>
           <div class="skel-line" style="width:30%;height:18px"></div>
@@ -1062,6 +1340,16 @@
           <h2 class="page-title">Published</h2>
           <div class="page-subtitle">Read-only history of what went live.</div>
         </div>
+      </div>
+      <div class="seg-tabs" id="published-seg">
+        <button class="seg active" data-seg="image">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          Images <span class="seg-count">0</span>
+        </button>
+        <button class="seg" data-seg="video">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+          Videos <span class="seg-count">0</span>
+        </button>
       </div>
       <div class="list" id="published-list">
         <div class="skeleton"><div class="skel-avatar"></div><div>
@@ -1158,6 +1446,7 @@ function switchTab(name) {
   if (name === 'published') loadPublished();
   if (name === 'failed') loadFailed();
   if (name === 'playground') refreshSummary();
+  if (name === 'video-playground') initVideoPlayground();
 }
 
 /* --------------- card rendering --------------- */
@@ -1170,6 +1459,9 @@ function renderCard(item, mode) {
   const hashtags = d.content?.hashtags || [];
   const cta = d.content?.cta || '';
   const img = d.assets?.profile_image_url || '';
+  const videoUrl = d.isVideo ? (d.assets?.video_url || '') : '';
+  // Review/Approved/Published show video posts as a reel (vertical video, no avatar).
+  const reel = !!videoUrl && (mode === 'review' || mode === 'approved' || mode === 'published');
   const subreddit = d.target?.subreddit || '';
   const flair = d.target?.flair || '';
   const status = d.status || (mode === 'approved' ? 'approved' : mode === 'published' ? 'published' : mode === 'failed' ? 'failed' : 'review');
@@ -1222,16 +1514,21 @@ function renderCard(item, mode) {
         <span class="icon">${platformIcon(platform)}</span>
         ${escapeHtml(platform)}
       </span>
+      ${d.isVideo ? '<span class="video-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>video</span>' : ''}
       <div class="strip-meta">
         ${created ? `<span class="timestamp">${escapeHtml(created)}</span>` : ''}
         <span class="status-pill"><span class="pulse"></span>${escapeHtml(status)}</span>
       </div>
     </div>
     <div class="card-body">
+      ${reel ? `
+      <div class="reel-wrap">
+        <video class="reel-video" src="${escapeHtml(videoUrl)}" controls preload="metadata" playsinline loop></video>
+      </div>` : `
       <div class="avatar-wrap">
         <img class="avatar" src="${escapeHtml(img)}" alt="${escapeHtml(brand)}" />
         <div class="avatar-fallback">${escapeHtml(initials || '?')}</div>
-      </div>
+      </div>`}
       <div class="body">
         <div class="brand-name">${escapeHtml(brand)}</div>
         ${subreddit || flair ? `
@@ -1244,6 +1541,7 @@ function renderCard(item, mode) {
           </div>` : ''}
         ${title ? `<div class="post-title">${escapeHtml(title)}</div>` : ''}
         ${failReason ? `<div class="fail-reason"><span class="fail-reason-label">Publish error</span><br/>${escapeHtml(failReason)}</div>` : ''}
+        ${videoUrl && !reel ? `<video class="card-video" src="${escapeHtml(videoUrl)}" controls preload="metadata" playsinline></video>` : ''}
         <div class="caption">${escapeHtml(caption)}</div>
         ${hashtags.length ? `<div class="hashtags">${hashtags.map((t) => `<span class="tag">${escapeHtml(t)}</span>`).join('')}</div>` : ''}
         ${cta ? `<div class="cta"><span class="cta-label">CTA</span><span>${escapeHtml(cta)}</span></div>` : ''}
@@ -1258,7 +1556,7 @@ function renderCard(item, mode) {
 
   const imgEl = card.querySelector('.avatar');
   const fallback = card.querySelector('.avatar-fallback');
-  imgEl.addEventListener('error', () => { imgEl.style.display = 'none'; fallback.style.display = 'flex'; });
+  if (imgEl) imgEl.addEventListener('error', () => { imgEl.style.display = 'none'; fallback.style.display = 'flex'; });
 
   const approveBtn = card.querySelector('[data-action="approve"]');
   const deleteBtn = card.querySelector('[data-action="delete"]');
@@ -1312,6 +1610,12 @@ async function loadSection(endpoint, container, countTarget, mode, empty) {
     const res = await fetch(endpoint);
     if (!res.ok) throw new Error('Failed to fetch');
     const { items } = await res.json();
+    // Review + Approved are split into Images/Videos sub-tabs.
+    if (mode in SECTION_ITEMS) {
+      SECTION_ITEMS[mode] = items;
+      renderSegmented(mode);
+      return;
+    }
     container.innerHTML = '';
     countTarget.textContent = items.length;
     if (!items.length) { renderEmpty(container, empty.title, empty.subtitle); return; }
@@ -1322,8 +1626,75 @@ async function loadSection(endpoint, container, countTarget, mode, empty) {
   }
 }
 
+/* --------------- Images / Videos sub-tabs (Review + Approved) --------------- */
+const SECTION_ITEMS = { review: [], approved: [], published: [] };
+const SEG_ACTIVE = { review: 'image', approved: 'image', published: 'image' };
+const SEG_CONFIG = {
+  review: {
+    container: reviewListEl,
+    count: tabCountReview,
+    tabs: document.getElementById('review-seg'),
+    empty: {
+      image: { title: 'No image posts', subtitle: 'No image posts are waiting for review.' },
+      video: { title: 'No video posts', subtitle: 'No video posts are waiting for review.' },
+    },
+  },
+  approved: {
+    container: approvedListEl,
+    count: tabCountApproved,
+    tabs: document.getElementById('approved-seg'),
+    empty: {
+      image: { title: 'No approved image posts', subtitle: 'Approved image posts will appear here.' },
+      video: { title: 'No approved video posts', subtitle: 'Approved video posts will appear here.' },
+    },
+  },
+  published: {
+    container: publishedListEl,
+    count: tabCountPublished,
+    tabs: document.getElementById('published-seg'),
+    empty: {
+      image: { title: 'No published image posts', subtitle: 'Published image posts will appear here.' },
+      video: { title: 'No published video posts', subtitle: 'Published video posts will appear here.' },
+    },
+  },
+};
+
+function renderSegmented(mode) {
+  const cfg = SEG_CONFIG[mode];
+  const items = SECTION_ITEMS[mode];
+  const seg = SEG_ACTIVE[mode];
+  const split = {
+    image: items.filter((it) => !it.data?.isVideo),
+    video: items.filter((it) => !!it.data?.isVideo),
+  };
+  cfg.count.textContent = items.length;
+  cfg.tabs.querySelectorAll('.seg').forEach((btn) => {
+    btn.classList.toggle('active', btn.dataset.seg === seg);
+    btn.querySelector('.seg-count').textContent = split[btn.dataset.seg].length;
+  });
+  const show = split[seg];
+  cfg.container.innerHTML = '';
+  if (!show.length) renderEmpty(cfg.container, cfg.empty[seg].title, cfg.empty[seg].subtitle);
+  else show.forEach((it) => cfg.container.appendChild(renderCard(it, mode)));
+  if (mode === 'review') applyReviewFilter();
+}
+
+function removeSectionItem(mode, file) {
+  SECTION_ITEMS[mode] = SECTION_ITEMS[mode].filter((it) => it.file !== file);
+  renderSegmented(mode);
+}
+
+Object.keys(SEG_CONFIG).forEach((mode) => {
+  SEG_CONFIG[mode].tabs.querySelectorAll('.seg').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      SEG_ACTIVE[mode] = btn.dataset.seg;
+      renderSegmented(mode);
+    });
+  });
+});
+
 const loadReview = () => loadSection('/api/review', reviewListEl, tabCountReview, 'review',
-  { title: 'All caught up', subtitle: 'No items are waiting for review.' }).then(() => applyReviewFilter());
+  { title: 'All caught up', subtitle: 'No items are waiting for review.' });
 const loadApproved = () => loadSection('/api/approved', approvedListEl, tabCountApproved, 'approved',
   { title: 'Nothing approved yet', subtitle: 'Approved items will appear here.' });
 const loadPublished = () => loadSection('/api/published', publishedListEl, tabCountPublished, 'published',
@@ -1520,10 +1891,9 @@ async function approve(file, btn, card) {
     const body = await res.json();
     if (!res.ok || !body.ok) throw new Error(body.error || 'Approve failed');
     animateOut(card, () => {
+      const inList = reviewListEl.contains(card);
       card.remove();
-      const remaining = reviewListEl.querySelectorAll('.card').length;
-      tabCountReview.textContent = remaining;
-      if (!remaining) renderEmpty(reviewListEl, 'All caught up', 'No items are waiting for review.');
+      if (inList) removeSectionItem('review', file);
       refreshSummary();
     });
     toast(`Approved · ${file.replace(/\.json$/, '')}`);
@@ -1548,10 +1918,9 @@ async function del(file, btn, card) {
     const body = await res.json();
     if (!res.ok || !body.ok) throw new Error(body.error || 'Delete failed');
     animateOut(card, () => {
+      const inList = reviewListEl.contains(card);
       card.remove();
-      const remaining = reviewListEl.querySelectorAll('.card').length;
-      tabCountReview.textContent = remaining;
-      if (!remaining) renderEmpty(reviewListEl, 'All caught up', 'No items are waiting for review.');
+      if (inList) removeSectionItem('review', file);
       refreshSummary();
     });
     toast(`Deleted · ${file.replace(/\.json$/, '')}`);
@@ -1575,9 +1944,7 @@ async function revert(file, btn, card) {
     if (!res.ok || !body.ok) throw new Error(body.error || 'Move failed');
     animateOut(card, () => {
       card.remove();
-      const remaining = approvedListEl.querySelectorAll('.card').length;
-      tabCountApproved.textContent = remaining;
-      if (!remaining) renderEmpty(approvedListEl, 'Nothing approved yet', 'Approved items will appear here.');
+      removeSectionItem('approved', file);
       refreshSummary();
     });
     toast(`Sent to review · ${file.replace(/\.json$/, '')}`);
@@ -1606,6 +1973,8 @@ async function regenerate(file, btn, card) {
     }
     const newCard = renderCard({ file: body.file, data: body.data }, 'review');
     card.replaceWith(newCard);
+    SECTION_ITEMS.review = SECTION_ITEMS.review.map((it) =>
+      it.file === file ? { file: body.file, data: body.data } : it);
     toast(`Regenerated · ${body.file.replace(/\.json$/, '')}`);
     refreshSummary();
   } catch (err) {
@@ -1663,44 +2032,47 @@ const playgroundOutput = document.getElementById('playground-output');
 /* --------------- playground: platform pills --------------- */
 const CHECK_SVG = '<svg class="pill-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>';
 
-function renderPlatformPills() {
-  platformGroup.innerHTML = '';
-  const allActive = PLATFORMS.every((p) => selectedPlatforms.has(p));
-  const someActive = !allActive && PLATFORMS.some((p) => selectedPlatforms.has(p));
+function renderPills(group, platformList, selectedSet, onChange) {
+  group.innerHTML = '';
+  const rerender = () => { renderPills(group, platformList, selectedSet, onChange); onChange(); };
+  const allActive = platformList.every((p) => selectedSet.has(p));
+  const someActive = !allActive && platformList.some((p) => selectedSet.has(p));
   const allPill = document.createElement('div');
   allPill.className = `pill pill-all${allActive ? ' active' : ''}`;
   allPill.innerHTML = `
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a15 15 0 0 1 0 20"/><path d="M12 2a15 15 0 0 0 0 20"/><path d="M2 12h20"/></svg>
-    ${allActive ? 'All platforms' : someActive ? `${selectedPlatforms.size} selected` : 'Select all'}
+    ${allActive ? 'All platforms' : someActive ? `${selectedSet.size} selected` : 'Select all'}
     ${CHECK_SVG}
   `;
   allPill.title = allActive ? 'Clear selection' : 'Select all platforms';
   allPill.addEventListener('click', () => {
-    if (allActive) { selectedPlatforms.clear(); }
-    else { PLATFORMS.forEach((p) => selectedPlatforms.add(p)); }
-    renderPlatformPills();
-    updateGenerateState();
+    if (allActive) { selectedSet.clear(); }
+    else { platformList.forEach((p) => selectedSet.add(p)); }
+    rerender();
   });
-  platformGroup.appendChild(allPill);
+  group.appendChild(allPill);
 
   const divider = document.createElement('span');
   divider.className = 'pill-divider';
-  platformGroup.appendChild(divider);
+  group.appendChild(divider);
 
-  PLATFORMS.forEach((p) => {
+  platformList.forEach((p) => {
     const pill = document.createElement('div');
-    const active = selectedPlatforms.has(p);
+    const active = selectedSet.has(p);
     pill.className = `pill platform-${p}${active ? ' active' : ''}`;
     pill.innerHTML = `${platformIcon(p)} <span>${p}</span> ${CHECK_SVG}`;
     pill.title = active ? `Deselect ${p}` : `Select ${p}`;
     pill.addEventListener('click', () => {
-      if (selectedPlatforms.has(p)) selectedPlatforms.delete(p);
-      else selectedPlatforms.add(p);
-      renderPlatformPills();
-      updateGenerateState();
+      if (selectedSet.has(p)) selectedSet.delete(p);
+      else selectedSet.add(p);
+      rerender();
     });
-    platformGroup.appendChild(pill);
+    group.appendChild(pill);
   });
+}
+
+function renderPlatformPills() {
+  renderPills(platformGroup, PLATFORMS, selectedPlatforms, updateGenerateState);
 }
 
 /* --------------- playground: model combo --------------- */
@@ -2067,7 +2439,8 @@ async function runGenerate() {
     });
     const body = await res.json();
     if (!res.ok || !body.ok) throw new Error(body.error || 'Generation failed');
-    renderGenerateResults(body);
+    renderGenerateResults(playgroundOutput, body, (r, failCard, btn) =>
+      retryImagePlatform(body.brand.slug, r.platform, failCard, btn));
     toast(`Generated ${body.results.filter(r => r.status === 'success').length}/${body.results.length} posts`);
     refreshSummary();
   } catch (err) {
@@ -2079,18 +2452,45 @@ async function runGenerate() {
   }
 }
 
-function renderGenerateResults({ brand, results }) {
+// Retry ONE failed platform from the image playground (e.g. a safety reject),
+// without touching the platforms that already succeeded.
+async function retryImagePlatform(slug, platform, failCard, btn) {
+  btn.disabled = true;
+  const original = btn.innerHTML;
+  btn.innerHTML = '<span class="spinner"></span> Retrying';
+  try {
+    const res = await fetch('/api/generate', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ slug, platforms: [platform] }),
+    });
+    const body = await res.json();
+    if (!res.ok || !body.ok) throw new Error(body.error || 'Retry failed');
+    const r = body.results?.[0];
+    if (!r || r.status !== 'success') {
+      throw new Error(`${r?.status ?? 'failed'}: ${(r?.errors || []).join(', ') || r?.error || 'Unknown error'}`);
+    }
+    failCard.replaceWith(renderCard({ file: r.file, data: r.data }, 'review'));
+    toast(`Generated · ${platform}`);
+    refreshSummary();
+  } catch (err) {
+    btn.disabled = false;
+    btn.innerHTML = original;
+    toast(err.message, true);
+  }
+}
+
+function renderGenerateResults(container, { brand, results }, onRetry) {
   const ok = results.filter((r) => r.status === 'success');
   const bad = results.filter((r) => r.status !== 'success');
-  playgroundOutput.innerHTML = '';
+  container.innerHTML = '';
   const summary = document.createElement('div');
   summary.className = 'gen-summary';
   summary.innerHTML = `<strong>${escapeHtml(brand.name)}</strong> · ${ok.length} succeeded${bad.length ? `, ${bad.length} failed` : ''}. Successful posts are now in <em>Review</em>.`;
-  playgroundOutput.appendChild(summary);
+  container.appendChild(summary);
 
   const list = document.createElement('div');
   list.className = 'list';
-  playgroundOutput.appendChild(list);
+  container.appendChild(list);
 
   results.forEach((r) => {
     if (r.status === 'success') {
@@ -2098,10 +2498,439 @@ function renderGenerateResults({ brand, results }) {
     } else {
       const err = document.createElement('div');
       err.className = 'fail-card';
-      err.innerHTML = `<div class="fail-title">${escapeHtml(r.platform)} · ${escapeHtml(r.status)}</div>${escapeHtml(r.error || (r.errors && r.errors.join(', ')) || 'Unknown error')}`;
+      err.innerHTML = `
+        <div class="fail-title">${escapeHtml(r.platform)} · ${escapeHtml(r.status)}</div>
+        ${escapeHtml(r.error || (r.errors && r.errors.join(', ')) || 'Unknown error')}
+        ${onRetry ? `<div style="margin-top:10px;"><button class="revert" data-retry>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M23 4v6h-6"/><path d="M1 20v-6h6"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10"/><path d="M20.49 15a9 9 0 0 1-14.85 3.36L1 14"/></svg>
+          Retry ${escapeHtml(r.platform)}</button></div>` : ''}`;
+      if (onRetry) {
+        err.querySelector('[data-retry]').addEventListener('click', (e) =>
+          onRetry(r, err, e.currentTarget));
+      }
       list.appendChild(err);
     }
   });
+}
+
+/* --------------- video playground --------------- */
+const VIDEO_PLATFORMS = ['instagram', 'facebook', 'x'];
+
+const vModelLabel = document.getElementById('v-model-label');
+const vModelCombo = document.getElementById('v-model-combo');
+const vModelSelected = document.getElementById('v-model-selected');
+const vSelectedAvatar = document.getElementById('v-selected-avatar');
+const vSelectedName = document.getElementById('v-selected-name');
+const vModelPopover = document.getElementById('v-model-popover');
+const vModelSearch = document.getElementById('v-model-search');
+const vModelList = document.getElementById('v-model-list');
+const vBrandsMoreBtn = document.getElementById('v-brands-more');
+const vPlatformGroup = document.getElementById('v-platform-group');
+const vGenerateBtn = document.getElementById('v-generate-btn');
+const vVideosWrap = document.getElementById('v-videos-wrap');
+const vVideosLabel = document.getElementById('v-videos-label');
+const vVideoGrid = document.getElementById('v-video-grid');
+const vVideosMoreBtn = document.getElementById('v-videos-more');
+const vPlaygroundOutput = document.getElementById('v-playground-output');
+
+let V_BRANDS = [];
+let vBrandsPage = 0;
+let vBrandsHasMore = true;
+let vBrandsLoading = false;
+let vSelectedBrand = null;
+let vSelectedPlatforms = new Set(VIDEO_PLATFORMS); // default all
+let vSearchQuery = '';
+let vHighlightIndex = 0;
+let V_VIDEOS = [];
+let vVideosPage = 0;
+let vVideosHasMore = false;
+let vVideosLoading = false;
+let vPicked = []; // selected video file_urls, in pick order
+
+// Pick order maps onto the selected platforms in display order:
+// 1st picked video → first selected platform, and so on.
+const vAssignedPlatforms = () => VIDEO_PLATFORMS.filter((p) => vSelectedPlatforms.has(p));
+
+function renderVideoPlatformPills() {
+  renderPills(vPlatformGroup, VIDEO_PLATFORMS, vSelectedPlatforms, onVideoPlatformsChange);
+}
+
+function onVideoPlatformsChange() {
+  const max = vAssignedPlatforms().length;
+  if (vPicked.length > max) vPicked.length = max;
+  updateVideoCardStates();
+  updateVGenerateState();
+}
+
+function updateVGenerateState() {
+  const needed = vAssignedPlatforms().length;
+  vGenerateBtn.disabled = !vSelectedBrand || !needed || vPicked.length !== needed;
+  vGenerateBtn.title = !vSelectedBrand ? 'Choose a model first'
+    : !needed ? 'Select at least one platform'
+    : vPicked.length !== needed ? `Select one video per platform (${vPicked.length}/${needed})`
+    : 'Generate one video post per platform';
+}
+
+/* video playground: paginated brand dropdown */
+function vFilteredBrands() {
+  const q = vSearchQuery.trim().toLowerCase();
+  if (!q) return V_BRANDS;
+  return V_BRANDS.filter((b) =>
+    b.name.toLowerCase().includes(q) || b.slug.toLowerCase().includes(q));
+}
+
+function renderVModelList() {
+  const items = vFilteredBrands();
+  if (!items.length) {
+    vModelList.innerHTML = '<div style="padding:24px; text-align:center; color: var(--muted); font-size:13px;">No loaded models match.</div>';
+  } else {
+    if (vHighlightIndex >= items.length) vHighlightIndex = 0;
+    vModelList.innerHTML = items.map((b, i) => `
+      <div class="combo-item${i === vHighlightIndex ? ' highlight' : ''}" data-slug="${escapeHtml(b.slug)}">
+        <img class="avatar-sm" src="${escapeHtml(b.profile_image_url || '')}" onerror="this.style.visibility='hidden'"/>
+        <div style="min-width:0;">
+          <div class="item-name">${escapeHtml(b.name)}</div>
+          <div class="item-slug">${escapeHtml(b.slug)}</div>
+        </div>
+      </div>
+    `).join('');
+    vModelList.querySelectorAll('.combo-item').forEach((el, i) => {
+      el.addEventListener('click', () => {
+        const brand = V_BRANDS.find((b) => b.slug === el.dataset.slug);
+        if (brand) selectVBrand(brand);
+      });
+      el.addEventListener('mouseenter', () => { vHighlightIndex = i; });
+    });
+  }
+  vBrandsMoreBtn.style.display = vBrandsHasMore ? '' : 'none';
+}
+
+async function loadVideoBrands() {
+  if (vBrandsLoading || !vBrandsHasMore) return;
+  vBrandsLoading = true;
+  vBrandsMoreBtn.disabled = true;
+  vBrandsMoreBtn.innerHTML = '<span class="spinner"></span> Loading';
+  try {
+    const res = await fetch(`/api/video-brands?page=${vBrandsPage + 1}`);
+    const body = await res.json();
+    if (!res.ok) throw new Error(body.error || 'Failed to load brands');
+    vBrandsPage = body.page;
+    vBrandsHasMore = !!body.has_more;
+    if (body.total != null) vModelLabel.textContent = `Model · ${body.total}`;
+    const known = new Set(V_BRANDS.map((b) => b.slug));
+    V_BRANDS.push(...body.brands.filter((b) => !known.has(b.slug)));
+    renderVModelList();
+  } catch (err) {
+    toast(err.message, true);
+  } finally {
+    vBrandsLoading = false;
+    vBrandsMoreBtn.disabled = false;
+    vBrandsMoreBtn.textContent = 'Load next 10';
+    vBrandsMoreBtn.style.display = vBrandsHasMore ? '' : 'none';
+  }
+}
+
+function selectVBrand(brand) {
+  vSelectedBrand = brand;
+  vSelectedName.textContent = brand.name;
+  if (brand.profile_image_url) {
+    vSelectedAvatar.style.display = 'block';
+    vSelectedAvatar.style.background = `url('${brand.profile_image_url}') center/cover no-repeat`;
+  } else {
+    vSelectedAvatar.style.display = 'none';
+  }
+  closeVPopover();
+  // fresh video state for the newly selected brand
+  V_VIDEOS = [];
+  vVideosPage = 0;
+  vVideosHasMore = true;
+  vPicked = [];
+  vVideoGrid.innerHTML = '';
+  vPlaygroundOutput.innerHTML = '';
+  vVideosWrap.style.display = '';
+  vVideosLabel.textContent = `Videos · ${brand.name}`;
+  updateVGenerateState();
+  loadBrandVideos();
+}
+
+function openVPopover() {
+  vModelPopover.classList.add('open');
+  vModelSearch.value = vSearchQuery;
+  vModelSearch.focus();
+  renderVModelList();
+}
+function closeVPopover() { vModelPopover.classList.remove('open'); }
+
+vModelSelected.addEventListener('click', (e) => {
+  e.stopPropagation();
+  if (vModelPopover.classList.contains('open')) closeVPopover();
+  else openVPopover();
+});
+document.addEventListener('click', (e) => {
+  if (!vModelCombo.contains(e.target)) closeVPopover();
+});
+vModelSearch.addEventListener('input', (e) => {
+  vSearchQuery = e.target.value;
+  vHighlightIndex = 0;
+  renderVModelList();
+});
+vModelSearch.addEventListener('keydown', (e) => {
+  const items = vFilteredBrands();
+  if (e.key === 'ArrowDown') { e.preventDefault(); vHighlightIndex = Math.min(items.length - 1, vHighlightIndex + 1); renderVModelList(); scrollVHighlightedIntoView(); }
+  else if (e.key === 'ArrowUp') { e.preventDefault(); vHighlightIndex = Math.max(0, vHighlightIndex - 1); renderVModelList(); scrollVHighlightedIntoView(); }
+  else if (e.key === 'Enter') { e.preventDefault(); const b = items[vHighlightIndex]; if (b) selectVBrand(b); }
+  else if (e.key === 'Escape') { closeVPopover(); }
+});
+function scrollVHighlightedIntoView() {
+  const el = vModelList.querySelector('.combo-item.highlight');
+  if (el) el.scrollIntoView({ block: 'nearest' });
+}
+vBrandsMoreBtn.addEventListener('click', loadVideoBrands);
+
+/* video playground: video grid */
+async function loadBrandVideos() {
+  if (!vSelectedBrand || vVideosLoading || !vVideosHasMore) return;
+  vVideosLoading = true;
+  vVideosMoreBtn.style.display = '';
+  vVideosMoreBtn.disabled = true;
+  vVideosMoreBtn.innerHTML = '<span class="spinner"></span> Loading';
+  try {
+    const res = await fetch(`/api/brand-videos?slug=${encodeURIComponent(vSelectedBrand.slug)}&page=${vVideosPage + 1}`);
+    const body = await res.json();
+    if (!res.ok) throw new Error(body.error || 'Failed to load videos');
+    vVideosPage = body.page;
+    vVideosHasMore = !!body.has_more;
+    if (body.total != null) vVideosLabel.textContent = `Videos · ${vSelectedBrand.name} · ${body.total}`;
+    const known = new Set(V_VIDEOS.map((v) => v.file_url));
+    const fresh = body.videos.filter((v) => !known.has(v.file_url));
+    V_VIDEOS.push(...fresh);
+    fresh.forEach((v) => vVideoGrid.appendChild(createVideoCard(v)));
+    if (!V_VIDEOS.length && !vVideosHasMore) {
+      vVideoGrid.innerHTML = '<div style="grid-column:1/-1; padding:24px; text-align:center; color:var(--muted); font-size:13px;">No SFW videos available for this model.</div>';
+    }
+  } catch (err) {
+    toast(err.message, true);
+  } finally {
+    vVideosLoading = false;
+    vVideosMoreBtn.disabled = false;
+    vVideosMoreBtn.textContent = 'Load 10 more';
+    vVideosMoreBtn.style.display = vVideosHasMore ? '' : 'none';
+  }
+}
+vVideosMoreBtn.addEventListener('click', loadBrandVideos);
+
+// Labels for the "already used" badge (video appears in an existing post).
+const USED_LABELS = { published: 'Published', approved: 'Approved', review: 'In review', failed: 'Failed' };
+
+function createVideoCard(v) {
+  const card = document.createElement('div');
+  card.className = 'video-card';
+  card.dataset.url = v.file_url;
+  card.innerHTML = `
+    <video src="${escapeHtml(v.file_url)}" controls preload="metadata" playsinline></video>
+    <span class="video-assign"></span>
+    ${v.used && USED_LABELS[v.used] ? `<span class="video-used ${escapeHtml(v.used)}">${USED_LABELS[v.used]}</span>` : ''}
+    <div class="video-foot" title="Click to select this video">
+      <div class="video-title">${escapeHtml(v.title || v.slug || 'video')}</div>
+      <div class="video-foot-actions">
+        <button class="sfw-toggle${v.verified ? ' on' : ''}" title="Human check — watch the video fully, then confirm it is not explicit AND the person clearly appears adult">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span>${v.verified ? 'Verified ✓' : 'Verify'}</span>
+        </button>
+        <span class="video-pick">Select</span>
+      </div>
+    </div>
+  `;
+  card.querySelector('.video-foot').addEventListener('click', () => toggleVideoPick(v.file_url));
+  card.querySelector('.sfw-toggle').addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggleVideoVerify(v.file_url);
+  });
+  return card;
+}
+
+// Human verifies a video after actually watching it — dual attestation:
+// not explicit AND the person clearly appears to be an adult.
+async function toggleVideoVerify(url) {
+  const item = V_VIDEOS.find((v) => v.file_url === url);
+  if (!item) return;
+  const next = !item.verified;
+  if (next) {
+    const ok = confirm(
+      'Human verification — confirm ALL of these:\n\n' +
+      '1) You watched this video fully\n' +
+      '2) It is NOT sexually explicit\n' +
+      '3) The person clearly appears to be an ADULT\n\n' +
+      'If you are unsure about any of them, click Cancel.'
+    );
+    if (!ok) return;
+  }
+  try {
+    const res = await fetch('/api/video-sfw', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ file_url: url, sfw: next, apparent_age_verified: next }),
+    });
+    const body = await res.json();
+    if (!res.ok || !body.ok) throw new Error(body.error || 'Failed to save verification');
+    item.verified = next;
+    // Un-verifying a selected video also deselects it.
+    if (!next) {
+      const i = vPicked.indexOf(url);
+      if (i >= 0) vPicked.splice(i, 1);
+    }
+    const card = vVideoGrid.querySelector(`.video-card[data-url="${CSS.escape(url)}"]`);
+    if (card) {
+      const btn = card.querySelector('.sfw-toggle');
+      btn.classList.toggle('on', next);
+      btn.querySelector('span').textContent = next ? 'Verified ✓' : 'Verify';
+    }
+    updateVideoCardStates();
+    updateVGenerateState();
+    toast(next ? 'Verified — video can now be used' : 'Verification removed');
+  } catch (err) {
+    toast(err.message, true);
+  }
+}
+
+// Stamp/refresh the used-badge on a video card already in the grid
+// (e.g. right after generating posts from it).
+function setVideoUsedBadge(url, status) {
+  const item = V_VIDEOS.find((v) => v.file_url === url);
+  if (item) item.used = status;
+  const card = vVideoGrid.querySelector(`.video-card[data-url="${CSS.escape(url)}"]`);
+  if (!card || !USED_LABELS[status]) return;
+  card.querySelector('.video-used')?.remove();
+  const badge = document.createElement('span');
+  badge.className = `video-used ${status}`;
+  badge.textContent = USED_LABELS[status];
+  card.appendChild(badge);
+}
+
+function toggleVideoPick(url) {
+  const i = vPicked.indexOf(url);
+  if (i >= 0) {
+    vPicked.splice(i, 1);
+  } else {
+    const item = V_VIDEOS.find((v) => v.file_url === url);
+    if (item && !item.verified) {
+      toast('Watch this video first, then Verify it (shield button) to use it', true);
+      return;
+    }
+    const max = vAssignedPlatforms().length;
+    if (!max) { toast('Select at least one platform first', true); return; }
+    if (vPicked.length >= max) {
+      toast(`Only ${max} video(s) needed — deselect one first`, true);
+      return;
+    }
+    vPicked.push(url);
+  }
+  updateVideoCardStates();
+  updateVGenerateState();
+}
+
+function updateVideoCardStates() {
+  const plats = vAssignedPlatforms();
+  vVideoGrid.querySelectorAll('.video-card').forEach((card) => {
+    const idx = vPicked.indexOf(card.dataset.url);
+    const selected = idx >= 0;
+    card.classList.toggle('selected', selected);
+    const assign = card.querySelector('.video-assign');
+    const pick = card.querySelector('.video-pick');
+    if (assign) assign.innerHTML = selected && plats[idx] ? `${platformIcon(plats[idx])} ${plats[idx]}` : '';
+    if (pick) pick.textContent = selected ? '✓ Selected' : 'Select';
+  });
+}
+
+/* video playground: generate */
+async function runVideoGenerate() {
+  const plats = vAssignedPlatforms();
+  if (!vSelectedBrand || !plats.length || vPicked.length !== plats.length) return;
+  const assignments = vPicked.map((url, i) => ({
+    platform: plats[i],
+    video: V_VIDEOS.find((v) => v.file_url === url),
+  }));
+  vGenerateBtn.disabled = true;
+  vGenerateBtn.innerHTML = '<span class="spinner"></span> Generating';
+  vPlaygroundOutput.innerHTML = `
+    <div class="gen-summary">
+      <strong>${escapeHtml(vSelectedBrand.name)}</strong> · generating video posts for
+      ${plats.map((p) => `<span style="text-transform:capitalize; margin-left:6px;">${escapeHtml(p)}</span>`).join(', ')} …
+    </div>
+    <div class="list">
+      ${plats.map(() => `
+        <div class="skeleton"><div class="skel-avatar"></div><div>
+          <div class="skel-line" style="width:30%;height:18px"></div>
+          <div class="skel-line" style="width:95%"></div>
+          <div class="skel-line" style="width:88%"></div>
+          <div class="skel-line" style="width:70%"></div>
+        </div></div>`).join('')}
+    </div>`;
+
+  try {
+    const res = await fetch('/api/generate-video', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ slug: vSelectedBrand.slug, assignments }),
+    });
+    const body = await res.json();
+    if (!res.ok || !body.ok) throw new Error(body.error || 'Generation failed');
+    renderGenerateResults(vPlaygroundOutput, body, (r, failCard, btn) =>
+      retryVideoPlatform(body.brand.slug, assignments.find((a) => a.platform === r.platform), failCard, btn));
+    toast(`Generated ${body.results.filter(r => r.status === 'success').length}/${body.results.length} video posts`);
+    // Freshly used videos are now sitting in review — badge them right away.
+    body.results.forEach((r) => {
+      if (r.status === 'success' && r.data?.assets?.video_url) {
+        setVideoUsedBadge(r.data.assets.video_url, 'review');
+      }
+    });
+    vPicked = [];
+    updateVideoCardStates();
+    refreshSummary();
+  } catch (err) {
+    vPlaygroundOutput.innerHTML = `<div class="fail-card"><div class="fail-title">Generation failed</div>${escapeHtml(err.message)}</div>`;
+    toast(err.message, true);
+  } finally {
+    vGenerateBtn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg> Start generate';
+    updateVGenerateState();
+  }
+}
+vGenerateBtn.addEventListener('click', runVideoGenerate);
+
+// Retry ONE failed platform with its originally assigned (already verified)
+// video — the platforms that succeeded stay untouched.
+async function retryVideoPlatform(slug, assignment, failCard, btn) {
+  if (!assignment) { toast('Original video assignment not found — generate again', true); return; }
+  btn.disabled = true;
+  const original = btn.innerHTML;
+  btn.innerHTML = '<span class="spinner"></span> Retrying';
+  try {
+    const res = await fetch('/api/generate-video', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ slug, assignments: [assignment] }),
+    });
+    const body = await res.json();
+    if (!res.ok || !body.ok) throw new Error(body.error || 'Retry failed');
+    const r = body.results?.[0];
+    if (!r || r.status !== 'success') {
+      throw new Error(`${r?.status ?? 'failed'}: ${(r?.errors || []).join(', ') || r?.error || 'Unknown error'}`);
+    }
+    failCard.replaceWith(renderCard({ file: r.file, data: r.data }, 'review'));
+    if (r.data?.assets?.video_url) setVideoUsedBadge(r.data.assets.video_url, 'review');
+    toast(`Generated · ${assignment.platform}`);
+    refreshSummary();
+  } catch (err) {
+    btn.disabled = false;
+    btn.innerHTML = original;
+    toast(err.message, true);
+  }
+}
+
+let vInited = false;
+function initVideoPlayground() {
+  if (vInited) return;
+  vInited = true;
+  renderVideoPlatformPills();
+  updateVGenerateState();
+  loadVideoBrands();
 }
 
 /* --------------- init --------------- */

@@ -1,0 +1,32 @@
+{
+  "brand": {
+    "id": "253a8dbe-90f2-4624-89d9-94a6648aec6b",
+    "slug": "anh-tran",
+    "name": "Anh Tran"
+  },
+  "assets": {
+    "video_url": "https://xgen.b-cdn.net/models/Anh_Tran/videos/Anh_Tran_watermarked_8e59bf86.mp4",
+    "video_title": "Anh_Tran_watermarked_8e59bf86"
+  },
+  "isVideo": true,
+  "video_verification": {
+    "sfw": true,
+    "apparent_age_verified": true,
+    "method": "human",
+    "verified_at": "2026-08-17T15:30:49.023Z"
+  },
+  "platform": "x",
+  "content": {
+    "caption": "My friends believed in me so I tried modeling and it feels wonderful",
+    "hashtags": [
+      "#ModelingJoy"
+    ],
+    "cta": "What do you think?"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "review",
+  "created_at": "2026-08-17T15:32:11.002Z"
+}

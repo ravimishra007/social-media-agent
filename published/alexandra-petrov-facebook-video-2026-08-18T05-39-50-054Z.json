@@ -1,0 +1,43 @@
+{
+  "brand": {
+    "id": "6e2fe04f-534a-4b03-9dc9-bd2eb7a5821c",
+    "slug": "alexandra-petrov",
+    "name": "Alexandra Petrov"
+  },
+  "assets": {
+    "video_url": "https://xgen.b-cdn.net/models/Alexandra_Petrov/videos/Alexandra_Petrov_watermarked_9af3b074.mp4",
+    "video_title": "Alexandra_Petrov_watermarked_9af3b074"
+  },
+  "isVideo": true,
+  "video_verification": {
+    "sfw": true,
+    "apparent_age_verified": true,
+    "method": "human",
+    "verified_at": "2026-08-18T05:38:54.686Z"
+  },
+  "platform": "facebook",
+  "content": {
+    "caption": "Lately, I've been immersing myself in classical stories that remind me of graceful ballet movements. These quiet reflections help me stay connected to what I love. 🌸📚",
+    "hashtags": [
+      "#BalletGrace",
+      "#LiteraryEscape"
+    ],
+    "cta": "Share what inspires you in the comments."
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "published",
+  "created_at": "2026-08-18T05:39:50.054Z",
+  "approved_at": "2026-08-18T05:44:38.454Z",
+  "published_at": "2026-08-18T05:45:59.978Z",
+  "publication": {
+    "platform": "facebook",
+    "integrationId": "cmr8uabh4034vk90y8pxbtzxi",
+    "account": "Xgenai brands",
+    "postId": "cmsy8oq4m01grmt0ycg3t2aq4",
+    "postUrl": null,
+    "publishedAt": "2026-08-18T05:45:59.978Z"
+  }
+}

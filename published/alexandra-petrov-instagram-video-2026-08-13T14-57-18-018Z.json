@@ -1,0 +1,37 @@
+{
+  "brand": {
+    "id": "6e2fe04f-534a-4b03-9dc9-bd2eb7a5821c",
+    "slug": "alexandra-petrov",
+    "name": "Alexandra Petrov"
+  },
+  "assets": {
+    "video_url": "https://xgen.b-cdn.net/models/Alexandra_Petrov/videos/Alexandra_Petrov_watermarked_fa56ed96.mp4",
+    "video_title": "Alexandra_Petrov_watermarked_fa56ed96"
+  },
+  "isVideo": true,
+  "platform": "instagram",
+  "content": {
+    "caption": "Every visit to Lake Baikal feels like coming home. The serene waters and surrounding nature help me reconnect and find fresh inspiration for my creative work. It's these quiet escapes that keep my spirit alive. 🌊✨",
+    "hashtags": [
+      "#LakeBaikal",
+      "#QuietMoments"
+    ],
+    "cta": "I'd love to hear about your favorite peaceful spots."
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "published",
+  "created_at": "2026-08-13T14:57:18.018Z",
+  "approved_at": "2026-08-13T15:01:15.135Z",
+  "published_at": "2026-08-13T15:39:10.238Z",
+  "publication": {
+    "platform": "instagram",
+    "integrationId": "cmsaddcic03leqn0yvgyrs7nt",
+    "account": "Aloe",
+    "postId": "cmsroob4j05mcqo0yhicpjea3",
+    "postUrl": null,
+    "publishedAt": "2026-08-13T15:39:10.238Z"
+  }
+}

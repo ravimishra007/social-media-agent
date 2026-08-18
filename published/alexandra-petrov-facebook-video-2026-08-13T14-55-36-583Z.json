@@ -1,0 +1,37 @@
+{
+  "brand": {
+    "id": "6e2fe04f-534a-4b03-9dc9-bd2eb7a5821c",
+    "slug": "alexandra-petrov",
+    "name": "Alexandra Petrov"
+  },
+  "assets": {
+    "video_url": "https://xgen.b-cdn.net/models/Alexandra_Petrov/videos/Alexandra_Petrov_watermarked_d82c071e.mp4",
+    "video_title": "Alexandra_Petrov_watermarked_d82c071e"
+  },
+  "isVideo": true,
+  "platform": "facebook",
+  "content": {
+    "caption": "There's a special kind of magic in retreating to peaceful waters. It echoes the elegance of ballet and the intrigue of avant garde inspirations. Feeling refreshed and ready for new ideas. 🌊",
+    "hashtags": [
+      "#LakeBaikal",
+      "#AvantGarde"
+    ],
+    "cta": "Tell me where you go to recharge?"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "published",
+  "created_at": "2026-08-13T14:55:36.583Z",
+  "approved_at": "2026-08-13T14:56:06.070Z",
+  "published_at": "2026-08-13T14:59:51.812Z",
+  "publication": {
+    "platform": "facebook",
+    "integrationId": "cmr8uabh4034vk90y8pxbtzxi",
+    "account": "Xgenai brands",
+    "postId": "cmsrn9raa058vqo0yvehquphm",
+    "postUrl": null,
+    "publishedAt": "2026-08-13T14:59:51.812Z"
+  }
+}

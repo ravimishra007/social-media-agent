@@ -1,0 +1,33 @@
+{
+  "brand": {
+    "id": "6e2fe04f-534a-4b03-9dc9-bd2eb7a5821c",
+    "slug": "alexandra-petrov",
+    "name": "Alexandra Petrov"
+  },
+  "assets": {
+    "video_url": "https://xgen.b-cdn.net/models/Alexandra_Petrov/videos/Alexandra_Petrov_watermarked_a30f1bc0.mp4",
+    "video_title": "Alexandra_Petrov_watermarked_a30f1bc0"
+  },
+  "isVideo": true,
+  "video_verification": {
+    "sfw": true,
+    "apparent_age_verified": true,
+    "method": "human",
+    "verified_at": "2026-08-18T05:44:53.595Z"
+  },
+  "platform": "instagram",
+  "content": {
+    "caption": "Taking a moment to breathe in the fresh air by the lake. It always recharges my soul and brings back memories of classical dances and beautiful stories. Nature's quiet beauty is my favorite inspiration.",
+    "hashtags": [
+      "#NaturalBeauty",
+      "#CreativeInspiration"
+    ],
+    "cta": "What brings you peace?"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "review",
+  "created_at": "2026-08-18T05:46:15.186Z"
+}

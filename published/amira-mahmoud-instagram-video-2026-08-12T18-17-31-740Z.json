@@ -1,0 +1,37 @@
+{
+  "brand": {
+    "id": "3e074b83-cb78-4ffb-870e-8ca4f85281c7",
+    "slug": "amira-mahmoud",
+    "name": "Amira Mahmoud"
+  },
+  "assets": {
+    "video_url": "https://xgen.b-cdn.net/models/Amira_Mahmoud/videos/Amira_Mahmoud_watermarked_c2d6849f.mp4",
+    "video_title": "Amira_Mahmoud_watermarked_c2d6849f"
+  },
+  "isVideo": true,
+  "platform": "instagram",
+  "content": {
+    "caption": "Soaring high above the clouds today feels like pure freedom. The desert still lingers in my thoughts from my last stop, but the sky always calls louder. Every flight reminds me how bold and vibrant life can be when you choose your own path. Feeling the elegance in every moment up here. 🌅✈️🌍",
+    "hashtags": [
+      "#traveler",
+      "#luxurylifestyle"
+    ],
+    "cta": "Where are you dreaming of flying to next?"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "published",
+  "created_at": "2026-08-12T18:17:31.740Z",
+  "approved_at": "2026-08-12T19:00:23.294Z",
+  "published_at": "2026-08-12T19:02:42.224Z",
+  "publication": {
+    "platform": "instagram",
+    "integrationId": "cmsaddcic03leqn0yvgyrs7nt",
+    "account": "Aloe",
+    "postId": "cmsqgi79l0dc1oy0y46iyg1zm",
+    "postUrl": null,
+    "publishedAt": "2026-08-12T19:02:42.224Z"
+  }
+}

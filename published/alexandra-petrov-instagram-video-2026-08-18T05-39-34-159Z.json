@@ -1,0 +1,43 @@
+{
+  "brand": {
+    "id": "6e2fe04f-534a-4b03-9dc9-bd2eb7a5821c",
+    "slug": "alexandra-petrov",
+    "name": "Alexandra Petrov"
+  },
+  "assets": {
+    "video_url": "https://xgen.b-cdn.net/models/Alexandra_Petrov/videos/Alexandra_Petrov_watermarked_1e2f2bb6.mp4",
+    "video_title": "Alexandra_Petrov_watermarked_1e2f2bb6"
+  },
+  "isVideo": true,
+  "video_verification": {
+    "sfw": true,
+    "apparent_age_verified": true,
+    "method": "human",
+    "verified_at": "2026-08-18T05:38:35.676Z"
+  },
+  "platform": "instagram",
+  "content": {
+    "caption": "Lost in thoughts of the art that stirs my soul, I find myself smiling at the simple joys of a new day. My ash blonde hair catches the light just right, reminding me of peaceful retreats. 🌿",
+    "hashtags": [
+      "#AshBlondeHair",
+      "#TallSlender"
+    ],
+    "cta": "What art moves you today?"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "published",
+  "created_at": "2026-08-18T05:39:34.159Z",
+  "approved_at": "2026-08-18T05:44:37.667Z",
+  "published_at": "2026-08-18T05:46:13.843Z",
+  "publication": {
+    "platform": "instagram",
+    "integrationId": "cmsaddcic03leqn0yvgyrs7nt",
+    "account": "Aloe",
+    "postId": "cmsy8p0rd0c7dt90yy8olqd7c",
+    "postUrl": null,
+    "publishedAt": "2026-08-18T05:46:13.843Z"
+  }
+}

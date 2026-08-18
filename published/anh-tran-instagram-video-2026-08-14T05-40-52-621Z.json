@@ -1,0 +1,42 @@
+{
+  "brand": {
+    "id": "253a8dbe-90f2-4624-89d9-94a6648aec6b",
+    "slug": "anh-tran",
+    "name": "Anh Tran"
+  },
+  "assets": {
+    "video_url": "https://xgen.b-cdn.net/models/Anh_Tran/videos/Anh_Tran_watermarked_03ad9875.mp4",
+    "video_title": "Anh_Tran_watermarked_03ad9875"
+  },
+  "isVideo": true,
+  "video_verification": {
+    "sfw": true,
+    "method": "human",
+    "verified_at": "2026-08-14T05:40:15.414Z"
+  },
+  "platform": "instagram",
+  "content": {
+    "caption": "Hi friends, today felt a little quiet so I stepped out with a soft smile and let the light wrap around me. It made me feel warm inside, like sharing a small secret. 🌸",
+    "hashtags": [
+      "#sweet",
+      "#shy"
+    ],
+    "cta": "What made your day feel gentle?"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "published",
+  "created_at": "2026-08-14T05:40:52.621Z",
+  "approved_at": "2026-08-14T05:44:07.702Z",
+  "published_at": "2026-08-14T05:46:06.564Z",
+  "publication": {
+    "platform": "instagram",
+    "integrationId": "cmsaddcic03leqn0yvgyrs7nt",
+    "account": "Aloe",
+    "postId": "cmssixhi407hkqb0yjnw2edlj",
+    "postUrl": null,
+    "publishedAt": "2026-08-14T05:46:06.564Z"
+  }
+}

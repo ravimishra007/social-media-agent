@@ -15,7 +15,8 @@ export function buildPrompt(
   brand,
   guidelines,
   trend = null,
-  platform
+  platform,
+  avoidHashtags = []
 ) {
   const templatePath = new URL(
     `${platform}.md`,
@@ -61,6 +62,15 @@ export function buildPrompt(
 
   for (const [key, value] of Object.entries(variables)) {
     template = template.replaceAll(`{{${key}}}`, value);
+  }
+
+  // Hashtag variety: tags already used in this brand's earlier posts are
+  // off-limits so every new post gets fresh ones.
+  if (avoidHashtags.length) {
+    template +=
+      `\n\nIMPORTANT — hashtag variety: the following hashtags were already used in ` +
+      `this model's previous posts. Do NOT use any of them. Invent fresh, different ` +
+      `hashtags that still fit the persona and the post:\n${avoidHashtags.join(" ")}\n`;
   }
 
   return template;

@@ -1,0 +1,36 @@
+{
+  "brand": {
+    "id": "6e2fe04f-534a-4b03-9dc9-bd2eb7a5821c",
+    "slug": "alexandra-petrov",
+    "name": "Alexandra Petrov"
+  },
+  "assets": {
+    "video_url": "https://xgen.b-cdn.net/models/Alexandra_Petrov/videos/Alexandra_Petrov_watermarked_1df504d9.mp4",
+    "video_title": "Alexandra_Petrov_watermarked_1df504d9"
+  },
+  "isVideo": true,
+  "platform": "x",
+  "content": {
+    "caption": "Lake Baikal's serene beauty never fails to recharge my spirit and imagination.",
+    "hashtags": [
+      "#russian"
+    ],
+    "cta": ""
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "published",
+  "created_at": "2026-08-13T14:56:34.055Z",
+  "approved_at": "2026-08-13T14:56:40.760Z",
+  "published_at": "2026-08-13T15:00:26.744Z",
+  "publication": {
+    "platform": "x",
+    "integrationId": "cmsa135oe0qmdkz0ydapqor9l",
+    "account": "Harper Walker",
+    "postId": "cmsrnai21059lls0yok8akm8l",
+    "postUrl": null,
+    "publishedAt": "2026-08-13T15:00:26.744Z"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "brand": {
+    "id": "6e2fe04f-534a-4b03-9dc9-bd2eb7a5821c",
+    "slug": "alexandra-petrov",
+    "name": "Alexandra Petrov"
+  },
+  "assets": {
+    "video_url": "https://xgen.b-cdn.net/models/Alexandra_Petrov/videos/Alexandra_Petrov_watermarked_b612dcfa.mp4",
+    "video_title": "Alexandra_Petrov_watermarked_b612dcfa"
+  },
+  "isVideo": true,
+  "platform": "facebook",
+  "content": {
+    "caption": "There's something magical about retreating to Lake Baikal's shores. The calm waters remind me of the elegant lines in ballet and the depth of classical stories. It fuels my creative spirit beautifully. 🌊✨ How do you recharge your soul?",
+    "hashtags": [
+      "#LakeBaikal",
+      "#ClassicalLiterature"
+    ],
+    "cta": "How do you recharge your soul?"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "published",
+  "created_at": "2026-08-13T14:57:38.836Z",
+  "approved_at": "2026-08-13T15:01:13.867Z",
+  "published_at": "2026-08-13T15:38:48.167Z",
+  "publication": {
+    "platform": "facebook",
+    "integrationId": "cmr8uabh4034vk90y8pxbtzxi",
+    "account": "Xgenai brands",
+    "postId": "cmsrontne05n5ls0yt38y256l",
+    "postUrl": null,
+    "publishedAt": "2026-08-13T15:38:48.167Z"
+  }
+}

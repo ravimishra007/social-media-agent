@@ -1,0 +1,36 @@
+{
+  "brand": {
+    "id": "6e2fe04f-534a-4b03-9dc9-bd2eb7a5821c",
+    "slug": "alexandra-petrov",
+    "name": "Alexandra Petrov"
+  },
+  "assets": {
+    "video_url": "https://xgen.b-cdn.net/models/Alexandra_Petrov/videos/Alexandra_Petrov_watermarked_4133c4f4.mp4",
+    "video_title": "Alexandra_Petrov_watermarked_4133c4f4"
+  },
+  "isVideo": true,
+  "platform": "x",
+  "content": {
+    "caption": "Nothing compares to the serenity I find at Lake Baikal each summer.",
+    "hashtags": [
+      "#russian"
+    ],
+    "cta": "Share your peaceful escapes"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "published",
+  "created_at": "2026-08-13T09:21:29.538Z",
+  "approved_at": "2026-08-13T09:31:55.965Z",
+  "published_at": "2026-08-13T09:33:39.719Z",
+  "publication": {
+    "platform": "x",
+    "integrationId": "cmsa135oe0qmdkz0ydapqor9l",
+    "account": "Harper Walker",
+    "postId": "cmsrbm7k60199ls0ysnd02z7q",
+    "postUrl": null,
+    "publishedAt": "2026-08-13T09:33:39.719Z"
+  }
+}

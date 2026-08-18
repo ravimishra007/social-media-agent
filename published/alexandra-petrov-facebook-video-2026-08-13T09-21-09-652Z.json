@@ -1,0 +1,37 @@
+{
+  "brand": {
+    "id": "6e2fe04f-534a-4b03-9dc9-bd2eb7a5821c",
+    "slug": "alexandra-petrov",
+    "name": "Alexandra Petrov"
+  },
+  "assets": {
+    "video_url": "https://xgen.b-cdn.net/models/Alexandra_Petrov/videos/Alexandra_Petrov_watermarked_58304e20.mp4",
+    "video_title": "Alexandra_Petrov_watermarked_58304e20"
+  },
+  "isVideo": true,
+  "platform": "facebook",
+  "content": {
+    "caption": "There's something truly special about the stories told through ballet and the pages of classic literature. They shape my creative journey in the most elegant ways. After immersing in art, nothing recharges me like the calm shores of a beloved lake. 🌸",
+    "hashtags": [
+      "#russian",
+      "#LakeBaikal"
+    ],
+    "cta": "What recharges your spirit?"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "published",
+  "created_at": "2026-08-13T09:21:09.652Z",
+  "approved_at": "2026-08-13T09:31:53.323Z",
+  "published_at": "2026-08-13T09:33:07.195Z",
+  "publication": {
+    "platform": "facebook",
+    "integrationId": "cmr8uabh4034vk90y8pxbtzxi",
+    "account": "Xgenai brands",
+    "postId": "cmsrblj3z0191ls0yjxtejo9c",
+    "postUrl": null,
+    "publishedAt": "2026-08-13T09:33:07.195Z"
+  }
+}

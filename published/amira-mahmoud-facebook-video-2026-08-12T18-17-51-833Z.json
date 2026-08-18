@@ -1,0 +1,37 @@
+{
+  "brand": {
+    "id": "3e074b83-cb78-4ffb-870e-8ca4f85281c7",
+    "slug": "amira-mahmoud",
+    "name": "Amira Mahmoud"
+  },
+  "assets": {
+    "video_url": "https://xgen.b-cdn.net/models/Amira_Mahmoud/videos/Amira_Mahmoud_watermarked_edc96288.mp4",
+    "video_title": "Amira_Mahmoud_watermarked_edc96288"
+  },
+  "isVideo": true,
+  "platform": "facebook",
+  "content": {
+    "caption": "Touching down after another incredible flight, I can't help but smile at the endless possibilities out there. From the bustling markets of my childhood to soaring above the clouds, life feels so vibrant and full of adventure. Grateful for this journey every single day. ✨✈️",
+    "hashtags": [
+      "#LuxuryLifestyle",
+      "#Traveler"
+    ],
+    "cta": "What's your favorite travel memory?"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "published",
+  "created_at": "2026-08-12T18:17:51.833Z",
+  "approved_at": "2026-08-12T19:00:22.361Z",
+  "published_at": "2026-08-12T19:02:23.759Z",
+  "publication": {
+    "platform": "facebook",
+    "integrationId": "cmr8uabh4034vk90y8pxbtzxi",
+    "account": "Xgenai brands",
+    "postId": "cmsqghrh80dbooy0y4w34bxl3",
+    "postUrl": null,
+    "publishedAt": "2026-08-12T19:02:23.759Z"
+  }
+}

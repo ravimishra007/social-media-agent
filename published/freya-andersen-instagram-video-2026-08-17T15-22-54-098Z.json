@@ -1,0 +1,43 @@
+{
+  "brand": {
+    "id": "fcd31896-11fe-47fc-989c-027e0e33717d",
+    "slug": "freya-andersen",
+    "name": "Freya Andersen"
+  },
+  "assets": {
+    "video_url": "https://xgen.b-cdn.net/models/Freya_Andersen/videos/Freya_Andersen_watermarked_b316343e.mp4",
+    "video_title": "Freya_Andersen_watermarked_b316343e"
+  },
+  "isVideo": true,
+  "video_verification": {
+    "sfw": true,
+    "apparent_age_verified": true,
+    "method": "human",
+    "verified_at": "2026-08-17T15:22:05.610Z"
+  },
+  "platform": "instagram",
+  "content": {
+    "caption": "Waking up to the crisp mountain air and the sound of rushing rivers always fills my heart with joy. There's nothing quite like losing myself in the trails here, feeling the earth under my boots and the sun on my face. Nature has a way of making everything feel right again. 🌲🏔️",
+    "hashtags": [
+      "#outdoorlover",
+      "#naturelover"
+    ],
+    "cta": "What’s one place that makes you feel at peace? I’d love to hear!"
+  },
+  "validation": {
+    "passed": true,
+    "errors": []
+  },
+  "status": "published",
+  "created_at": "2026-08-17T15:22:54.099Z",
+  "approved_at": "2026-08-17T15:23:45.612Z",
+  "published_at": "2026-08-17T17:51:26.466Z",
+  "publication": {
+    "platform": "instagram",
+    "integrationId": "cmsaddcic03leqn0yvgyrs7nt",
+    "account": "Aloe",
+    "postId": "cmsxj5sey05fht90ykhf6pc4f",
+    "postUrl": null,
+    "publishedAt": "2026-08-17T17:51:26.466Z"
+  }
+}
